@@ -2,1081 +2,210 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     
-    <meta name="description" content="Adalah sebuah web app yang menyediakan ribuan template website dengan desain menarik untuk di kunjungi">
+    <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (1) ========== -->
+    <title>NECODEV GZ</title>
+    <meta name="description" content="NECODEV GZ - Platform pengembangan teknologi modern. Halaman ini dilindungi dari akses source code dan pengunduhan gambar.">
     
-    <link rel="icon" href="#" type="image/x-icon">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="apple-touch-icon" href="#">
+    <!-- Favicon 1:1 (siap diisi sendiri) -->
+    <link rel="icon" type="image/png" sizes="512x512" href="#">
+    <link rel="shortcut icon" href="#">
+    <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (1) SELESAI ========== -->
     
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="application-name" content="Vintacts | Marketplace">
-    <meta name="apple-mobile-web-app-title" content="Vintacts">
-    
-    <title>Vintacts | Marketplace</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <!-- CSS Proteksi & Styling -->
     <style>
+        /* ========== PENANDA KHUSUS: BAGIAN PENTING (2) - CSS PROTEKSI ========== */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', system-ui, -apple-system, sans-serif;
-            background-color: #000000;
-            min-height: 100vh;
-            padding: 12px 16px;
-            touch-action: pan-y;
-        }
-
-        #homePage {
-            display: block;
-        }
-        #homePage.hidden {
-            display: none;
-        }
-
-        #detailPage {
-            display: none;
-        }
-        #detailPage.active {
-            display: block;
-            padding-bottom: 80px;
-        }
-
-        #cartPage {
-            display: none;
-        }
-        #cartPage.active {
-            display: block;
-            padding-bottom: 80px;
-        }
-
-        .header-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 45px;
-            border: 1px solid rgba(192, 133, 253, 0.3);
-            border-radius: 10px;
-            padding: 8px 12px;
-            box-shadow: 0 0 8px rgba(192, 133, 253, 0.1);
-        }
-        .top-left-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .brand-photo {
-            width: 32px;
-            height: 32px;
-            object-fit: cover;
-            display: block;
-        }
-        .brand-text {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 800;
-            font-size: 18px;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #9ca3af, #d1d5db, #f3f4f6, #e5e7eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .header-icons {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .icon-bell {
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-            position: relative;
-        }
-        .icon-cart {
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-            position: relative;
-        }
-        .icon-bell svg, .icon-cart svg {
-            width: 100%;
-            height: 100%;
-            fill: none;
-            stroke: #C085FD;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            filter: drop-shadow(0 0 3px rgba(192, 133, 253, 0.5));
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -6px;
-            right: -8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #ef4444;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-            display: none;
-            box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
-        }
-        .cart-badge.show {
-            display: flex;
-        }
-
-        .slider-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 8px;
-            position: relative;
-            cursor: grab;
             user-select: none;
             -webkit-user-select: none;
-            box-shadow: 0 0 10px rgba(192, 133, 253, 0.15);
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
-        .slider-container:active {
-            cursor: grabbing;
-        }
-        .slider-container.dragging {
-            cursor: grabbing;
-        }
-        .slider-track {
+        
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
-            width: 500%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            -webkit-user-drag: none;
         }
-        .slider-track.no-transition {
-            transition: none;
+        
+        /* Video container - MURNI tanpa border, shadow, apapun */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
         }
-        .slider-track img {
-            width: 20%;
-            height: 100%;
-            object-fit: cover;
-            flex-shrink: 0;
+        
+        video {
+            /* TANPA BORDER, TANPA OUTLINE, TANPA BAYANGAN */
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background: transparent;
+        }
+        
+        /* Hilangkan semua dekorasi bawaan video */
+        video:focus {
+            outline: none;
+        }
+        
+        /* Sembunyikan kontrol default video (biar murni) */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        
+        /* Mencegah semua gambar bisa di-drag/save */
+        img, svg, canvas, picture, figure, video {
+            -webkit-user-drag: none;
+            user-drag: none;
             pointer-events: none;
         }
-
-        .dots-indicator {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-            margin-top: 10px;
-            margin-bottom: 16px;
+        
+        /* Mencegah highlight biru saat klik */
+        :focus {
+            outline: none;
         }
-        .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #ffffff;
-            transition: all 0.3s ease;
-            cursor: pointer;
+        
+        /* Mencegah cetak (print) halaman */
+        @media print {
+            body {
+                display: none;
+            }
         }
-        .dot.active {
-            background-color: #C085FD;
-            width: 8px;
-            height: 8px;
-            box-shadow: 0 0 8px rgba(192, 133, 253, 0.8);
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 8px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            padding-bottom: 4px;
-            margin-bottom: 16px;
-        }
-        .filter-buttons::-webkit-scrollbar {
-            display: none;
-        }
-        .filter-btn {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            font-size: 12px;
-            letter-spacing: 0.3px;
-            padding: 6px 14px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background-color: #151515;
-            color: #ffffff;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .filter-btn.active {
-            background-color: #C085FD;
-            border: 1px solid #C085FD;
-            box-shadow: 0 0 12px rgba(192, 133, 253, 0.5), 0 0 20px rgba(192, 133, 253, 0.2);
-        }
-
-        .product-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .product-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background-color: #111111;
-            border-radius: 10px;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            aspect-ratio: 16 / 4;
-        }
-        .product-card:hover {
-            background-color: #1a1a1a;
-            border-color: rgba(192, 133, 253, 0.15);
-            box-shadow: 0 0 10px rgba(192, 133, 253, 0.08);
-        }
-        .product-image {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .product-info {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            min-width: 0;
-            flex: 1;
-            padding-right: 44px;
-        }
-        .product-title {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            color: #C085FD;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
-        }
-        .product-desc {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 10px;
-            color: #9ca3af;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .btn-add {
-            position: absolute;
-            bottom: 10px;
-            right: 12px;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            background-color: #C085FD;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
-            z-index: 2;
-            box-shadow: 0 0 10px rgba(192, 133, 253, 0.5);
-        }
-        .btn-add.in-cart {
-            background-color: #3a3a3a;
-            color: #6b6b6b;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        .btn-add:hover:not(.in-cart) {
-            background-color: #d4a8ff;
-            transform: scale(1.05);
-            box-shadow: 0 0 16px rgba(192, 133, 253, 0.7);
-        }
-        .product-card.hidden {
-            display: none;
-        }
-
-        /* DETAIL PAGE */
-        .detail-header, .cart-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        .back-btn {
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .back-btn svg {
-            width: 24px;
-            height: 24px;
-            stroke: #ffffff;
-            fill: none;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-        .detail-title, .cart-title {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 0.5px;
-            color: #C085FD;
-            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
-        }
-        .detail-hero-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 16px;
-            box-shadow: 0 0 12px rgba(192, 133, 253, 0.15);
-        }
-        .detail-hero {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .live-badge {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            font-size: 10px;
-            letter-spacing: 0.5px;
-            padding: 5px 10px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            z-index: 5;
-        }
-        .live-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background-color: #C085FD;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; box-shadow: 0 0 4px #C085FD, 0 0 8px #C085FD; }
-            50% { opacity: 0.2; box-shadow: 0 0 1px #C085FD, 0 0 2px #C085FD; }
-        }
-
-        .section-label {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-            color: #C085FD;
-            margin-bottom: 8px;
-            margin-top: 16px;
-            text-shadow: 0 0 6px rgba(192, 133, 253, 0.3);
-        }
-        .section-label:first-of-type {
-            margin-top: 0;
-        }
-        .detail-description {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 13px;
-            color: #d1d5db;
-            line-height: 1.7;
-            margin-bottom: 4px;
-        }
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 4px;
-        }
-        .tech-tag {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            font-size: 11px;
-            letter-spacing: 0.3px;
-            padding: 6px 14px;
-            border-radius: 6px;
-            background-color: #151515;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            white-space: nowrap;
-            box-shadow: 0 0 6px rgba(192, 133, 253, 0.1);
-        }
-        .feature-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .feature-list li {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 13px;
-            color: #d1d5db;
-            line-height: 1.5;
-            padding-left: 16px;
-            position: relative;
-        }
-        .feature-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #C085FD;
-            font-weight: 700;
-            font-size: 16px;
-            text-shadow: 0 0 6px rgba(192, 133, 253, 0.6);
-        }
-
-        #detailBottomBar {
-            display: none;
-        }
-        #detailBottomBar.active {
-            display: flex;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #0a0a0a;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 10px 16px;
-            align-items: center;
-            gap: 12px;
-            z-index: 100;
-        }
-        .bottom-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background-color: #151515;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            flex-shrink: 0;
-            position: relative;
-        }
-        .bottom-icon svg {
-            width: 20px;
-            height: 20px;
-            stroke: #ffffff;
-            fill: none;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            filter: drop-shadow(0 0 3px rgba(192, 133, 253, 0.5));
-        }
-        .bottom-cart-badge {
-            position: absolute;
-            top: -4px;
-            right: -6px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: #ef4444;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-            display: none;
-        }
-        .bottom-cart-badge.show {
-            display: flex;
-        }
-        .bottom-price-btn {
-            flex: 1;
-            height: 40px;
-            border-radius: 10px;
-            background-color: #C085FD;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
-            letter-spacing: 0.3px;
-            box-shadow: 0 0 14px rgba(192, 133, 253, 0.5);
-        }
-
-        /* CART PAGE */
-        .cart-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .cart-item-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background-color: #111111;
-            border-radius: 10px;
-            padding: 10px;
-            border: 1px solid rgba(192, 133, 253, 0.1);
-            position: relative;
-            box-shadow: 0 0 8px rgba(192, 133, 253, 0.06);
-        }
-        .cart-item-image {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .cart-item-info {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            min-width: 0;
-            flex: 1;
-            padding-right: 50px;
-        }
-        .cart-item-title {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            color: #C085FD;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
-        }
-        .cart-item-price {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 13px;
-            color: #ffffff;
-        }
-        .cart-item-delete {
-            position: absolute;
-            top: 10px;
-            right: 12px;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cart-item-delete svg {
-            width: 18px;
-            height: 18px;
-            stroke: #ef4444;
-            fill: none;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-        .cart-empty {
-            text-align: center;
-            color: #9ca3af;
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            padding: 40px 0;
-        }
-        .cart-total-section {
-            background-color: #111111;
-            border-radius: 10px;
-            padding: 16px;
-            border: 1px solid rgba(192, 133, 253, 0.1);
-            margin-top: 16px;
-        }
-        .cart-total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 0;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            color: #C085FD;
-        }
+        /* ========== PENANDA KHUSUS: BAGIAN PENTING (2) SELESAI ========== */
     </style>
 </head>
 <body>
-    <div id="homePage">
-        <div class="header-bar">
-            <div class="top-left-brand">
-                <img src="Pict/Ikon.png" alt="Vintacts" class="brand-photo">
-                <span class="brand-text">VINTACTS</span>
-            </div>
-            <div class="header-icons">
-                <div class="icon-bell" title="Notifikasi">
-                    <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                </div>
-                <div class="icon-cart" title="Keranjang" id="cartIcon">
-                    <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                    <span class="cart-badge" id="cartBadge">0</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slider-container" id="sliderContainer">
-            <div class="slider-track" id="sliderTrack">
-                <img src="Pict/1.png" alt="Slide 1" draggable="false">
-                <img src="Pict/2.png" alt="Slide 2" draggable="false">
-                <img src="Pict/3.png" alt="Slide 3" draggable="false">
-                <img src="Pict/4.png" alt="Slide 4" draggable="false">
-                <img src="Pict/5.png" alt="Slide 5" draggable="false">
-            </div>
-        </div>
-
-        <div class="dots-indicator" id="dotsContainer">
-            <span class="dot active" data-index="0"></span><span class="dot" data-index="1"></span><span class="dot" data-index="2"></span><span class="dot" data-index="3"></span><span class="dot" data-index="4"></span>
-        </div>
-
-        <div class="filter-buttons" id="filterButtons">
-            <button class="filter-btn active" data-filter="all">ALL</button>
-            <button class="filter-btn" data-filter="portfolio">Portofolio</button>
-            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-            <button class="filter-btn" data-filter="company">Company Profile</button>
-            <button class="filter-btn" data-filter="landing">Landing Page</button>
-            <button class="filter-btn" data-filter="webapp">Web App</button>
-        </div>
-
-        <div class="product-list" id="productList">
-            <div class="product-card" data-category="portfolio" data-id="creative-studio" data-price="Rp. 49.000" data-price-num="49000" data-desc="Template portofolio modern yang dirancang khusus untuk para kreator, desainer, fotografer, dan studio kreatif." data-shortdesc="Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan." data-features="Layout responsive mobile-friendly|Galeri portofolio dengan filter kategori|Animasi scroll halus|Formulir kontak dengan validasi">
-                <img src="https://picsum.photos/50/50?random=10" alt="Portfolio" class="product-image">
-                <div class="product-info">
-                    <span class="product-title">Creative Studio</span>
-                    <p class="product-desc">Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan.</p>
-                </div>
-                <button class="btn-add" title="Tambah ke keranjang">+</button>
-            </div>
-
-            <div class="product-card" data-category="ecommerce" data-id="urban-store" data-price="Rp. 79.000" data-price-num="79000" data-desc="Toko online siap pakai yang didesain dengan tampilan trendy dan modern. Dilengkapi dengan katalog produk dinamis." data-shortdesc="Toko online siap pakai dengan tampilan trendy dan fitur checkout yang mulus." data-features="Katalog produk dengan kategori|Sistem keranjang & checkout|Integrasi payment gateway|Dashboard admin pesanan">
-                <img src="https://picsum.photos/50/50?random=11" alt="E-Commerce" class="product-image">
-                <div class="product-info">
-                    <span class="product-title">Urban Store</span>
-                    <p class="product-desc">Toko online siap pakai dengan tampilan trendy dan fitur checkout yang mulus.</p>
-                </div>
-                <button class="btn-add" title="Tambah ke keranjang">+</button>
-            </div>
-
-            <div class="product-card" data-category="company" data-id="nexa-corp" data-price="Rp. 59.000" data-price-num="59000" data-desc="Profil perusahaan profesional dengan layout bersih dan elegan. Menampilkan section tentang perusahaan dan tim." data-shortdesc="Profil perusahaan profesional dengan layout clean dan section layanan lengkap." data-features="Halaman tentang & tim|Section layanan & portofolio|Testimoni klien|Formulir kontak bisnis">
-                <img src="https://picsum.photos/50/50?random=12" alt="Company Profile" class="product-image">
-                <div class="product-info">
-                    <span class="product-title">Nexa Corp</span>
-                    <p class="product-desc">Profil perusahaan profesional dengan layout clean dan section layanan lengkap.</p>
-                </div>
-                <button class="btn-add" title="Tambah ke keranjang">+</button>
-            </div>
-
-            <div class="product-card" data-category="landing" data-id="launch-pro" data-price="Rp. 39.000" data-price-num="39000" data-desc="Landing page konversi tinggi yang dioptimasi untuk campaign marketing digital. Dilengkapi dengan headline menarik." data-shortdesc="Landing page konversi tinggi untuk produk digital, SaaS, atau campaign marketing." data-features="Headline & hero section optimal|Countdown timer urgency|CTA button strategis|Form lead generation">
-                <img src="https://picsum.photos/50/50?random=13" alt="Landing Page" class="product-image">
-                <div class="product-info">
-                    <span class="product-title">LaunchPro</span>
-                    <p class="product-desc">Landing page konversi tinggi untuk produk digital, SaaS, atau campaign marketing.</p>
-                </div>
-                <button class="btn-add" title="Tambah ke keranjang">+</button>
-            </div>
-
-            <div class="product-card" data-category="webapp" data-id="task-flow" data-price="Rp. 99.000" data-price-num="99000" data-desc="Aplikasi web dashboard admin yang lengkap dengan kontrol panel interaktif. Grafik analitik real-time." data-shortdesc="Aplikasi web dashboard admin lengkap dengan kontrol panel, grafik, dan manajemen data real-time." data-features="Dashboard analitik real-time|Manajemen data pengguna|Tabel data sorting & filtering|Role-based access control">
-                <img src="https://picsum.photos/50/50?random=14" alt="Web App" class="product-image">
-                <div class="product-info">
-                    <span class="product-title">TaskFlow</span>
-                    <p class="product-desc">Aplikasi web dashboard admin lengkap dengan kontrol panel, grafik, dan manajemen data real-time.</p>
-                </div>
-                <button class="btn-add" title="Tambah ke keranjang">+</button>
-            </div>
-        </div>
+    <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (3) - VIDEO UTAMA ========== -->
+    <div class="video-container">
+        <video id="mainVideo" autoplay loop="false" muted playsinline disablePictureInPicture>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-
-    <div id="detailPage">
-        <div class="detail-header">
-            <div class="back-btn" id="backBtnDetail" title="Kembali">
-                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-            </div>
-            <span class="detail-title" id="detailProductTitle">Creative Studio</span>
-        </div>
-        <div class="detail-hero-container">
-            <img src="https://picsum.photos/800/450?random=detail" alt="Detail" class="detail-hero" id="detailHeroImage">
-            <div class="live-badge"><span class="live-dot"></span> Live</div>
-        </div>
-        <div class="section-label">DESKRIPSI</div>
-        <p class="detail-description" id="detailDescription"></p>
-        <div class="section-label">TEKNOLOGI</div>
-        <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Javascript</span></div>
-        <div class="section-label">FITUR</div>
-        <ul class="feature-list" id="detailFeatures"></ul>
-    </div>
-
-    <div id="detailBottomBar">
-        <div class="bottom-icon" title="Pesan">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="bottom-icon" title="Keranjang" id="detailCartIcon">
-            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            <span class="bottom-cart-badge" id="bottomCartBadge">0</span>
-        </div>
-        <button class="bottom-price-btn" id="bottomPriceBtn">Rp. 49.000</button>
-    </div>
-
-    <div id="cartPage">
-        <div class="cart-header">
-            <div class="back-btn" id="backBtnCart" title="Kembali">
-                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-            </div>
-            <span class="cart-title">KERANJANG</span>
-        </div>
-        <div class="cart-list" id="cartList"></div>
-        <div class="cart-total-section" id="cartTotalSection" style="display:none;">
-            <div class="cart-total-row"><span>Total</span><span id="cartTotal">Rp. 0</span></div>
-        </div>
-    </div>
-
+    
     <script>
-        let cart = [];
-        let currentProductId = '';
-
-        const homePage = document.getElementById('homePage');
-        const detailPage = document.getElementById('detailPage');
-        const cartPage = document.getElementById('cartPage');
-        const detailBottomBar = document.getElementById('detailBottomBar');
-        const cartBadge = document.getElementById('cartBadge');
-        const bottomCartBadge = document.getElementById('bottomCartBadge');
-
-        function isInCart(productId) {
-            return cart.some(item => item.id === productId);
-        }
-
-        function updateAllAddButtons() {
-            document.querySelectorAll('.product-card').forEach(card => {
-                const productId = card.getAttribute('data-id');
-                const btn = card.querySelector('.btn-add');
-                if (isInCart(productId)) {
-                    btn.classList.add('in-cart');
-                    btn.disabled = true;
-                } else {
-                    btn.classList.remove('in-cart');
-                    btn.disabled = false;
+        // ========== PENANDA KHUSUS: BAGIAN PENTING (4) - JAVASCRIPT PROTEKSI & VIDEO ==========
+        
+        (function() {
+            // ========== PROTEKSI TOTAL ==========
+            // 1. Mencegah CTRL+U (View Source)
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) {
+                    e.preventDefault();
+                    return false;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.keyCode === 83) {
+                    e.preventDefault();
+                    return false;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.keyCode === 80) {
+                    e.preventDefault();
+                    return false;
+                }
+                if (e.keyCode === 123) {
+                    e.preventDefault();
+                    return false;
+                }
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+                    e.preventDefault();
+                    return false;
                 }
             });
-        }
-
-        function updateBadges() {
-            const totalItems = cart.length;
-            cartBadge.textContent = totalItems;
-            bottomCartBadge.textContent = totalItems;
-            if (totalItems > 0) {
-                cartBadge.classList.add('show');
-                bottomCartBadge.classList.add('show');
-            } else {
-                cartBadge.classList.remove('show');
-                bottomCartBadge.classList.remove('show');
-            }
-        }
-
-        function formatRupiah(num) {
-            return 'Rp. ' + num.toLocaleString('id-ID');
-        }
-
-        function addToCart(name, image, priceNum, priceDisplay, productId) {
-            if (isInCart(productId)) return;
-            cart.push({ id: productId, name, image, priceNum, priceDisplay });
-            updateBadges();
-            updateAllAddButtons();
-            if (cartPage.classList.contains('active')) {
-                renderCartPage();
-            }
-        }
-
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateBadges();
-            updateAllAddButtons();
-            if (cartPage.classList.contains('active')) {
-                renderCartPage();
-            }
-        }
-
-        function renderCartPage() {
-            const cartList = document.getElementById('cartList');
-            const cartTotalSection = document.getElementById('cartTotalSection');
             
-            if (cart.length === 0) {
-                cartList.innerHTML = '<div class="cart-empty">Keranjang masih kosong</div>';
-                cartTotalSection.style.display = 'none';
-            } else {
-                cartList.innerHTML = cart.map(item => `
-                    <div class="cart-item-card">
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                        <div class="cart-item-info">
-                            <span class="cart-item-title">${item.name}</span>
-                            <span class="cart-item-price">${item.priceDisplay}</span>
-                        </div>
-                        <div class="cart-item-delete" data-id="${item.id}" title="Hapus dari keranjang">
-                            <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-                        </div>
-                    </div>
-                `).join('');
-                
-                const total = cart.reduce((sum, item) => sum + item.priceNum, 0);
-                document.getElementById('cartTotal').textContent = formatRupiah(total);
-                cartTotalSection.style.display = 'block';
-
-                document.querySelectorAll('.cart-item-delete').forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const id = this.getAttribute('data-id');
-                        removeFromCart(id);
-                    });
-                });
-            }
-        }
-
-        function openDetailPage(productName, productImageSrc, priceDisplay, priceNum, desc, features, shortDesc, productId) {
-            currentProductId = productId;
-            document.getElementById('detailProductTitle').textContent = productName;
-            document.getElementById('detailHeroImage').src = productImageSrc;
-            document.getElementById('detailDescription').textContent = desc;
-            document.getElementById('bottomPriceBtn').textContent = priceDisplay;
-            const detailFeatures = document.getElementById('detailFeatures');
-            detailFeatures.innerHTML = '';
-            features.split('|').forEach(f => {
-                const li = document.createElement('li');
-                li.textContent = f.trim();
-                detailFeatures.appendChild(li);
+            // 2. Mencegah klik kanan
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
             });
-            homePage.classList.add('hidden');
-            detailPage.classList.add('active');
-            cartPage.classList.remove('active');
-            detailBottomBar.classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        function goBackHome() {
-            homePage.classList.remove('hidden');
-            detailPage.classList.remove('active');
-            cartPage.classList.remove('active');
-            detailBottomBar.classList.remove('active');
-            window.scrollTo(0, 0);
-        }
-
-        function openCartPage() {
-            renderCartPage();
-            homePage.classList.add('hidden');
-            detailPage.classList.remove('active');
-            cartPage.classList.add('active');
-            detailBottomBar.classList.remove('active');
-            window.scrollTo(0, 0);
-        }
-
-        function goBackFromCart() {
-            cartPage.classList.remove('active');
-            if (detailPage.classList.contains('active')) {
-                detailBottomBar.classList.add('active');
-            } else {
-                homePage.classList.remove('hidden');
-            }
-            window.scrollTo(0, 0);
-        }
-
-        document.getElementById('backBtnDetail').addEventListener('click', goBackHome);
-        document.getElementById('backBtnCart').addEventListener('click', goBackFromCart);
-        document.getElementById('bottomPriceBtn').addEventListener('click', function() {
-            alert('🛒 Fitur checkout akan segera hadir!');
-        });
-        document.getElementById('cartIcon').addEventListener('click', openCartPage);
-        document.getElementById('detailCartIcon').addEventListener('click', function() {
-            if (cart.length === 0 && currentProductId) {
-                const card = document.querySelector(`.product-card[data-id="${currentProductId}"]`);
-                if (card) {
-                    const name = card.querySelector('.product-title').textContent;
-                    const image = card.querySelector('.product-image').src;
-                    const priceNum = parseInt(card.getAttribute('data-price-num'));
-                    const priceDisplay = card.getAttribute('data-price');
-                    addToCart(name, image, priceNum, priceDisplay, currentProductId);
-                }
-            } else {
-                openCartPage();
-            }
-        });
-
-        document.querySelectorAll('.product-card .btn-add').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const card = this.closest('.product-card');
-                const id = card.getAttribute('data-id');
-                const name = card.querySelector('.product-title').textContent;
-                const image = card.querySelector('.product-image').src;
-                const priceNum = parseInt(card.getAttribute('data-price-num'));
-                const priceDisplay = card.getAttribute('data-price');
-                addToCart(name, image, priceNum, priceDisplay, id);
+            
+            // 3. Mencegah drag
+            window.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
             });
-        });
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                if (e.target.classList.contains('btn-add')) return;
-                const id = this.getAttribute('data-id');
-                const title = this.querySelector('.product-title').textContent;
-                const imageSrc = this.querySelector('.product-image').src;
-                const detailImageSrc = imageSrc.replace('50/50', '800/450');
-                const priceDisplay = this.getAttribute('data-price');
-                const priceNum = parseInt(this.getAttribute('data-price-num'));
-                const desc = this.getAttribute('data-desc');
-                const features = this.getAttribute('data-features');
-                const shortDesc = this.getAttribute('data-shortdesc');
-                openDetailPage(title, detailImageSrc, priceDisplay, priceNum, desc, features, shortDesc, id);
-            });
-        });
-
-        document.querySelectorAll('#detailBottomBar .bottom-icon').forEach(icon => {
-            icon.addEventListener('click', function() {
-                if (this.getAttribute('title') === 'Pesan') {
-                    alert('📌 Fitur Pesan akan segera hadir!');
+            
+            // 4. Mencegah seleksi teks
+            document.onselectstart = function() { return false; };
+            
+            // 5. Nonaktifkan console
+            console.log = function() {};
+            console.warn = function() {};
+            console.error = function() {};
+            console.info = function() {};
+            
+            // 6. Mencegah PrintScreen
+            document.addEventListener('keyup', function(e) {
+                if (e.key === 'PrintScreen') {
+                    navigator.clipboard.writeText('');
+                    e.preventDefault();
+                    return false;
                 }
             });
-        });
-
-        // SLIDER
-        const sliderContainer = document.getElementById('sliderContainer');
-        const sliderTrack = document.getElementById('sliderTrack');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = 5;
-        let currentSlide = 0, autoPlayTimer, isDragging = false, startPosX = 0, currentTranslate = 0, prevTranslate = 0, dragDistance = 0;
-        function getPosX(e) { return e.type.includes('touch') ? e.touches[0].clientX : e.clientX; }
-        function setTrackPosition(t, withTransition = true) {
-            sliderTrack.classList.toggle('no-transition', !withTransition);
-            sliderTrack.style.transform = `translateX(${t}px)`;
-        }
-        function getMaxTranslate() { return -(sliderContainer.offsetWidth * (totalSlides - 1)); }
-        function snapToNearestSlide() {
-            const w = sliderContainer.offsetWidth;
-            let nearest = Math.round(Math.abs(currentTranslate) / w);
-            if (nearest < 0) nearest = 0;
-            if (nearest >= totalSlides) nearest = totalSlides - 1;
-            currentSlide = nearest;
-            prevTranslate = -(nearest * w);
-            currentTranslate = prevTranslate;
-            setTrackPosition(prevTranslate, true);
-            updateDots();
-        }
-        function updateDots() { dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide)); }
-        function goToSlide(i) {
-            const w = sliderContainer.offsetWidth;
-            currentSlide = i;
-            prevTranslate = -(i * w);
-            currentTranslate = prevTranslate;
-            setTrackPosition(prevTranslate, true);
-            updateDots();
-        }
-        function nextSlide() {
-            if (isDragging) return;
-            currentSlide = (currentSlide + 1) % totalSlides;
-            goToSlide(currentSlide);
-        }
-        function startAutoPlay() { stopAutoPlay(); autoPlayTimer = setInterval(nextSlide, 5000); }
-        function stopAutoPlay() { clearInterval(autoPlayTimer); }
-        function resetAutoPlay() { stopAutoPlay(); startAutoPlay(); }
-        function handleDragStart(e) {
-            isDragging = true;
-            sliderContainer.classList.add('dragging');
-            startPosX = getPosX(e);
-            sliderTrack.classList.add('no-transition');
-            stopAutoPlay();
-        }
-        function handleDragMove(e) {
-            if (!isDragging) return;
-            const diff = getPosX(e) - startPosX;
-            dragDistance = Math.abs(diff);
-            currentTranslate = prevTranslate + diff;
-            const max = getMaxTranslate();
-            if (currentTranslate > 0) currentTranslate *= 0.3;
-            else if (currentTranslate < max) currentTranslate = max + (currentTranslate - max) * 0.3;
-            setTrackPosition(currentTranslate, false);
-        }
-        function handleDragEnd() {
-            if (!isDragging) return;
-            isDragging = false;
-            sliderContainer.classList.remove('dragging');
-            if (dragDistance > 30) snapToNearestSlide();
-            else { const w = sliderContainer.offsetWidth; currentTranslate = -(currentSlide * w); prevTranslate = currentTranslate; setTrackPosition(currentTranslate, true); }
-            dragDistance = 0;
-            resetAutoPlay();
-        }
-        sliderContainer.addEventListener('mousedown', handleDragStart);
-        sliderContainer.addEventListener('mousemove', handleDragMove);
-        sliderContainer.addEventListener('mouseup', handleDragEnd);
-        sliderContainer.addEventListener('mouseleave', () => { if (isDragging) handleDragEnd(); });
-        sliderContainer.addEventListener('touchstart', handleDragStart, { passive: false });
-        sliderContainer.addEventListener('touchmove', (e) => { if (isDragging) e.preventDefault(); handleDragMove(e); }, { passive: false });
-        sliderContainer.addEventListener('touchend', handleDragEnd);
-        dots.forEach(d => d.addEventListener('click', function() { goToSlide(parseInt(this.dataset.index)); resetAutoPlay(); }));
-        startAutoPlay();
-        window.addEventListener('resize', () => {
-            const w = sliderContainer.offsetWidth;
-            prevTranslate = -(currentSlide * w);
-            currentTranslate = prevTranslate;
-            setTrackPosition(prevTranslate, false);
-        });
-
-        // FILTER
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const filter = this.dataset.filter;
-                document.querySelectorAll('.product-card').forEach(card => {
-                    card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+            
+            // 7. Mencegah copy/cut/paste
+            document.oncopy = function(e) { e.preventDefault(); return false; };
+            document.oncut = function(e) { e.preventDefault(); return false; };
+            document.onpaste = function(e) { e.preventDefault(); return false; };
+            
+            // ========== KONTROL VIDEO ==========
+            const video = document.getElementById('mainVideo');
+            
+            // Set video untuk autoplay dan play sekali (tidak loop)
+            video.loop = false;     // Hanya putar 1x
+            video.muted = true;     // Wajib muted untuk autoplay di browser modern
+            video.playsInline = true; // Biar tidak fullscreen otomatis di mobile
+            
+            // Coba autoplay
+            let playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Autoplay berhasil
+                    console.log('Video autoplay berjalan');
+                }).catch(() => {
+                    // Fallback: jika autoplay gagal, tetap diam (tidak muncul kontrol)
+                    console.log('Autoplay perlu interaksi - tapi tetap murni hitam');
                 });
-            });
-        });
+            }
+            
+            // Pastikan video tidak bisa di-save via keyboard (proteksi tambahan)
+            video.addEventListener('contextmenu', (e) => e.preventDefault());
+            video.addEventListener('dragstart', (e) => e.preventDefault());
+            
+            // Mencegah video masuk picture-in-picture
+            video.disablePictureInPicture = true;
+            
+            // Mencegah download video (hilangkan kontrol)
+            video.controls = false;
+            video.controlsList = "nodownload nofullscreen noremoteplayback";
+            
+            // ========== PENGINGAT UNTUK USER (TIDAK TAMPIL) ==========
+            // Catatan: Ganti src video di bawah ini dengan file video 1:1 Anda
+            // Contoh: video.src = "video_1x1.mp4";
+            // Saat ini src masih kosong (""), Anda bisa menggantinya.
+            
+        })();
+        
+        // ========== TEMPAT SETELAH PROTEKSI ==========
+        // INSTRUKSI: Ganti video.src dengan URL video 1:1 Anda
+        // Contoh: document.getElementById('mainVideo').src = "video_anda.mp4";
+        
+        // ========== PENANDA KHUSUS: BAGIAN PENTING (4) SELESAI ==========
     </script>
 </body>
 </html>
