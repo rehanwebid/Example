@@ -10,6 +10,9 @@
     
     <link rel="icon" type="image/png" sizes="512x512" href="#">
     <link rel="shortcut icon" href="#">
+    
+    <!-- IMPORT FONT MINECRAFT -->
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
     <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (1) SELESAI ========== -->
     
     <style>
@@ -29,7 +32,7 @@
             height: 100vh;
             width: 100vw;
             overflow: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Minecraft', 'Courier New', monospace;
         }
         
         /* ===== HALAMAN VIDEO ===== */
@@ -44,7 +47,14 @@
             justify-content: center;
             align-items: center;
             z-index: 10;
+            opacity: 1;
+            visibility: visible;
             transition: opacity 0.5s ease;
+        }
+        
+        .video-page.hide {
+            opacity: 0;
+            visibility: hidden;
         }
         
         .video-container {
@@ -93,13 +103,14 @@
         .main-page.show {
             opacity: 1;
             visibility: visible;
+            z-index: 20;
         }
         
-        /* HEADER RAMPiNG - tinggi mengikuti konten, bukan gambar */
+        /* HEADER RAMPING */
         .header {
             background-color: white;
             border-radius: 15px;
-            padding: 8px 16px;  /* PADDING KECIL = RAMPiNG */
+            padding: 8px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -107,23 +118,36 @@
             max-width: 1200px;
             margin: 0 auto;
             gap: 16px;
-            min-height: 48px;  /* minimal tinggi, tidak memaksa besar */
+            min-height: 48px;
         }
         
-        /* Bagian kiri: gambar 16:5 yang mengecil mengikuti header */
+        /* Bagian kiri: foto 1:1 + teks NECODEV GZ */
         .header-left {
-            flex-shrink: 0;  /* tidak menekan gambar */
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
         }
         
         .header-image {
-            height: 32px;  /* TINGGI GAMBAR DIPAKSA KECIL (32px) */
-            width: auto;    /* lebar otomatis mengikuti rasio 16:5 */
-            aspect-ratio: 16 / 5;
+            width: 32px;
+            height: 32px;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
             display: block;
             border: none;
             outline: none;
             background: transparent;
+            border-radius: 8px;
+        }
+        
+        .header-text {
+            font-family: 'Minecraft', 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: normal;
+            color: black;
+            letter-spacing: 1px;
+            white-space: nowrap;
         }
         
         /* Bagian kanan: ikon */
@@ -154,13 +178,13 @@
             display: block;
         }
         
-        /* Content placeholder biar header terlihat sendiri */
         .content-placeholder {
             margin-top: 40px;
             text-align: center;
             color: white;
             opacity: 0.3;
             font-size: 12px;
+            font-family: monospace;
         }
         
         /* Proteksi drag */
@@ -189,16 +213,17 @@
     <div class="video-page" id="videoPage">
         <div class="video-container">
             <video id="mainVideo" autoplay muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen">
-                <source src="Pict/Load.mp4" type="video/mp4">
+                <source src="" type="video/mp4">
             </video>
         </div>
     </div>
     
-    <!-- HALAMAN UTAMA DENGAN HEADER RAMPiNG -->
+    <!-- HALAMAN UTAMA -->
     <div class="main-page" id="mainPage">
         <div class="header">
             <div class="header-left">
-                <img class="header-image" src="Pict/Head.png" alt="header image" id="headerImage">
+                <img class="header-image" src="#" alt="logo" id="headerImage">
+                <span class="header-text">NECODEV GZ</span>
             </div>
             <div class="header-right">
                 <div class="icon bell-icon" id="bellIcon">
@@ -236,40 +261,61 @@
             console.log = console.warn = console.error = console.info = function() {};
             document.oncopy = document.oncut = document.onpaste = function(e) { e.preventDefault(); return false; };
             
-            // ========== VIDEO ==========
+            // ========== ELEMEN ==========
             const videoPage = document.getElementById('videoPage');
             const mainPage = document.getElementById('mainPage');
             const video = document.getElementById('mainVideo');
             
+            // ========== SET VIDEO ==========
             video.loop = false;
             video.muted = true;
             video.playsInline = true;
             video.controls = false;
             
             // PAKAI LINK VIDEO ONLINE
-            video.src = "Pict/Load.mp4";
+            video.src = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4";
             
+            // ========== EVENT VIDEO SELESAI ==========
             video.addEventListener('ended', function() {
-                videoPage.style.opacity = '0';
-                setTimeout(function() {
-                    videoPage.style.display = 'none';
-                    mainPage.classList.add('show');
-                }, 500);
+                console.log('Video selesai, pindah halaman');
+                videoPage.classList.add('hide');
+                mainPage.classList.add('show');
             });
             
-            video.play().catch(() => {});
-            video.addEventListener('contextmenu', (e) => e.preventDefault());
+            // Fallback timeout 8 detik
+            setTimeout(function() {
+                if (videoPage && !videoPage.classList.contains('hide')) {
+                    console.log('Fallback timeout: paksa pindah halaman');
+                    videoPage.classList.add('hide');
+                    mainPage.classList.add('show');
+                }
+            }, 8000);
+            
+            // Autoplay
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    console.log('Autoplay gagal: ' + error);
+                    setTimeout(function() {
+                        if (videoPage && !videoPage.classList.contains('hide')) {
+                            videoPage.classList.add('hide');
+                            mainPage.classList.add('show');
+                        }
+                    }, 3000);
+                });
+            }
+            
+            video.addEventListener('contextmenu', function(e) { e.preventDefault(); });
             video.disablePictureInPicture = true;
             
             // ========== IKON ==========
-            document.getElementById('bellIcon').addEventListener('click', () => alert('Notifikasi'));
-            document.getElementById('cartIcon').addEventListener('click', () => alert('Keranjang'));
+            document.getElementById('bellIcon').addEventListener('click', function() { alert('🔔 Notifikasi'); });
+            document.getElementById('cartIcon').addEventListener('click', function() { alert('🛒 Keranjang'); });
             
-            // ========== FOTO HEADER 16:5 ==========
+            // ========== FOTO HEADER 1:1 ==========
             const headerImage = document.getElementById('headerImage');
-            // Ganti dengan link foto 16:5 Anda atau biarkan sebagai placeholder
-            headerImage.src = "Pict/Head.png";
-            // headerImage.style.height = "32px"; // sudah diatur di CSS
+            // Ganti dengan link foto 1:1 Anda
+            headerImage.src = "https://placehold.co/100x100/444444/white?text=GZ";
         })();
     </script>
 </body>
