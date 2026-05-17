@@ -8,7 +8,6 @@
     <title>NECODEV GZ</title>
     <meta name="description" content="NECODEV GZ - Platform pengembangan teknologi modern. Halaman ini dilindungi dari akses source code dan pengunduhan gambar.">
     
-    <!-- Favicon 1:1 (siap diisi sendiri) -->
     <link rel="icon" type="image/png" sizes="512x512" href="#">
     <link rel="shortcut icon" href="#">
     <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (1) SELESAI ========== -->
@@ -18,8 +17,6 @@
         * {
             user-select: none;
             -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -77,7 +74,7 @@
             display: none !important;
         }
         
-        /* ===== HALAMAN UTAMA (SETELAH VIDEO) ===== */
+        /* ===== HALAMAN UTAMA ===== */
         .main-page {
             position: fixed;
             top: 0;
@@ -98,28 +95,29 @@
             visibility: visible;
         }
         
-        /* Header putih dengan border radius 15px */
+        /* HEADER RAMPiNG - tinggi mengikuti konten, bukan gambar */
         .header {
             background-color: white;
             border-radius: 15px;
-            padding: 12px 20px;
+            padding: 8px 16px;  /* PADDING KECIL = RAMPiNG */
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            gap: 16px;
+            min-height: 48px;  /* minimal tinggi, tidak memaksa besar */
         }
         
-        /* Bagian kiri: foto 16:5 */
+        /* Bagian kiri: gambar 16:5 yang mengecil mengikuti header */
         .header-left {
-            flex: 1;
+            flex-shrink: 0;  /* tidak menekan gambar */
         }
         
         .header-image {
-            width: 100%;
-            max-width: 200px;
+            height: 32px;  /* TINGGI GAMBAR DIPAKSA KECIL (32px) */
+            width: auto;    /* lebar otomatis mengikuti rasio 16:5 */
             aspect-ratio: 16 / 5;
             object-fit: cover;
             display: block;
@@ -128,54 +126,51 @@
             background: transparent;
         }
         
-        /* Bagian kanan: ikon lonceng & keranjang */
+        /* Bagian kanan: ikon */
         .header-right {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             align-items: center;
+            flex-shrink: 0;
         }
         
         .icon {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             cursor: pointer;
             transition: transform 0.2s ease;
-            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .icon:hover {
             transform: scale(1.05);
         }
         
-        /* SVG ikon lonceng (hitam) */
-        .bell-icon svg, .cart-icon svg {
-            width: 28px;
-            height: 28px;
+        .icon svg {
+            width: 22px;
+            height: 22px;
             display: block;
         }
         
-        /* Konten tambahan biar header tidak sendiri (opsional) */
+        /* Content placeholder biar header terlihat sendiri */
         .content-placeholder {
             margin-top: 40px;
             text-align: center;
             color: white;
-            opacity: 0.5;
-            font-size: 14px;
+            opacity: 0.3;
+            font-size: 12px;
         }
         
-        /* Mencegah drag semua elemen */
+        /* Proteksi drag */
         img, svg, canvas, picture, figure, video {
             -webkit-user-drag: none;
             user-drag: none;
             pointer-events: none;
         }
         
-        /* Ikon tetap bisa diklik */
-        .header-right {
-            pointer-events: auto;
-        }
-        
-        .icon {
+        .header-right .icon {
             pointer-events: auto;
         }
         
@@ -184,15 +179,13 @@
         }
         
         @media print {
-            body {
-                display: none;
-            }
+            body { display: none; }
         }
         /* ========== PENANDA KHUSUS: BAGIAN PENTING (2) SELESAI ========== */
     </style>
 </head>
 <body>
-    <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (3) - HALAMAN VIDEO ========== -->
+    <!-- HALAMAN VIDEO -->
     <div class="video-page" id="videoPage">
         <div class="video-container">
             <video id="mainVideo" autoplay muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen">
@@ -201,38 +194,33 @@
         </div>
     </div>
     
-    <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (4) - HALAMAN UTAMA ========== -->
+    <!-- HALAMAN UTAMA DENGAN HEADER RAMPiNG -->
     <div class="main-page" id="mainPage">
         <div class="header">
-            <!-- Kiri: foto 16:5 (murni tanpa border) -->
             <div class="header-left">
-                <img class="header-image" src="#" alt="header image" id="headerImage">
+                <img class="header-image" src="Pict/Head.png" alt="header image" id="headerImage">
             </div>
-            
-            <!-- Kanan: ikon lonceng dan keranjang hitam -->
             <div class="header-right">
                 <div class="icon bell-icon" id="bellIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="28px" height="28px">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
                         <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.93 6 11v5l-2 2v1h16v-1l-2-2z"/>
                     </svg>
                 </div>
                 <div class="icon cart-icon" id="cartIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="28px" height="28px">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
                         <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
                     </svg>
                 </div>
             </div>
         </div>
         <div class="content-placeholder">
-            <!-- Konten tambahan bebas -->
+            <!-- Konten bebas -->
         </div>
     </div>
     
     <script>
-        // ========== PENANDA KHUSUS: BAGIAN PENTING (5) - JAVASCRIPT PROTEKSI & TRANSISI ==========
-        
         (function() {
-            // ========== PROTEKSI TOTAL ==========
+            // ========== PROTEKSI ==========
             document.addEventListener('keydown', function(e) {
                 if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) { e.preventDefault(); return false; }
                 if ((e.ctrlKey || e.metaKey) && e.keyCode === 83) { e.preventDefault(); return false; }
@@ -242,52 +230,26 @@
                     e.preventDefault(); return false;
                 }
             });
-            
             document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
             window.addEventListener('dragstart', function(e) { e.preventDefault(); return false; });
             document.onselectstart = function() { return false; };
+            console.log = console.warn = console.error = console.info = function() {};
+            document.oncopy = document.oncut = document.onpaste = function(e) { e.preventDefault(); return false; };
             
-            console.log = function() {};
-            console.warn = function() {};
-            console.error = function() {};
-            console.info = function() {};
-            
-            document.addEventListener('keyup', function(e) {
-                if (e.key === 'PrintScreen') {
-                    navigator.clipboard.writeText('');
-                    e.preventDefault();
-                    return false;
-                }
-            });
-            
-            document.oncopy = function(e) { e.preventDefault(); return false; };
-            document.oncut = function(e) { e.preventDefault(); return false; };
-            document.onpaste = function(e) { e.preventDefault(); return false; };
-            
-            // ========== ELEMEN ==========
+            // ========== VIDEO ==========
             const videoPage = document.getElementById('videoPage');
             const mainPage = document.getElementById('mainPage');
             const video = document.getElementById('mainVideo');
             
-            // ========== SET VIDEO & AUTOPLAY 1x ==========
             video.loop = false;
             video.muted = true;
             video.playsInline = true;
             video.controls = false;
             
-            // Ganti dengan video Anda di sini:
-            // video.src = "nama_video_1x1.mp4";
-            // SEMENTARA: biarkan kosong (atau isi contoh jika ada)
-            // Jika tidak diisi, video tidak akan play dan tidak pindah halaman.
-            // Untuk testing, Anda bisa isi video sample online:
-            // video.src = "https://www.w3schools.com/html/mov_bbb.mp4"; (tapi tidak 1:1)
+            // PAKAI LINK VIDEO ONLINE
+            video.src = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4";
             
-            // PERINTAH: Ganti dengan file video 1:1 milik Anda
-            // Contoh: video.src = "video_anda.mp4";
-            
-            // Deteksi saat video selesai diputar
             video.addEventListener('ended', function() {
-                // Pindah ke halaman utama
                 videoPage.style.opacity = '0';
                 setTimeout(function() {
                     videoPage.style.display = 'none';
@@ -295,45 +257,20 @@
                 }, 500);
             });
             
-            // Coba autoplay
-            let playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    // Jika autoplay gagal, tetap diam (video tidak jalan, tidak pindah)
-                });
-            }
-            
-            // Proteksi video
+            video.play().catch(() => {});
             video.addEventListener('contextmenu', (e) => e.preventDefault());
-            video.addEventListener('dragstart', (e) => e.preventDefault());
             video.disablePictureInPicture = true;
             
-            // ========== FUNGSI UNTUK IKON (CONTOH) ==========
-            const bellIcon = document.getElementById('bellIcon');
-            const cartIcon = document.getElementById('cartIcon');
+            // ========== IKON ==========
+            document.getElementById('bellIcon').addEventListener('click', () => alert('Notifikasi'));
+            document.getElementById('cartIcon').addEventListener('click', () => alert('Keranjang'));
             
-            bellIcon.addEventListener('click', function() {
-                alert('Notifikasi: Lonceng ditekan');
-            });
-            
-            cartIcon.addEventListener('click', function() {
-                alert('Keranjang belanja');
-            });
-            
-            // ========== PENGATURAN FOTO HEADER 16:5 ==========
+            // ========== FOTO HEADER 16:5 ==========
             const headerImage = document.getElementById('headerImage');
-            // Ganti src foto dengan gambar Anda
-            // Contoh: headerImage.src = "foto_16_5.jpg";
-            // headerImage.src = "#"; // default masih placeholder
-            
+            // Ganti dengan link foto 16:5 Anda atau biarkan sebagai placeholder
+            headerImage.src = "https://placehold.co/160x50/cccccc/969696?text=16:5";
+            // headerImage.style.height = "32px"; // sudah diatur di CSS
         })();
-        
-        // ========== PENANDA KHUSUS: BAGIAN PENTING (5) SELESAI ==========
-        // CATATAN:
-        // 1. Ganti video.src dengan file video 1:1 Anda
-        // 2. Ganti headerImage.src dengan foto rasio 16:5
-        // 3. Video akan autoplay, setelah selesai pindah ke halaman utama
-        // 4. Header putih border-radius 15px, foto kiri 16:5, ikon lonceng & keranjang hitam kanan
     </script>
 </body>
 </html>
