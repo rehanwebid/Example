@@ -213,7 +213,7 @@
     <div class="video-page" id="videoPage">
         <div class="video-container">
             <video id="mainVideo" autoplay muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen">
-                <source src="" type="video/mp4">
+                <source src="Load.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -222,7 +222,7 @@
     <div class="main-page" id="mainPage">
         <div class="header">
             <div class="header-left">
-                <img class="header-image" src="#" alt="logo" id="headerImage">
+                <img class="header-image" src="Head.png" alt="logo" id="headerImage">
                 <span class="header-text">NECODEV GZ</span>
             </div>
             <div class="header-right">
@@ -273,7 +273,7 @@
             video.controls = false;
             
             // PAKAI LINK VIDEO ONLINE
-            video.src = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4";
+            video.src = "Load.mp4";
             
             // ========== EVENT VIDEO SELESAI ==========
             video.addEventListener('ended', function() {
@@ -315,7 +315,7 @@
             // ========== FOTO HEADER 1:1 ==========
             const headerImage = document.getElementById('headerImage');
             // Ganti dengan link foto 1:1 Anda
-            headerImage.src = "https://placehold.co/100x100/444444/white?text=GZ";
+            headerImage.src = "Head.png";
         })();
     </script>
 </body>
