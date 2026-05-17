@@ -53,10 +53,10 @@
             padding-bottom: 80px;
         }
 
-        #checkoutPage {
+        #cartPage {
             display: none;
         }
-        #checkoutPage.active {
+        #cartPage.active {
             display: block;
             padding-bottom: 80px;
         }
@@ -66,6 +66,10 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 45px;
+            border: 1px solid rgba(192, 133, 253, 0.3);
+            border-radius: 10px;
+            padding: 8px 12px;
+            box-shadow: 0 0 8px rgba(192, 133, 253, 0.1);
         }
         .top-left-brand {
             display: flex;
@@ -93,10 +97,17 @@
             align-items: center;
             gap: 16px;
         }
-        .icon-bell, .icon-cart {
+        .icon-bell {
             width: 22px;
             height: 22px;
             cursor: pointer;
+            position: relative;
+        }
+        .icon-cart {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            position: relative;
         }
         .icon-bell svg, .icon-cart svg {
             width: 100%;
@@ -106,11 +117,35 @@
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
+            filter: drop-shadow(0 0 3px rgba(192, 133, 253, 0.5));
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            display: none;
+            box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
+        }
+        .cart-badge.show {
+            display: flex;
         }
 
         .slider-container {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 7;
             border-radius: 10px;
             overflow: hidden;
             margin-top: 8px;
@@ -118,6 +153,7 @@
             cursor: grab;
             user-select: none;
             -webkit-user-select: none;
+            box-shadow: 0 0 10px rgba(192, 133, 253, 0.15);
         }
         .slider-container:active {
             cursor: grabbing;
@@ -162,6 +198,7 @@
             background-color: #C085FD;
             width: 8px;
             height: 8px;
+            box-shadow: 0 0 8px rgba(192, 133, 253, 0.8);
         }
 
         .filter-buttons {
@@ -195,6 +232,7 @@
         .filter-btn.active {
             background-color: #C085FD;
             border: 1px solid #C085FD;
+            box-shadow: 0 0 12px rgba(192, 133, 253, 0.5), 0 0 20px rgba(192, 133, 253, 0.2);
         }
 
         .product-list {
@@ -212,17 +250,17 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
+            aspect-ratio: 16 / 4;
         }
         .product-card:hover {
             background-color: #1a1a1a;
-        }
-        .product-card:active {
-            background-color: #1e1e1e;
+            border-color: rgba(192, 133, 253, 0.15);
+            box-shadow: 0 0 10px rgba(192, 133, 253, 0.08);
         }
         .product-image {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
@@ -244,6 +282,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
         }
         .product-desc {
             font-family: 'Roboto', sans-serif;
@@ -276,21 +315,25 @@
             border: none;
             transition: all 0.2s ease;
             z-index: 2;
+            box-shadow: 0 0 10px rgba(192, 133, 253, 0.5);
         }
-        .btn-add:hover {
+        .btn-add.in-cart {
+            background-color: #3a3a3a;
+            color: #6b6b6b;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .btn-add:hover:not(.in-cart) {
             background-color: #d4a8ff;
             transform: scale(1.05);
-        }
-        .btn-add:active {
-            background-color: #a86de0;
-            transform: scale(0.95);
+            box-shadow: 0 0 16px rgba(192, 133, 253, 0.7);
         }
         .product-card.hidden {
             display: none;
         }
 
         /* DETAIL PAGE */
-        .detail-header, .checkout-header {
+        .detail-header, .cart-header {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -314,12 +357,13 @@
             stroke-linecap: round;
             stroke-linejoin: round;
         }
-        .detail-title, .checkout-title {
+        .detail-title, .cart-title {
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             font-size: 16px;
             letter-spacing: 0.5px;
             color: #C085FD;
+            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
         }
         .detail-hero-container {
             width: 100%;
@@ -328,6 +372,7 @@
             overflow: hidden;
             position: relative;
             margin-bottom: 16px;
+            box-shadow: 0 0 12px rgba(192, 133, 253, 0.15);
         }
         .detail-hero {
             width: 100%;
@@ -372,6 +417,7 @@
             color: #C085FD;
             margin-bottom: 8px;
             margin-top: 16px;
+            text-shadow: 0 0 6px rgba(192, 133, 253, 0.3);
         }
         .section-label:first-of-type {
             margin-top: 0;
@@ -401,6 +447,7 @@
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.3);
             white-space: nowrap;
+            box-shadow: 0 0 6px rgba(192, 133, 253, 0.1);
         }
         .feature-list {
             list-style: none;
@@ -424,6 +471,7 @@
             color: #C085FD;
             font-weight: 700;
             font-size: 16px;
+            text-shadow: 0 0 6px rgba(192, 133, 253, 0.6);
         }
 
         #detailBottomBar {
@@ -453,6 +501,7 @@
             justify-content: center;
             cursor: pointer;
             flex-shrink: 0;
+            position: relative;
         }
         .bottom-icon svg {
             width: 20px;
@@ -462,6 +511,28 @@
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
+            filter: drop-shadow(0 0 3px rgba(192, 133, 253, 0.5));
+        }
+        .bottom-cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            display: none;
+        }
+        .bottom-cart-badge.show {
+            display: flex;
         }
         .bottom-price-btn {
             flex: 1;
@@ -479,43 +550,42 @@
             border: none;
             transition: all 0.2s ease;
             letter-spacing: 0.3px;
-        }
-        .bottom-price-btn:hover {
-            background-color: #d4a8ff;
-        }
-        .bottom-price-btn:active {
-            background-color: #a86de0;
-            transform: scale(0.98);
+            box-shadow: 0 0 14px rgba(192, 133, 253, 0.5);
         }
 
-        /* CHECKOUT PAGE */
-        .checkout-item-card {
+        /* CART PAGE */
+        .cart-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .cart-item-card {
             display: flex;
             align-items: center;
             gap: 12px;
             background-color: #111111;
             border-radius: 10px;
             padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(192, 133, 253, 0.1);
             position: relative;
-            margin-bottom: 16px;
+            box-shadow: 0 0 8px rgba(192, 133, 253, 0.06);
         }
-        .checkout-item-image {
-            width: 80px;
-            height: 80px;
+        .cart-item-image {
+            width: 50px;
+            height: 50px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
         }
-        .checkout-item-info {
+        .cart-item-info {
             display: flex;
             flex-direction: column;
             gap: 3px;
             min-width: 0;
             flex: 1;
-            padding-right: 44px;
+            padding-right: 50px;
         }
-        .checkout-item-title {
+        .cart-item-title {
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             font-size: 15px;
@@ -524,96 +594,61 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            text-shadow: 0 0 6px rgba(192, 133, 253, 0.4);
         }
-        .checkout-item-desc {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 10px;
-            color: #9ca3af;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .checkout-btn-add {
-            position: absolute;
-            bottom: 10px;
-            right: 12px;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            background-color: #C085FD;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
-            z-index: 2;
-        }
-        .checkout-btn-add:hover {
-            background-color: #d4a8ff;
-            transform: scale(1.05);
-        }
-        .checkout-btn-add:active {
-            background-color: #a86de0;
-            transform: scale(0.95);
-        }
-
-        /* QR Section */
-        .qr-section {
-            text-align: center;
-            margin-top: 24px;
-        }
-        .qr-text {
+        .cart-item-price {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             font-size: 13px;
-            color: #d1d5db;
-            margin-bottom: 16px;
+            color: #ffffff;
         }
-        .qr-image {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Contact card */
-        .contact-card {
+        .cart-item-delete {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 12px;
-            background-color: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 10px;
+            justify-content: center;
+        }
+        .cart-item-delete svg {
+            width: 18px;
+            height: 18px;
+            stroke: #ef4444;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .cart-empty {
+            text-align: center;
+            color: #9ca3af;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            padding: 40px 0;
+        }
+        .cart-total-section {
+            background-color: #111111;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid rgba(192, 133, 253, 0.1);
             margin-top: 16px;
         }
-        .contact-photo {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            display: block;
-        }
-        .contact-number {
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
             font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-            color: #ffffff;
-            letter-spacing: 0.5px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #C085FD;
         }
     </style>
 </head>
 <body>
-    <!-- HOME PAGE -->
     <div id="homePage">
         <div class="header-bar">
             <div class="top-left-brand">
@@ -624,8 +659,9 @@
                 <div class="icon-bell" title="Notifikasi">
                     <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </div>
-                <div class="icon-cart" title="Keranjang">
+                <div class="icon-cart" title="Keranjang" id="cartIcon">
                     <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
                 </div>
             </div>
         </div>
@@ -654,8 +690,8 @@
         </div>
 
         <div class="product-list" id="productList">
-            <div class="product-card" data-category="portfolio" data-id="creative-studio" data-price="Rp 49K" data-desc="Template portofolio modern yang dirancang khusus untuk para kreator, desainer, fotografer, dan studio kreatif yang ingin menampilkan karya mereka dengan gaya minimalis namun tetap elegan." data-shortdesc="Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan." data-features="Layout responsive mobile-friendly|Galeri portofolio dengan filter kategori|Animasi scroll halus|Formulir kontak dengan validasi">
-                <img src="https://picsum.photos/80/80?random=10" alt="Portfolio" class="product-image">
+            <div class="product-card" data-category="portfolio" data-id="creative-studio" data-price="Rp. 49.000" data-price-num="49000" data-desc="Template portofolio modern yang dirancang khusus untuk para kreator, desainer, fotografer, dan studio kreatif." data-shortdesc="Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan." data-features="Layout responsive mobile-friendly|Galeri portofolio dengan filter kategori|Animasi scroll halus|Formulir kontak dengan validasi">
+                <img src="https://picsum.photos/50/50?random=10" alt="Portfolio" class="product-image">
                 <div class="product-info">
                     <span class="product-title">Creative Studio</span>
                     <p class="product-desc">Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan.</p>
@@ -663,8 +699,8 @@
                 <button class="btn-add" title="Tambah ke keranjang">+</button>
             </div>
 
-            <div class="product-card" data-category="ecommerce" data-id="urban-store" data-price="Rp 79K" data-desc="Toko online siap pakai yang didesain dengan tampilan trendy dan modern. Dilengkapi dengan katalog produk dinamis, sistem keranjang belanja, halaman checkout yang mulus, dan integrasi pembayaran." data-shortdesc="Toko online siap pakai dengan tampilan trendy dan fitur checkout yang mulus." data-features="Katalog produk dengan kategori|Sistem keranjang & checkout|Integrasi payment gateway|Dashboard admin pesanan">
-                <img src="https://picsum.photos/80/80?random=11" alt="E-Commerce" class="product-image">
+            <div class="product-card" data-category="ecommerce" data-id="urban-store" data-price="Rp. 79.000" data-price-num="79000" data-desc="Toko online siap pakai yang didesain dengan tampilan trendy dan modern. Dilengkapi dengan katalog produk dinamis." data-shortdesc="Toko online siap pakai dengan tampilan trendy dan fitur checkout yang mulus." data-features="Katalog produk dengan kategori|Sistem keranjang & checkout|Integrasi payment gateway|Dashboard admin pesanan">
+                <img src="https://picsum.photos/50/50?random=11" alt="E-Commerce" class="product-image">
                 <div class="product-info">
                     <span class="product-title">Urban Store</span>
                     <p class="product-desc">Toko online siap pakai dengan tampilan trendy dan fitur checkout yang mulus.</p>
@@ -672,8 +708,8 @@
                 <button class="btn-add" title="Tambah ke keranjang">+</button>
             </div>
 
-            <div class="product-card" data-category="company" data-id="nexa-corp" data-price="Rp 59K" data-desc="Profil perusahaan profesional dengan layout bersih dan elegan. Menampilkan section tentang perusahaan, tim, layanan, portofolio klien, testimoni, dan formulir kontak bisnis." data-shortdesc="Profil perusahaan profesional dengan layout clean dan section layanan lengkap." data-features="Halaman tentang & tim|Section layanan & portofolio|Testimoni klien|Formulir kontak bisnis">
-                <img src="https://picsum.photos/80/80?random=12" alt="Company Profile" class="product-image">
+            <div class="product-card" data-category="company" data-id="nexa-corp" data-price="Rp. 59.000" data-price-num="59000" data-desc="Profil perusahaan profesional dengan layout bersih dan elegan. Menampilkan section tentang perusahaan dan tim." data-shortdesc="Profil perusahaan profesional dengan layout clean dan section layanan lengkap." data-features="Halaman tentang & tim|Section layanan & portofolio|Testimoni klien|Formulir kontak bisnis">
+                <img src="https://picsum.photos/50/50?random=12" alt="Company Profile" class="product-image">
                 <div class="product-info">
                     <span class="product-title">Nexa Corp</span>
                     <p class="product-desc">Profil perusahaan profesional dengan layout clean dan section layanan lengkap.</p>
@@ -681,8 +717,8 @@
                 <button class="btn-add" title="Tambah ke keranjang">+</button>
             </div>
 
-            <div class="product-card" data-category="landing" data-id="launch-pro" data-price="Rp 39K" data-desc="Landing page konversi tinggi yang dioptimasi untuk campaign marketing digital. Dilengkapi dengan headline menarik, section fitur, countdown timer, CTA strategis, dan form lead generation." data-shortdesc="Landing page konversi tinggi untuk produk digital, SaaS, atau campaign marketing." data-features="Headline & hero section optimal|Countdown timer urgency|CTA button strategis|Form lead generation">
-                <img src="https://picsum.photos/80/80?random=13" alt="Landing Page" class="product-image">
+            <div class="product-card" data-category="landing" data-id="launch-pro" data-price="Rp. 39.000" data-price-num="39000" data-desc="Landing page konversi tinggi yang dioptimasi untuk campaign marketing digital. Dilengkapi dengan headline menarik." data-shortdesc="Landing page konversi tinggi untuk produk digital, SaaS, atau campaign marketing." data-features="Headline & hero section optimal|Countdown timer urgency|CTA button strategis|Form lead generation">
+                <img src="https://picsum.photos/50/50?random=13" alt="Landing Page" class="product-image">
                 <div class="product-info">
                     <span class="product-title">LaunchPro</span>
                     <p class="product-desc">Landing page konversi tinggi untuk produk digital, SaaS, atau campaign marketing.</p>
@@ -690,8 +726,8 @@
                 <button class="btn-add" title="Tambah ke keranjang">+</button>
             </div>
 
-            <div class="product-card" data-category="webapp" data-id="task-flow" data-price="Rp 99K" data-desc="Aplikasi web dashboard admin yang lengkap dengan kontrol panel interaktif. Menyediakan grafik analitik real-time, manajemen data pengguna, tabel data dinamis, dan role-based access." data-shortdesc="Aplikasi web dashboard admin lengkap dengan kontrol panel, grafik, dan manajemen data real-time." data-features="Dashboard analitik real-time|Manajemen data pengguna|Tabel data sorting & filtering|Role-based access control">
-                <img src="https://picsum.photos/80/80?random=14" alt="Web App" class="product-image">
+            <div class="product-card" data-category="webapp" data-id="task-flow" data-price="Rp. 99.000" data-price-num="99000" data-desc="Aplikasi web dashboard admin yang lengkap dengan kontrol panel interaktif. Grafik analitik real-time." data-shortdesc="Aplikasi web dashboard admin lengkap dengan kontrol panel, grafik, dan manajemen data real-time." data-features="Dashboard analitik real-time|Manajemen data pengguna|Tabel data sorting & filtering|Role-based access control">
+                <img src="https://picsum.photos/50/50?random=14" alt="Web App" class="product-image">
                 <div class="product-info">
                     <span class="product-title">TaskFlow</span>
                     <p class="product-desc">Aplikasi web dashboard admin lengkap dengan kontrol panel, grafik, dan manajemen data real-time.</p>
@@ -701,7 +737,6 @@
         </div>
     </div>
 
-    <!-- DETAIL PAGE -->
     <div id="detailPage">
         <div class="detail-header">
             <div class="back-btn" id="backBtnDetail" title="Kembali">
@@ -716,83 +751,140 @@
         <div class="section-label">DESKRIPSI</div>
         <p class="detail-description" id="detailDescription"></p>
         <div class="section-label">TEKNOLOGI</div>
-        <div class="tech-tags">
-            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Javascript</span>
-        </div>
+        <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Javascript</span></div>
         <div class="section-label">FITUR</div>
         <ul class="feature-list" id="detailFeatures"></ul>
     </div>
 
-    <!-- BOTTOM BAR DETAIL -->
     <div id="detailBottomBar">
         <div class="bottom-icon" title="Pesan">
             <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <div class="bottom-icon" title="Keranjang">
+        <div class="bottom-icon" title="Keranjang" id="detailCartIcon">
             <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="bottom-cart-badge" id="bottomCartBadge">0</span>
         </div>
-        <button class="bottom-price-btn" id="bottomPriceBtn">Rp. 200.000</button>
+        <button class="bottom-price-btn" id="bottomPriceBtn">Rp. 49.000</button>
     </div>
 
-    <!-- CHECKOUT PAGE -->
-    <div id="checkoutPage">
-        <div class="checkout-header">
-            <div class="back-btn" id="backBtnCheckout" title="Kembali">
+    <div id="cartPage">
+        <div class="cart-header">
+            <div class="back-btn" id="backBtnCart" title="Kembali">
                 <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
             </div>
-            <span class="checkout-title">CHECKOUT</span>
+            <span class="cart-title">KERANJANG</span>
         </div>
-
-        <div class="checkout-item-card" id="checkoutItemCard">
-            <img src="https://picsum.photos/80/80?random=10" alt="Item" class="checkout-item-image" id="checkoutItemImage">
-            <div class="checkout-item-info">
-                <span class="checkout-item-title" id="checkoutItemTitle">Creative Studio</span>
-                <p class="checkout-item-desc" id="checkoutItemDesc">Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan.</p>
-            </div>
-            <button class="checkout-btn-add" id="checkoutBtnAdd" title="Tambah ke keranjang">+</button>
-        </div>
-
-        <!-- QR Section -->
-        <div class="qr-section">
-            <p class="qr-text">Scan QR di bawah ini dan lanjutkan pembayaran</p>
-            <img src="https://picsum.photos/200/200" alt="QR Code" class="qr-image">
-        </div>
-
-        <!-- Contact card -->
-        <div class="contact-card">
-            <img src="https://picsum.photos/40/40" alt="Contact" class="contact-photo">
-            <span class="contact-number">0896-8421-9904</span>
+        <div class="cart-list" id="cartList"></div>
+        <div class="cart-total-section" id="cartTotalSection" style="display:none;">
+            <div class="cart-total-row"><span>Total</span><span id="cartTotal">Rp. 0</span></div>
         </div>
     </div>
 
     <script>
-        let currentProduct = {
-            name: 'Creative Studio',
-            image: 'https://picsum.photos/80/80?random=10',
-            price: 'Rp 49K',
-            shortDesc: 'Template portofolio modern untuk menampilkan karya kreatif dengan gaya minimalis dan elegan.',
-            desc: '',
-            features: ''
-        };
+        let cart = [];
+        let currentProductId = '';
 
         const homePage = document.getElementById('homePage');
         const detailPage = document.getElementById('detailPage');
-        const checkoutPage = document.getElementById('checkoutPage');
+        const cartPage = document.getElementById('cartPage');
         const detailBottomBar = document.getElementById('detailBottomBar');
+        const cartBadge = document.getElementById('cartBadge');
+        const bottomCartBadge = document.getElementById('bottomCartBadge');
 
-        function openDetailPage(productName, productImageSrc, price, desc, features, shortDesc) {
-            currentProduct.name = productName;
-            currentProduct.image = productImageSrc.replace('800/450', '80/80');
-            currentProduct.price = price;
-            currentProduct.desc = desc;
-            currentProduct.features = features;
-            currentProduct.shortDesc = shortDesc;
+        function isInCart(productId) {
+            return cart.some(item => item.id === productId);
+        }
 
+        function updateAllAddButtons() {
+            document.querySelectorAll('.product-card').forEach(card => {
+                const productId = card.getAttribute('data-id');
+                const btn = card.querySelector('.btn-add');
+                if (isInCart(productId)) {
+                    btn.classList.add('in-cart');
+                    btn.disabled = true;
+                } else {
+                    btn.classList.remove('in-cart');
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        function updateBadges() {
+            const totalItems = cart.length;
+            cartBadge.textContent = totalItems;
+            bottomCartBadge.textContent = totalItems;
+            if (totalItems > 0) {
+                cartBadge.classList.add('show');
+                bottomCartBadge.classList.add('show');
+            } else {
+                cartBadge.classList.remove('show');
+                bottomCartBadge.classList.remove('show');
+            }
+        }
+
+        function formatRupiah(num) {
+            return 'Rp. ' + num.toLocaleString('id-ID');
+        }
+
+        function addToCart(name, image, priceNum, priceDisplay, productId) {
+            if (isInCart(productId)) return;
+            cart.push({ id: productId, name, image, priceNum, priceDisplay });
+            updateBadges();
+            updateAllAddButtons();
+            if (cartPage.classList.contains('active')) {
+                renderCartPage();
+            }
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateBadges();
+            updateAllAddButtons();
+            if (cartPage.classList.contains('active')) {
+                renderCartPage();
+            }
+        }
+
+        function renderCartPage() {
+            const cartList = document.getElementById('cartList');
+            const cartTotalSection = document.getElementById('cartTotalSection');
+            
+            if (cart.length === 0) {
+                cartList.innerHTML = '<div class="cart-empty">Keranjang masih kosong</div>';
+                cartTotalSection.style.display = 'none';
+            } else {
+                cartList.innerHTML = cart.map(item => `
+                    <div class="cart-item-card">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        <div class="cart-item-info">
+                            <span class="cart-item-title">${item.name}</span>
+                            <span class="cart-item-price">${item.priceDisplay}</span>
+                        </div>
+                        <div class="cart-item-delete" data-id="${item.id}" title="Hapus dari keranjang">
+                            <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        </div>
+                    </div>
+                `).join('');
+                
+                const total = cart.reduce((sum, item) => sum + item.priceNum, 0);
+                document.getElementById('cartTotal').textContent = formatRupiah(total);
+                cartTotalSection.style.display = 'block';
+
+                document.querySelectorAll('.cart-item-delete').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        removeFromCart(id);
+                    });
+                });
+            }
+        }
+
+        function openDetailPage(productName, productImageSrc, priceDisplay, priceNum, desc, features, shortDesc, productId) {
+            currentProductId = productId;
             document.getElementById('detailProductTitle').textContent = productName;
             document.getElementById('detailHeroImage').src = productImageSrc;
             document.getElementById('detailDescription').textContent = desc;
-            document.getElementById('bottomPriceBtn').textContent = price;
-
+            document.getElementById('bottomPriceBtn').textContent = priceDisplay;
             const detailFeatures = document.getElementById('detailFeatures');
             detailFeatures.innerHTML = '';
             features.split('|').forEach(f => {
@@ -800,10 +892,9 @@
                 li.textContent = f.trim();
                 detailFeatures.appendChild(li);
             });
-
             homePage.classList.add('hidden');
             detailPage.classList.add('active');
-            checkoutPage.classList.remove('active');
+            cartPage.classList.remove('active');
             detailBottomBar.classList.add('active');
             window.scrollTo(0, 0);
         }
@@ -811,64 +902,85 @@
         function goBackHome() {
             homePage.classList.remove('hidden');
             detailPage.classList.remove('active');
-            checkoutPage.classList.remove('active');
+            cartPage.classList.remove('active');
             detailBottomBar.classList.remove('active');
             window.scrollTo(0, 0);
         }
 
-        function openCheckoutPage() {
-            document.getElementById('checkoutItemImage').src = currentProduct.image;
-            document.getElementById('checkoutItemTitle').textContent = currentProduct.name;
-            document.getElementById('checkoutItemDesc').textContent = currentProduct.shortDesc;
-
+        function openCartPage() {
+            renderCartPage();
+            homePage.classList.add('hidden');
             detailPage.classList.remove('active');
+            cartPage.classList.add('active');
             detailBottomBar.classList.remove('active');
-            checkoutPage.classList.add('active');
             window.scrollTo(0, 0);
         }
 
-        function goBackToDetail() {
-            checkoutPage.classList.remove('active');
-            detailPage.classList.add('active');
-            detailBottomBar.classList.add('active');
+        function goBackFromCart() {
+            cartPage.classList.remove('active');
+            if (detailPage.classList.contains('active')) {
+                detailBottomBar.classList.add('active');
+            } else {
+                homePage.classList.remove('hidden');
+            }
             window.scrollTo(0, 0);
         }
 
         document.getElementById('backBtnDetail').addEventListener('click', goBackHome);
-        document.getElementById('backBtnCheckout').addEventListener('click', goBackToDetail);
-        document.getElementById('bottomPriceBtn').addEventListener('click', openCheckoutPage);
-
-        document.getElementById('checkoutBtnAdd').addEventListener('click', function() {
-            alert('✅ ' + currentProduct.name + ' ditambahkan ke keranjang!');
+        document.getElementById('backBtnCart').addEventListener('click', goBackFromCart);
+        document.getElementById('bottomPriceBtn').addEventListener('click', function() {
+            alert('🛒 Fitur checkout akan segera hadir!');
+        });
+        document.getElementById('cartIcon').addEventListener('click', openCartPage);
+        document.getElementById('detailCartIcon').addEventListener('click', function() {
+            if (cart.length === 0 && currentProductId) {
+                const card = document.querySelector(`.product-card[data-id="${currentProductId}"]`);
+                if (card) {
+                    const name = card.querySelector('.product-title').textContent;
+                    const image = card.querySelector('.product-image').src;
+                    const priceNum = parseInt(card.getAttribute('data-price-num'));
+                    const priceDisplay = card.getAttribute('data-price');
+                    addToCart(name, image, priceNum, priceDisplay, currentProductId);
+                }
+            } else {
+                openCartPage();
+            }
         });
 
-        const productCards = document.querySelectorAll('.product-card');
-        productCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                if (e.target.classList.contains('btn-add')) return;
-                const title = this.querySelector('.product-title').textContent;
-                const imageSrc = this.querySelector('.product-image').src;
-                const detailImageSrc = imageSrc.replace('80/80', '800/450');
-                const price = this.getAttribute('data-price');
-                const desc = this.getAttribute('data-desc');
-                const features = this.getAttribute('data-features');
-                const shortDesc = this.getAttribute('data-shortdesc');
-                openDetailPage(title, detailImageSrc, price, desc, features, shortDesc);
-            });
-        });
-
-        document.querySelectorAll('.btn-add').forEach(btn => {
+        document.querySelectorAll('.product-card .btn-add').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 const card = this.closest('.product-card');
-                const productName = card.querySelector('.product-title').textContent;
-                alert('✅ ' + productName + ' ditambahkan ke keranjang!');
+                const id = card.getAttribute('data-id');
+                const name = card.querySelector('.product-title').textContent;
+                const image = card.querySelector('.product-image').src;
+                const priceNum = parseInt(card.getAttribute('data-price-num'));
+                const priceDisplay = card.getAttribute('data-price');
+                addToCart(name, image, priceNum, priceDisplay, id);
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-add')) return;
+                const id = this.getAttribute('data-id');
+                const title = this.querySelector('.product-title').textContent;
+                const imageSrc = this.querySelector('.product-image').src;
+                const detailImageSrc = imageSrc.replace('50/50', '800/450');
+                const priceDisplay = this.getAttribute('data-price');
+                const priceNum = parseInt(this.getAttribute('data-price-num'));
+                const desc = this.getAttribute('data-desc');
+                const features = this.getAttribute('data-features');
+                const shortDesc = this.getAttribute('data-shortdesc');
+                openDetailPage(title, detailImageSrc, priceDisplay, priceNum, desc, features, shortDesc, id);
             });
         });
 
         document.querySelectorAll('#detailBottomBar .bottom-icon').forEach(icon => {
             icon.addEventListener('click', function() {
-                alert('📌 Fitur ' + this.getAttribute('title') + ' akan segera hadir!');
+                if (this.getAttribute('title') === 'Pesan') {
+                    alert('📌 Fitur Pesan akan segera hadir!');
+                }
             });
         });
 
@@ -878,7 +990,6 @@
         const dots = document.querySelectorAll('.dot');
         const totalSlides = 5;
         let currentSlide = 0, autoPlayTimer, isDragging = false, startPosX = 0, currentTranslate = 0, prevTranslate = 0, dragDistance = 0;
-
         function getPosX(e) { return e.type.includes('touch') ? e.touches[0].clientX : e.clientX; }
         function setTrackPosition(t, withTransition = true) {
             sliderTrack.classList.toggle('no-transition', !withTransition);
@@ -939,7 +1050,6 @@
             dragDistance = 0;
             resetAutoPlay();
         }
-
         sliderContainer.addEventListener('mousedown', handleDragStart);
         sliderContainer.addEventListener('mousemove', handleDragMove);
         sliderContainer.addEventListener('mouseup', handleDragEnd);
@@ -962,7 +1072,7 @@
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 const filter = this.dataset.filter;
-                productCards.forEach(card => {
+                document.querySelectorAll('.product-card').forEach(card => {
                     card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
                 });
             });
