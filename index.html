@@ -16,7 +16,6 @@
     <!-- ========== PENANDA KHUSUS: BAGIAN PENTING (1) SELESAI ========== -->
     
     <style>
-        /* ========== PENANDA KHUSUS: BAGIAN PENTING (2) - CSS PROTEKSI & STYLE ========== */
         * {
             user-select: none;
             -webkit-user-select: none;
@@ -109,7 +108,7 @@
             z-index: 20;
         }
         
-        /* HEADER RAMPING */
+        /* HEADER */
         .header {
             background-color: white;
             border-radius: 15px;
@@ -177,7 +176,7 @@
             display: block;
         }
         
-        /* ===== MENU IKON 4 BESAR ===== */
+        /* ===== MENU IKON ===== */
         .icon-menu {
             display: flex;
             justify-content: space-around;
@@ -209,17 +208,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: white;
-            border-radius: 12px;
-            padding: 6px;
         }
         
         .menu-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             display: block;
-            fill: black;
-            stroke: black;
+            fill: white;
         }
         
         .menu-label {
@@ -231,10 +226,11 @@
             letter-spacing: 0.5px;
         }
         
-        /* ===== BANNER 16:5 ===== */
+        /* BANNER - margin bottom diperkecil */
         .banner-container {
             width: 100%;
             margin-top: 24px;
+            margin-bottom: 0px;
             display: flex;
             justify-content: center;
         }
@@ -251,25 +247,22 @@
             border-radius: 0px;
         }
         
-        /* ===== SLIDING TEXT CARD ===== */
-        .sliding-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 6px 16px;
-            margin-top: 20px;
+        /* ===== SLIDING TEXT - TANPA PERSEGI PANJANG, JARAK DIPERKECIL ===== */
+        .sliding-container {
             width: 100%;
+            margin-top: 8px;  /* DARI 20px MENJADI 8px (LEBIH DEKAT KE BANNER) */
+            margin-bottom: 0px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 44px;
-            overflow: hidden;
+            min-height: 36px;
         }
         
         .sliding-text {
             font-family: 'Orbitron', monospace;
             font-size: 12px;
             font-weight: 500;
-            color: black;
+            color: white;
             text-align: center;
             letter-spacing: 0.5px;
             animation: zoomIn 0.5s ease forwards;
@@ -280,75 +273,92 @@
         }
         
         @keyframes zoomIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
         }
         
         @keyframes zoomOut {
-            0% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.8); }
         }
         
-        /* ===== GAMBAR 16:9 DENGAN TOMBOL VIEW ===== */
-        .image-16x9-container {
+        /* STATS CARD - margin top diperkecil */
+        .stats-card {
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 16px 12px;
+            margin-top: 8px;  /* DARI 20px MENJADI 8px (LEBIH DEKAT KE TEKS) */
             width: 100%;
-            margin-top: 20px;
-            position: relative;
             display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .stat-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
             justify-content: center;
         }
         
-        .image-16x9 {
-            width: 100%;
-            max-width: 600px;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+        .stat-icon svg {
+            width: 28px;
+            height: 28px;
             display: block;
-            border: none;
-            outline: none;
-            background: transparent;
-            border-radius: 0px;
-            position: relative;
+            fill: none;
+            stroke: white;
+            stroke-width: 1.5;
         }
         
-        .view-button {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            background-color: black;
-            color: white;
-            border: 1px solid white;
-            border-radius: 4px;
-            padding: 6px 14px;
+        .stat-label {
             font-family: 'Orbitron', monospace;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            z-index: 5;
+            font-size: 10px;
+            font-weight: 500;
+            color: #9ca3af;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
         
-        .view-button:hover {
-            background-color: white;
-            color: black;
-            border-color: black;
-            transform: scale(1.02);
+        .stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
         
-        /* KONTEN TENGAH */
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            animation: blink 1s infinite;
+            box-shadow: 0 0 4px #22c55e;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* KONTEN TENGAH - margin top diperkecil */
         .main-content {
             flex: 1;
             display: flex;
@@ -359,16 +369,17 @@
             font-size: 18px;
             text-align: center;
             opacity: 0.6;
-            margin: 20px 0;
+            margin-top: 12px;  /* DARI 20px MENJADI 12px (LEBIH DEKAT KE STATS CARD) */
+            margin-bottom: 20px;
         }
         
-        /* ===== LINGKARAN CUSTOMER SERVICE (POJOK KANAN BAWAH) ===== */
+        /* CS LINGKARAN */
         .cs-circle {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background-color: white;
             display: flex;
@@ -377,13 +388,21 @@
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             z-index: 30;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
             overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+        }
+        
+        .cs-circle.show {
+            opacity: 1;
+            visibility: visible;
         }
         
         .cs-circle:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transform: scale(1.08);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.4);
         }
         
         .cs-image {
@@ -395,7 +414,7 @@
             outline: none;
         }
         
-        /* Proteksi drag */
+        /* Proteksi */
         img, svg, canvas, picture, figure, video {
             -webkit-user-drag: none;
             user-drag: none;
@@ -405,18 +424,13 @@
         .header-right .icon,
         .menu-item,
         .cs-circle,
-        .view-button {
+        .stat-item {
             pointer-events: auto;
         }
         
-        :focus {
-            outline: none;
-        }
+        :focus { outline: none; }
         
-        @media print {
-            body { display: none; }
-        }
-        /* ========== PENANDA KHUSUS: BAGIAN PENTING (2) SELESAI ========== */
+        @media print { body { display: none; } }
     </style>
 </head>
 <body>
@@ -431,7 +445,6 @@
     
     <!-- HALAMAN UTAMA -->
     <div class="main-page" id="mainPage">
-        <!-- HEADER ATAS -->
         <div class="header">
             <div class="header-left">
                 <img class="header-image" src="Header.png" alt="logo" id="headerImage">
@@ -455,7 +468,7 @@
         <div class="icon-menu">
             <div class="menu-item" data-menu="website">
                 <div class="menu-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                     </svg>
                 </div>
@@ -463,23 +476,24 @@
             </div>
             <div class="menu-item" data-menu="template">
                 <div class="menu-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
-                        <path d="M4 6h16v2H4V6zm2-4h12v2H6V2zm16 4v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2zm-4 8c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 18H4v-4h4v4zm0-6H4V8h4v4zm6 6h-4v-4h4v4zm0-6h-4V8h4v4zm6 6h-4v-4h4v4zm0-6h-4V8h4v4z"/>
                     </svg>
                 </div>
                 <span class="menu-label">Template</span>
             </div>
             <div class="menu-item" data-menu="domain">
                 <div class="menu-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 13c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z"/>
+                        <circle cx="12" cy="12" r="2.5"/>
                     </svg>
                 </div>
                 <span class="menu-label">Domain</span>
             </div>
             <div class="menu-item" data-menu="seo">
                 <div class="menu-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                         <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                         <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/>
                     </svg>
@@ -493,25 +507,62 @@
             <img class="banner-image" src="Tab.png" alt="banner" id="bannerImage">
         </div>
         
-        <!-- SLIDING TEXT CARD -->
-        <div class="sliding-card">
-            <div class="sliding-text" id="slidingText">Kembangkan idemu bersamaku 📢</div>
+        <!-- SLIDING TEXT - JARAK DIPERKECIL -->
+        <div class="sliding-container">
+            <div class="sliding-text" id="slidingText">📢 Kembangkan idemu bersamaku</div>
         </div>
         
-        <!-- GAMBAR 16:9 DENGAN TOMBOL VIEW -->
-        <div class="image-16x9-container">
-            <img class="image-16x9" src="PJ.png" alt="Preview" id="previewImage">
-            <button class="view-button" id="viewButton">VIEW</button>
+        <!-- STATS CARD - JARAK DIPERKECIL -->
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                        <path d="M4 6h16v2H4V6zm2-4h12v2H6V2zm16 4v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2z"/>
+                    </svg>
+                </div>
+                <span class="stat-label">Projects</span>
+                <span class="stat-value">42+</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <span class="stat-label">Client</span>
+                <span class="stat-value">20+</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <span class="stat-label">Website</span>
+                <span class="stat-value">35+</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </div>
+                <span class="stat-label">Status</span>
+                <span class="stat-value">
+                    <span class="live-dot"></span> ONLINE
+                </span>
+            </div>
         </div>
     
-    <!-- LINGKARAN CUSTOMER SERVICE (PUTIH) -->
+    <!-- CS LINGKARAN -->
     <div class="cs-circle" id="csCircle">
         <img class="cs-image" src="CS.png" alt="CS" id="csImage">
     </div>
     
     <script>
         (function() {
-            // ========== PROTEKSI ==========
+            // Proteksi
             document.addEventListener('keydown', function(e) {
                 if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) { e.preventDefault(); return false; }
                 if ((e.ctrlKey || e.metaKey) && e.keyCode === 83) { e.preventDefault(); return false; }
@@ -527,7 +578,7 @@
             console.log = console.warn = console.error = console.info = function() {};
             document.oncopy = document.oncut = document.onpaste = function(e) { e.preventDefault(); return false; };
             
-            // ========== ELEMEN ==========
+            // Elemen
             const videoPage = document.getElementById('videoPage');
             const mainPage = document.getElementById('mainPage');
             const video = document.getElementById('mainVideo');
@@ -535,36 +586,36 @@
             const menuItems = document.querySelectorAll('.menu-item');
             const slidingText = document.getElementById('slidingText');
             const csCircle = document.getElementById('csCircle');
-            const viewButton = document.getElementById('viewButton');
-            const previewImage = document.getElementById('previewImage');
             
-            // ========== SET VIDEO ==========
+            // Video
             video.loop = false;
             video.muted = true;
             video.playsInline = true;
             video.controls = false;
             video.src = "Load.mp4";
             
-            // ========== EVENT VIDEO SELESAI ==========
             video.addEventListener('ended', function() {
                 videoPage.classList.add('hide');
                 mainPage.classList.add('show');
+                csCircle.classList.add('show');
             });
             
             setTimeout(function() {
                 if (videoPage && !videoPage.classList.contains('hide')) {
                     videoPage.classList.add('hide');
                     mainPage.classList.add('show');
+                    csCircle.classList.add('show');
                 }
             }, 8000);
             
             var playPromise = video.play();
             if (playPromise !== undefined) {
-                playPromise.catch(function(error) {
+                playPromise.catch(function() {
                     setTimeout(function() {
                         if (videoPage && !videoPage.classList.contains('hide')) {
                             videoPage.classList.add('hide');
                             mainPage.classList.add('show');
+                            csCircle.classList.add('show');
                         }
                     }, 3000);
                 });
@@ -573,14 +624,13 @@
             video.addEventListener('contextmenu', function(e) { e.preventDefault(); });
             video.disablePictureInPicture = true;
             
-            // ========== SLIDING TEXT ==========
+            // Sliding text
             const texts = [
                 "Kembangkan idemu bersamaku 📢",
                 "Bangun masa depan bersamaku 📢",
                 "Ciptakan website modern bersamaku 📢",
                 "Mulai perjalanan digitalmu bersamaku 📢"
             ];
-            
             let currentIndex = 0;
             
             function changeTextWithAnimation() {
@@ -590,16 +640,13 @@
                     slidingText.textContent = texts[currentIndex];
                     slidingText.classList.remove('zoom-out');
                     slidingText.classList.add('zoom-in');
-                    setTimeout(() => {
-                        slidingText.classList.remove('zoom-in');
-                    }, 500);
+                    setTimeout(() => { slidingText.classList.remove('zoom-in'); }, 500);
                 }, 500);
             }
-            
             let interval = setInterval(changeTextWithAnimation, 5000);
             window.addEventListener('beforeunload', function() { clearInterval(interval); });
             
-            // ========== MENU IKON ==========
+            // Menu
             menuItems.forEach(item => {
                 item.addEventListener('click', function() {
                     const menuName = this.getAttribute('data-menu');
@@ -615,32 +662,22 @@
                 });
             });
             
-            // ========== IKON HEADER ==========
+            // Header icons
             document.getElementById('bellIcon').addEventListener('click', function() { alert('🔔 Notifikasi'); });
             document.getElementById('cartIcon').addEventListener('click', function() { alert('🛒 Keranjang'); });
             
-            // ========== TOMBOL VIEW ==========
-            viewButton.addEventListener('click', function() {
-                alert('🔍 VIEW - Menampilkan detail lengkap');
-            });
-            
-            // ========== CUSTOMER SERVICE ==========
+            // CS
             csCircle.addEventListener('click', function() {
                 alert('💬 Customer Service - Hubungi kami di WhatsApp: 0812-3456-7890');
             });
             
-            // ========== FOTO HEADER 1:1 ==========
+            // Gambar
             const headerImage = document.getElementById('headerImage');
             headerImage.src = "Header.png";
             
-            // ========== BANNER 16:5 ==========
             const bannerImage = document.getElementById('bannerImage');
             bannerImage.src = "Tab.png";
             
-            // ========== GAMBAR PREVIEW 16:9 ==========
-            previewImage.src = "PJ.png";
-            
-            // ========== FOTO CS LINGKARAN 1:1 (PUTIH) ==========
             const csImage = document.getElementById('csImage');
             csImage.src = "CS.png";
         })();
