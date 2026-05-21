@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>NECODEV GZ</title>
+    <title>NECODEV GZ - Kontrak Kerja</title>
     <!-- Google Fonts: Orbitron -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Remix Icon - Premium & Modern Icons -->
@@ -26,7 +26,7 @@
             overflow-y: auto;
         }
 
-        /* Container utama dengan padding-top untuk header fixed */
+        /* Container utama */
         .app-container {
             width: 100%;
             max-width: 600px;
@@ -39,7 +39,7 @@
             padding-top: 60px;
         }
 
-        /* HEADER: FIXED (TIDAK GERAK) */
+        /* HEADER FIXED */
         .header {
             background-color: #000000;
             width: 100%;
@@ -58,12 +58,14 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
+            background-color: #000000;
         }
 
         .header-left {
             display: flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
         }
 
         .profile-photo {
@@ -71,7 +73,6 @@
             height: 20px;
             border-radius: 0;
             object-fit: cover;
-            background-color: #1a1a1a;
         }
 
         .header-text {
@@ -95,7 +96,7 @@
             cursor: pointer;
         }
 
-        /* FOTO 1:1 MURNI DI KANAN BAWAH (FIXED) - TANPA LINGKARAN */
+        /* FOTO 1:1 DI KANAN BAWAH (FIXED) - BISA DIKLIK */
         .fixed-photo {
             position: fixed;
             bottom: 20px;
@@ -109,6 +110,7 @@
             z-index: 1000;
             cursor: pointer;
             transition: transform 0.2s ease, opacity 0.2s ease;
+            border-radius: 0;
         }
 
         .fixed-photo:hover {
@@ -116,317 +118,101 @@
             opacity: 0.9;
         }
 
-        /* GAMBAR MURNI 16:7 */
-        .hero-image {
-            width: 100%;
-            margin: 10px auto 0 auto;
-            display: block;
-            aspect-ratio: 16 / 7;
-            object-fit: cover;
-        }
+        /* ============ HALAMAN UTAMA ============ */
+        .page-home { display: block; }
+        .hero-image { width: 100%; margin: 10px auto 0 auto; display: block; aspect-ratio: 16 / 7; object-fit: cover; }
+        .info-bar { background-color: #000000; width: 100%; margin: 2px auto 0 auto; padding: 1px 12px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.6); display: flex; justify-content: space-between; align-items: center; min-height: 22px; }
+        .info-bar-text { color: rgba(255, 255, 255, 0.9); font-family: 'Orbitron', monospace; font-size: 8px; letter-spacing: 0.3px; display: inline-block; }
+        .prefix-symbol { color: rgba(255, 255, 255, 0.7); font-family: 'Orbitron', monospace; font-size: 8px; margin-right: 4px; display: inline-block; }
+        .typing-container { display: inline-block; }
+        .cursor { display: inline-block; width: 1px; margin-left: 2px; animation: blink 0.8s step-end infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .info-bar-photo { width: 16px; height: 16px; object-fit: cover; }
+        .layanan-text { width: 100%; margin: 7px auto 0 auto; text-align: left; font-family: 'Orbitron', monospace; font-size: 10px; font-weight: 500; color: rgba(255, 255, 255, 0.8); letter-spacing: 0.5px; }
+        .swipe-section { width: 100%; margin: 18px auto 0 auto; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+        .swipe-section::-webkit-scrollbar { display: none; }
+        .swipe-track { display: flex; flex-direction: row; width: 200%; }
+        .group-page { width: 50%; flex-shrink: 0; scroll-snap-align: start; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .icon-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; cursor: pointer; }
+        .icon-item.disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+        .icon-item i { color: white; font-size: 28px; }
+        .icon-label { color: rgba(255, 255, 255, 0.6); font-family: 'Orbitron', monospace; font-size: 8px; font-weight: 400; letter-spacing: 0.5px; text-transform: uppercase; }
+        .dots-indicator { width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 16px; margin-bottom: 4px; }
+        .dot-page { width: 6px; height: 6px; background-color: rgba(255, 255, 255, 0.3); border-radius: 50%; transition: all 0.3s ease; cursor: pointer; }
+        .dot-page.active { width: 18px; border-radius: 4px; background-color: rgba(255, 255, 255, 0.9); }
+        .card-wrapper { width: 100%; margin: 12px auto 0 auto; padding: 4px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; background-color: #000000; }
+        .three-bars-container { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+        .bar-item { background-color: #000000; width: 100%; padding: 8px 14px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.5); display: flex; align-items: center; gap: 12px; min-height: 44px; }
+        .bar-photo { width: 28px; height: 28px; object-fit: cover; flex-shrink: 0; }
+        .bar-text { flex: 1; color: rgba(255, 255, 255, 0.85); font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.3px; line-height: 1.3; }
+        .trending-text { width: 100%; margin: 12px auto 0 auto; text-align: left; font-family: 'Orbitron', monospace; font-size: 10px; font-weight: 500; color: rgba(255, 255, 255, 0.8); letter-spacing: 0.5px; }
+        .square-16-11 { width: 100%; margin: 12px auto 0 auto; aspect-ratio: 16 / 11; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 6px; background-color: #000000; position: relative; display: flex; flex-direction: column; padding: 8px; gap: 8px; }
+        .lihat-semua { text-align: right; color: rgba(255, 255, 255, 0.7); font-family: 'Orbitron', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.3px; cursor: pointer; }
+        .foto-16-9-container { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; }
+        .foto-16-9 { width: 100%; height: 100%; object-fit: cover; display: block; border: none; outline: none; }
+        .btn-view { position: absolute; bottom: 10px; right: 10px; background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 20px; padding: 4px 10px; display: flex; align-items: center; gap: 6px; cursor: pointer; font-family: 'Orbitron', monospace; font-size: 9px; font-weight: 500; color: white; }
+        .new-header-bar { background-color: #000000; width: 100%; margin: 12px auto 0 auto; padding: 4px 12px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.6); display: flex; align-items: center; gap: 10px; min-height: 32px; }
+        .new-bar-photo { width: 20px; height: 20px; border-radius: 0; object-fit: cover; flex-shrink: 0; }
+        .new-bar-text { color: rgba(255, 255, 255, 0.7); font-family: 'Orbitron', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.3px; flex: 1; }
 
-        /* PERSEGI PANJANG (info bar pertama) */
-        .info-bar {
-            background-color: #000000;
-            width: 100%;
-            margin: 2px auto 0 auto;
-            padding: 1px 12px;
-            border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 22px;
-        }
+        /* ============ HALAMAN WEBSITE ============ */
+        .page-website { display: none; }
+        .website-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .back-button { background: transparent; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 4px; padding: 6px 12px; color: white; font-family: 'Orbitron', monospace; font-size: 10px; cursor: pointer; transition: all 0.2s ease; }
+        .back-button:hover { background: rgba(255, 255, 255, 0.1); }
+        .website-title { color: white; font-family: 'Orbitron', monospace; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+        .website-hero-image { width: 100%; margin: 0 auto 16px auto; display: block; aspect-ratio: 16 / 7; object-fit: cover; background-color: #1a1a1a; border: none; outline: none; }
+        .form-container { width: 100%; margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+        .input-group { display: flex; flex-direction: column; gap: 6px; }
+        .input-label { color: rgba(255, 255, 255, 0.7); font-family: 'Orbitron', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.5px; }
+        .input-field { background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 4px; padding: 10px 12px; color: white; font-family: 'Orbitron', monospace; font-size: 10px; outline: none; transition: all 0.2s ease; }
+        .input-field:focus { border-color: rgba(255, 255, 255, 0.8); }
+        .textarea-field { background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 4px; padding: 10px 12px; color: white; font-family: 'Orbitron', monospace; font-size: 10px; outline: none; resize: vertical; min-height: 80px; }
+        .textarea-field:focus { border-color: rgba(255, 255, 255, 0.8); }
+        .radio-group { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+        .radio-label { display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.8); font-family: 'Orbitron', monospace; font-size: 10px; cursor: pointer; position: relative; }
+        .radio-label input { position: absolute; opacity: 0; width: 0; height: 0; cursor: pointer; }
+        .custom-radio { width: 16px; height: 16px; background-color: #000000; border: 1.5px solid rgba(255, 255, 255, 0.6); border-radius: 50%; display: inline-block; position: relative; transition: all 0.2s ease; }
+        .custom-radio::after { content: ''; position: absolute; display: none; top: 3px; left: 3px; width: 8px; height: 8px; border-radius: 50%; background-color: white; }
+        .radio-label input:checked ~ .custom-radio { border-color: white; }
+        .radio-label input:checked ~ .custom-radio::after { display: block; }
+        .radio-label:hover .custom-radio { border-color: white; }
+        .price-label { color: rgba(255, 255, 255, 0.8); font-family: 'Orbitron', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.5px; margin-top: 16px; text-align: left; }
+        .range-container { width: 100%; margin-top: 8px; }
+        .range-slider { width: 100%; height: 4px; -webkit-appearance: none; background: linear-gradient(to right, #333, #fff); border-radius: 5px; outline: none; cursor: pointer; }
+        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: white; border: 1px solid rgba(255,255,255,0.5); cursor: pointer; box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+        .range-value { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-family: 'Orbitron', monospace; font-size: 9px; color: rgba(255, 255, 255, 0.6); }
+        .current-price { color: white; font-weight: bold; font-size: 11px; }
+        .contract-text { margin-top: 20px; text-align: center; }
+        .contract-link { color: rgba(255, 255, 255, 0.6); font-family: 'Orbitron', monospace; font-size: 8px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; transition: color 0.2s ease; }
+        .contract-link:hover { color: white; }
+        .send-button { width: 100%; margin-top: 24px; padding: 12px 20px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 500; color: white; }
+        .send-button:hover { background-color: rgba(255, 255, 255, 0.1); border-color: white; }
+        .send-button i { font-size: 16px; color: white; }
 
-        .info-bar-text {
-            color: rgba(255, 255, 255, 0.9);
-            font-family: 'Orbitron', monospace;
-            font-size: 8px;
-            letter-spacing: 0.3px;
-            display: inline-block;
-        }
-
-        .prefix-symbol {
-            color: rgba(255, 255, 255, 0.7);
-            font-family: 'Orbitron', monospace;
-            font-size: 8px;
-            margin-right: 4px;
-            display: inline-block;
-        }
-
-        .typing-container {
-            display: inline-block;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 1px;
-            margin-left: 2px;
-            animation: blink 0.8s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .info-bar-photo {
-            width: 16px;
-            height: 16px;
-            object-fit: cover;
-        }
-
-        .layanan-text {
-            width: 100%;
-            margin: 7px auto 0 auto;
-            text-align: left;
-            font-family: 'Orbitron', monospace;
-            font-size: 10px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-            letter-spacing: 0.5px;
-        }
-
-        /* ============ SWIPEABLE ICONS SECTION ============ */
-        .swipe-section {
-            width: 100%;
-            margin: 18px auto 0 auto;
-            overflow-x: auto;
-            overflow-y: hidden;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .swipe-section::-webkit-scrollbar {
-            display: none;
-        }
-
-        .swipe-track {
-            display: flex;
-            flex-direction: row;
-            width: 200%;
-        }
-
-        .group-page {
-            width: 50%;
-            flex-shrink: 0;
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .icon-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .icon-item i {
-            color: white;
-            font-size: 28px;
-        }
-
-        .icon-label {
-            color: rgba(255, 255, 255, 0.6);
-            font-family: 'Orbitron', monospace;
-            font-size: 8px;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .dots-indicator {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 16px;
-            margin-bottom: 4px;
-        }
-
-        .dot-page {
-            width: 6px;
-            height: 6px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .dot-page.active {
-            width: 18px;
-            border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-
-        .card-wrapper {
-            width: 100%;
-            margin: 12px auto 0 auto;
-            padding: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 8px;
-            background-color: #000000;
-        }
-
-        .three-bars-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .bar-item {
-            background-color: #000000;
-            width: 100%;
-            padding: 8px 14px;
-            border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-height: 44px;
-        }
-
-        .bar-photo {
-            width: 28px;
-            height: 28px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .bar-text {
-            flex: 1;
-            color: rgba(255, 255, 255, 0.85);
-            font-family: 'Orbitron', monospace;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            line-height: 1.3;
-        }
-
-        .trending-text {
-            width: 100%;
-            margin: 12px auto 0 auto;
-            text-align: left;
-            font-family: 'Orbitron', monospace;
-            font-size: 10px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-            letter-spacing: 0.5px;
-        }
-
-        .square-16-11 {
-            width: 100%;
-            margin: 12px auto 0 auto;
-            aspect-ratio: 16 / 11;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 6px;
-            background-color: #000000;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-            gap: 8px;
-        }
-
-        .lihat-semua {
-            text-align: right;
-            color: rgba(255, 255, 255, 0.7);
-            font-family: 'Orbitron', monospace;
-            font-size: 9px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            cursor: pointer;
-        }
-
-        .foto-16-9-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .foto-16-9 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border: none;
-            outline: none;
-        }
-
-        .btn-view {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 4px 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            font-family: 'Orbitron', monospace;
-            font-size: 9px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .new-header-bar {
-            background-color: #000000;
-            width: 100%;
-            margin: 12px auto 0 auto;
-            padding: 4px 12px;
-            border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-height: 32px;
-        }
-
-        .new-bar-photo {
-            width: 20px;
-            height: 20px;
-            border-radius: 0;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .new-bar-text {
-            color: rgba(255, 255, 255, 0.7);
-            font-family: 'Orbitron', monospace;
-            font-size: 9px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-            flex: 1;
-        }
-
-        .main-content {
-            height: 20px;
-        }
-
-        canvas, iframe, svg, video {
-            display: none !important;
-        }
+        /* ============ HALAMAN KONTRAK ============ */
+        .page-contract { display: none; }
+        .contract-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .contract-content { width: 100%; color: rgba(255, 255, 255, 0.85); font-family: 'Orbitron', monospace; font-size: 9px; line-height: 1.7; letter-spacing: 0.3px; text-align: justify; white-space: normal; word-wrap: break-word; }
+        .contract-content h1 { font-size: 13px; text-align: center; margin-bottom: 10px; color: white; letter-spacing: 1px; }
+        .contract-content h2 { font-size: 11px; margin-top: 16px; margin-bottom: 8px; color: rgba(255, 255, 255, 0.95); border-left: 2px solid white; padding-left: 8px; }
+        .contract-content h3 { font-size: 10px; margin-top: 12px; margin-bottom: 6px; color: rgba(255, 255, 255, 0.9); }
+        .contract-content p { margin-bottom: 10px; }
+        .contract-content .section-title { font-size: 11px; font-weight: bold; margin-top: 14px; margin-bottom: 6px; color: white; background: rgba(255,255,255,0.05); padding: 4px 6px; border-radius: 3px; }
+        .contract-content ul, .contract-content ol { margin-left: 20px; margin-bottom: 12px; }
+        .contract-content li { margin-bottom: 4px; }
+        .contract-content hr { margin: 16px 0; border-color: rgba(255,255,255,0.2); }
+        .empty-area { flex: 1; min-height: 80px; width: 100%; }
+        .main-content { height: 20px; }
+        canvas, iframe, svg, video { display: none !important; }
+        input, textarea { user-select: text !important; }
     </style>
 </head>
 <body>
 <div class="app-container">
     <!-- HEADER FIXED -->
-    <div class="header">
-        <div class="header-left">
+    <div class="header" id="mainHeader">
+        <div class="header-left" id="homeLink">
             <img class="profile-photo" src="ikon.png" alt="profile">
             <span class="header-text">NECODEV GZ</span>
         </div>
@@ -436,87 +222,226 @@
         </div>
     </div>
 
-    <!-- FOTO 1:1 MURNI DI KANAN BAWAH (FIXED) - TANPA LINGKARAN -->
-    <img class="fixed-photo" src="ikon.png" alt="fixed photo">
+    <!-- FOTO 1:1 DI KANAN BAWAH (FIXED) - KLIK LANGSUNG KE WA -->
+    <img class="fixed-photo" id="whatsappFloatBtn" src="ikon.png" alt="WhatsApp">
 
-    <!-- KONTEN UTAMA -->
-    <img class="hero-image" src="tab.png" alt="hero banner">
-
-    <div class="info-bar">
-        <div class="info-bar-text">
-            <span class="prefix-symbol">&gt;</span>
-            <span class="typing-container">
-                <span id="animated-text"></span>
-                <span class="cursor">|</span>
-            </span>
+    <!-- HALAMAN UTAMA (BERANDA) -->
+    <div id="pageHome" class="page-home">
+        <img class="hero-image" src="tab.png" alt="hero banner">
+        <div class="info-bar">
+            <div class="info-bar-text">
+                <span class="prefix-symbol">&gt;</span>
+                <span class="typing-container">
+                    <span id="animated-text"></span>
+                    <span class="cursor">|</span>
+                </span>
+            </div>
+            <img class="info-bar-photo" src="ikon.png" alt="small profile">
         </div>
-        <img class="info-bar-photo" src="ikon.png" alt="small profile">
-    </div>
-
-    <div class="layanan-text">Layanan NECO</div>
-
-    <div class="swipe-section" id="swipeSection">
-        <div class="swipe-track" id="swipeTrack">
-            <div class="group-page">
-                <div class="icon-item"><i class="ri-global-line"></i><span class="icon-label">Website</span></div>
-                <div class="icon-item"><i class="ri-layout-4-line"></i><span class="icon-label">Template</span></div>
-                <div class="icon-item"><i class="ri-bar-chart-2-line"></i><span class="icon-label">Domin</span></div>
-                <div class="icon-item"><i class="ri-line-chart-line"></i><span class="icon-label">SEO</span></div>
-            </div>
-            <div class="group-page">
-                <div class="icon-item"><i class="ri-flashlight-line"></i><span class="icon-label">Pulsa</span></div>
-                <div class="icon-item"><i class="ri-wifi-line"></i><span class="icon-label">Kouta</span></div>
-                <div class="icon-item"><i class="ri-gamepad-line"></i><span class="icon-label">Game</span></div>
-                <div class="icon-item"><i class="ri-edit-box-line"></i><span class="icon-label">Editing</span></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dots-indicator">
-        <div class="dot-page active" data-index="0"></div>
-        <div class="dot-page" data-index="1"></div>
-    </div>
-
-    <div class="card-wrapper">
-        <div class="three-bars-container">
-            <div class="bar-item">
-                <img class="bar-photo" src="ikon.png" alt="template 1">
-                <span class="bar-text">Template portofolio dark blue pro</span>
-            </div>
-            <div class="bar-item">
-                <img class="bar-photo" src="ikon.png" alt="template 2">
-                <span class="bar-text">Template company profil chiken rocket</span>
-            </div>
-            <div class="bar-item">
-                <img class="bar-photo" src="ikon.png" alt="template 3">
-                <span class="bar-text">Template E-commerce caffee shopp</span>
+        <div class="layanan-text">Layanan NECO</div>
+        <div class="swipe-section" id="swipeSection">
+            <div class="swipe-track" id="swipeTrack">
+                <div class="group-page">
+                    <div class="icon-item" data-category="website" id="websiteIcon">
+                        <i class="ri-global-line"></i>
+                        <span class="icon-label">Website</span>
+                    </div>
+                    <div class="icon-item disabled"><i class="ri-layout-4-line"></i><span class="icon-label">Template</span></div>
+                    <div class="icon-item disabled"><i class="ri-bar-chart-2-line"></i><span class="icon-label">Domin</span></div>
+                    <div class="icon-item disabled"><i class="ri-line-chart-line"></i><span class="icon-label">SEO</span></div>
+                </div>
+                <div class="group-page">
+                    <div class="icon-item disabled"><i class="ri-flashlight-line"></i><span class="icon-label">Pulsa</span></div>
+                    <div class="icon-item disabled"><i class="ri-wifi-line"></i><span class="icon-label">Kouta</span></div>
+                    <div class="icon-item disabled"><i class="ri-gamepad-line"></i><span class="icon-label">Game</span></div>
+                    <div class="icon-item disabled"><i class="ri-edit-box-line"></i><span class="icon-label">Editing</span></div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="trending-text">Yang sedang trend</div>
-
-    <div class="square-16-11">
-        <div class="lihat-semua">Lihat semua &gt;</div>
-        <div class="foto-16-9-container">
-            <img class="foto-16-9" src="pro.png" alt="trending image">
-            <div class="btn-view">
-                <i class="ri-eye-line"></i>
-                <span>View</span>
+        <div class="dots-indicator">
+            <div class="dot-page active" data-index="0"></div>
+            <div class="dot-page" data-index="1"></div>
+        </div>
+        <div class="card-wrapper">
+            <div class="three-bars-container">
+                <div class="bar-item"><img class="bar-photo" src="ikon.png" alt="template 1"><span class="bar-text">Template portofolio dark blue pro</span></div>
+                <div class="bar-item"><img class="bar-photo" src="ikon.png" alt="template 2"><span class="bar-text">Template company profil chiken rocket</span></div>
+                <div class="bar-item"><img class="bar-photo" src="ikon.png" alt="template 3"><span class="bar-text">Template E-commerce caffee shopp</span></div>
             </div>
+        </div>
+        <div class="trending-text">Yang sedang trend</div>
+        <div class="square-16-11">
+            <div class="lihat-semua">Lihat semua &gt;</div>
+            <div class="foto-16-9-container">
+                <img class="foto-16-9" src="pro.png" alt="trending image">
+                <div class="btn-view"><i class="ri-eye-line"></i><span>View</span></div>
+            </div>
+        </div>
+        <div class="new-header-bar">
+            <img class="new-bar-photo" src="ikon.png" alt="new bar photo">
+            <span class="new-bar-text">Nantikan selalu update dari NECODEV GZ</span>
         </div>
     </div>
 
-    <div class="new-header-bar">
-        <img class="new-bar-photo" src="ikon.png" alt="new bar photo">
-        <span class="new-bar-text">Nantikan selalu update dari NECODEV GZ</span>
+    <!-- HALAMAN WEBSITE -->
+    <div id="pageWebsite" class="page-website">
+        <div class="website-header">
+            <button class="back-button" id="backFromWebsiteBtn">← Kembali</button>
+            <span class="website-title">Website Services</span>
+        </div>
+        <img class="website-hero-image" src="web.png" alt="website hero">
+        <div class="form-container">
+            <div class="input-group"><label class="input-label">Nama</label><input type="text" class="input-field" placeholder="Masukkan nama Anda" id="inputNama"></div>
+            <div class="input-group"><label class="input-label">Keperluan</label><textarea class="textarea-field" placeholder="Tulis keperluan Anda di sini..." id="inputKeperluan"></textarea></div>
+        </div>
+        <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="theme" value="dark"><span class="custom-radio"></span>Dark</label>
+            <label class="radio-label"><input type="radio" name="theme" value="bright"><span class="custom-radio"></span>Bright</label>
+            <label class="radio-label"><input type="radio" name="theme" value="neutral" checked><span class="custom-radio"></span>Netral</label>
+        </div>
+        <div class="price-label">Pilih harga</div>
+        <div class="range-container">
+            <input type="range" id="priceSlider" class="range-slider" min="100000" max="1000000" step="10000" value="500000">
+            <div class="range-value"><span>Rp 100.000</span><span class="current-price" id="priceValue">Rp 500.000</span><span>Rp 1.000.000</span></div>
+        </div>
+        <div class="contract-text"><span class="contract-link" id="contractLink">Baca kontrak kerja sebelum pesan</span></div>
+        <button class="send-button" id="sendMessageBtn"><i class="ri-send-plane-line"></i><span>Kirim Pesan</span></button>
+        <div class="empty-area"></div>
     </div>
 
+    <!-- HALAMAN KONTRAK -->
+    <div id="pageContract" class="page-contract">
+        <div class="contract-header">
+            <button class="back-button" id="backFromContractBtn">← Kembali</button>
+            <span class="website-title">Kontrak Kerja</span>
+        </div>
+        <div class="contract-content">
+            <h1>SURAT KETERANGAN PERSYARATAN KONTRAK PEMBUATAN WEBSITE<br>NECODEV GZ – DIGITAL SOLUTION PARTNER</h1>
+            <p style="text-align:center">Nomor: 002/SK-PK/NCDV-GZ/V/2026</p><hr>
+            <h2>I. PIHAK-PIHAK YANG TERIKAT</h2>
+            <p>Perjanjian kerja sama ini dibuat dan disetujui oleh:</p>
+            <p><strong>1. PIHAK PERTAMA (Penyedia Jasa):</strong> NECODEV GZ, sebuah entitas penyedia jasa pengembangan teknologi digital dan website, yang dalam hal ini diwakili oleh Project Manager yang sah.</p>
+            <p><strong>2. PIHAK KEDUA (Klien/Pemesan):</strong> [Nama Klien/Perusahaan], yang selanjutnya disebut sebagai "Klien".</p>
+            <p>Kedua belah pihak sepakat untuk terikat dalam kontrak kerja sama pembuatan website dengan ketentuan dan persyaratan sebagaimana diuraikan di bawah ini.</p>
+            <h2>II. KETENTUAN UMUM SISTEM PEMBAYARAN</h2>
+            <p>Berdasarkan kebijakan resmi NECODEV GZ, disepakati bahwa sistem pembayaran proyek dilakukan dengan mekanisme Termin atau pembayaran bertahap yang mengikat secara hukum. Adapun ketentuannya adalah sebagai berikut:</p>
+            <p>1. Pembayaran Wajib di Muka (Down Payment/DP): Klien wajib melakukan pembayaran sebesar 50% (Lima Puluh Persen) dari total nilai kontrak yang telah disepakati dalam Proposal Penawaran Harga.</p>
+            <p>2. Fungsi Pembayaran Pertama: Dana sebesar 50% ini merupakan Simpanan Komitmen Kerja Sama dan biaya inisialisasi proyek. Pembayaran ini berfungsi sebagai: tanda jadi dimulainya kontrak kerja sama secara legal dan mengikat; biaya pembelian domain, hosting premium, lisensi tema premium, serta penyiapan development environment; biaya riset UI/UX dan pembuatan wireframe awal.</p>
+            <p>3. Konsekuensi Keterlambatan DP: Apabila dalam waktu 3 (Tiga) Hari Kerja setelah penandatanganan kontrak ini Klien belum menyerahkan bukti pembayaran DP, maka NECODEV GZ berhak menunda jadwal pengerjaan atau membatalkan kontrak secara sepihak tanpa dikenakan sanksi.</p>
+            <h2>III. RINCIAN TAHAPAN PROYEK DAN PELUNASAN</h2>
+            <p>Setelah PIHAK PERTAMA menerima bukti transfer sah pembayaran 50% pertama, proyek resmi berjalan. Tahapan selanjutnya diatur sebagai berikut:</p>
+            <p>1. Fase Pengembangan 50%–90%: NECODEV GZ akan mengerjakan pengerjaan hingga mencapai tahap Development Stage yang signifikan, meliputi pembangunan struktur halaman utama, integrasi fitur-fitur fungsional krusial, dan Progress Report disampaikan secara visual melalui staging site kepada Klien secara berkala.</p>
+            <p>2. Ketentuan Pelunasan (Pembayaran 50% Kedua): Pembayaran termin kedua sebesar 50% (Lima Puluh Persen) WAJIB dilunasi oleh PIHAK KEDUA SEBELUM website dinyatakan Go-Live atau dipindahkan ke domain resmi Klien. Poin Kritis: Tim NECODEV GZ dilarang keras memindahkan file website dari server staging ke server produksi utama Klien sebelum sisa pembayaran dilunasi sepenuhnya. Website akan tetap berada di server staging milik NECODEV GZ hingga pelunasan diterima dan terverifikasi.</p>
+            <h2>IV. KESEMPATAN REVISI DAN BATASANNYA</h2>
+            <p>NECODEV GZ memberikan kesempatan revisi untuk menjamin kepuasan Klien dengan syarat dan ketentuan sebagai berikut:</p>
+            <p>1. Kuota Revisi Gratis: Klien mendapatkan 1 (Satu) Kali Sesi Revisi Mayor dan 3 (Tiga) Kali Sesi Revisi Minor tanpa biaya tambahan.</p>
+            <p>2. Definisi Revisi: Mayor: Perubahan struktur layout halaman, perubahan alur fungsional fitur utama. Minor: Perubahan teks, penggantian gambar, penyesuaian palet warna, atau reposisi elemen konten.</p>
+            <p>3. Pembengkakan Biaya: Apabila Klien meminta penambahan fitur di luar proposal awal, akan dikenakan biaya Custom Development Fee yang wajib dibayarkan di muka sebesar 100% untuk fitur tambahan tersebut.</p>
+            <p>4. Batas Penggunaan Kuota Revisi: Kuota revisi hanya berlaku selama masa pengerjaan proyek berlangsung. Setelah website Go-Live, kuota revisi gratis dianggap hangus.</p>
+            <h2>V. GARANSI PERBAIKAN BUG</h2>
+            <p>1. Masa Garansi: NECODEV GZ memberikan garansi perbaikan bug atau error sistem selama 7 (Tujuh) Hari Kalender terhitung sejak tanggal website resmi dinyatakan Go-Live.</p>
+            <p>2. Cakupan Garansi: Kesalahan fungsi fitur, broken link, display error akibat kode dari tim NECODEV GZ.</p>
+            <p>3. Pengecualian Garansi: Tidak berlaku jika ada intervensi pihak ketiga, kerusakan akibat serangan virus, perubahan konfigurasi server oleh Klien, atau error dari pembaruan plugin/CMS pihak ketiga.</p>
+            <p>4. Layanan Pasca Garansi: Setelah masa garansi 7 hari berakhir, setiap permintaan perbaikan akan dikenakan biaya Maintenance Fee.</p>
+            <h2>VI. KETENTUAN KOMUNIKASI RESMI</h2>
+            <p>1. Saluran Utama – WhatsApp: Mengingat Klien menyatakan preferensi dan keaktifannya di platform WhatsApp, maka WhatsApp ditetapkan sebagai saluran komunikasi utama.</p>
+            <p>2. Pencatatan dan Konfirmasi Ulang: Setiap instruksi wajib dicatat dan dikonfirmasi ulang. Klien wajib memberikan persetujuan (approval) agar instruksi dianggap valid.</p>
+            <p>3. Grup WhatsApp Resmi Proyek: Seluruh komunikasi terpusat dalam satu Grup WhatsApp Resmi.</p>
+            <p>4. Jam Operasional Komunikasi: Respon tim tersedia pada Hari Kerja (Senin–Jumat), pukul 09.00–17.00 WIB.</p>
+            <h2>VII. KETERANGAN TAMBAHAN TERKAIT PEMBATALAN DAN REFUND</h2>
+            <p>1. Pembatalan Sepihak oleh Klien: Dana yang telah disetorkan TIDAK DAPAT DITARIK KEMBALI (HANGUS). Klien tetap berhak mendapatkan salinan data mentah pengerjaan yang sudah selesai.</p>
+            <p>2. Pembatalan oleh NECODEV GZ karena force majeure: Seluruh dana dikembalikan 100% serta seluruh data mentah diserahkan ke Klien.</p>
+            <p>3. Definisi Force Majeure: Bencana alam, kebakaran, pemogokan massal, kebijakan pemerintah, atau gangguan infrastruktur internet nasional >14 hari.</p>
+            <h2>VIII. KETERANGAN TAMBAHAN LAINNYA</h2>
+            <p>1. Kepemilikan Aset Digital: Setelah semua pembayaran (100%) dilunasi, seluruh kode sumber menjadi hak milik Klien. Sebelum pelunasan, seluruh aset adalah hak kekayaan intelektual NECODEV GZ.</p>
+            <p>2. Durasi Pengerjaan: Dihitung berdasarkan Hari Kerja, tidak termasuk libur nasional dan jeda menunggu persetujuan Klien.</p>
+            <p>3. Kewajiban Klien Menyediakan Materi: Klien wajib menyerahkan materi konten dalam 7 Hari Kerja setelah diminta.</p>
+            <p>4. Rahasia Data dan Keamanan: NECODEV GZ wajib menjaga kerahasiaan data bisnis Klien.</p>
+            <p>5. Domain dan Hosting: Biaya tahun pertama termasuk dalam kontrak. Perpanjangan tahun berikutnya menjadi tanggung jawab Klien.</p>
+            <p>6. Perubahan Lingkup Proyek (Scope Creep): Permintaan di luar proposal awal dikenakan penawaran harga terpisah.</p>
+            <p>7. Penyelesaian Perselisihan: Dimusyawarahkan terlebih dahulu, jika tidak mencapai kesepakatan maka ditempuh jalur hukum di wilayah domisili NECODEV GZ.</p>
+            <h2>IX. PENUTUP</h2>
+            <p>Dengan disetujuinya dokumen persyaratan kontrak ini, PIHAK KEDUA menyatakan telah membaca, memahami, dan menyetujui seluruh pasal dan ketentuan yang berlaku tanpa adanya unsur paksaan, tekanan, atau penipuan dari pihak manapun.</p>
+            <p>Dokumen ini dibuat dalam rangkap dua, masing-masing memiliki kekuatan hukum yang sama, satu untuk PIHAK PERTAMA dan satu untuk PIHAK KEDUA.</p>
+            <hr><p style="text-align:center; margin-top:16px;">© NECODEV GZ – Digital Solution Partner</p>
+        </div>
+        <div class="empty-area"></div>
+    </div>
     <div class="main-content"></div>
 </div>
 
 <script>
     (function() {
+        // Nomor WhatsApp tujuan
+        const WA_NUMBER = "6289684219904";
+        
+        // Elemen
+        const pageHome = document.getElementById('pageHome');
+        const pageWebsite = document.getElementById('pageWebsite');
+        const pageContract = document.getElementById('pageContract');
+        const websiteIcon = document.getElementById('websiteIcon');
+        const contractLink = document.getElementById('contractLink');
+        const backFromWebsiteBtn = document.getElementById('backFromWebsiteBtn');
+        const backFromContractBtn = document.getElementById('backFromContractBtn');
+        const homeLink = document.getElementById('homeLink');
+        const whatsappFloatBtn = document.getElementById('whatsappFloatBtn');
+        const sendButton = document.getElementById('sendMessageBtn');
+        const priceSlider = document.getElementById('priceSlider');
+        const priceValue = document.getElementById('priceValue');
+        
+        // Fungsi buka WhatsApp dengan atau tanpa pesan
+        function openWhatsApp(message = null) {
+            let url = `https://wa.me/${WA_NUMBER}`;
+            if (message) {
+                url += `?text=${encodeURIComponent(message)}`;
+            }
+            window.open(url, '_blank');
+        }
+        
+        // Event: Foto pojok kanan bawah (tanpa pesan)
+        if (whatsappFloatBtn) {
+            whatsappFloatBtn.addEventListener('click', () => {
+                openWhatsApp();
+            });
+        }
+        
+        // Tombol Kirim Pesan dengan data dari form
+        if (sendButton) {
+            sendButton.addEventListener('click', () => {
+                const nama = document.getElementById('inputNama')?.value || "(tidak diisi)";
+                const keperluan = document.getElementById('inputKeperluan')?.value || "(tidak diisi)";
+                const themeRadio = document.querySelector('input[name="theme"]:checked');
+                const tema = themeRadio ? themeRadio.value : "neutral";
+                let temaText = "";
+                if (tema === "dark") temaText = "Dark";
+                else if (tema === "bright") temaText = "Bright";
+                else temaText = "Netral";
+                const harga = document.getElementById('priceValue')?.textContent || "Rp 500.000";
+                
+                const message = `Halo kak, saya klien dari web/apk NECODEV GZ ingin memesan pelayanan Website dengan data berikut :
+
+Nama : ${nama}
+Keperluan: ${keperluan}
+Tema : ${temaText}
+Harga : ${harga}
+
+Dan sudah membaca kontrak kerja pembayaran website yang Kakak deskripsikan.
+
+Terimakasih.`;
+                
+                openWhatsApp(message);
+            });
+        }
+        
+        // Range slider
+        if (priceSlider && priceValue) {
+            priceSlider.addEventListener('input', function() {
+                const value = parseInt(this.value);
+                priceValue.textContent = 'Rp ' + value.toLocaleString('id-ID');
+            });
+        }
+        
+        // Animasi ketik
         const texts = [
             "Bangun masa depan bersama ku",
             "Kembakan idemu bersamaku",
@@ -528,7 +453,10 @@
         const TYPING_SPEED = 50, DELETING_SPEED = 30, PAUSE = 5000;
 
         function typeEffect() {
-            if (!animatedTextElement) return;
+            if (!animatedTextElement || (pageWebsite.style.display === 'block' || pageContract.style.display === 'block')) {
+                setTimeout(typeEffect, 500);
+                return;
+            }
             const fullText = texts[textIndex];
             if (isDeleting) {
                 currentText = fullText.substring(0, charIndex - 1);
@@ -553,12 +481,13 @@
         }
         setTimeout(typeEffect, 500);
 
+        // Swipe & dots
         const swipeSection = document.getElementById('swipeSection');
         const dots = document.querySelectorAll('.dot-page');
         let currentIndex = 0;
 
         function updateActiveDot() {
-            if (!swipeSection) return;
+            if (!swipeSection || pageHome.style.display === 'none') return;
             const newIndex = Math.round(swipeSection.scrollLeft / swipeSection.clientWidth);
             if (newIndex !== currentIndex && newIndex >= 0 && newIndex < dots.length) {
                 currentIndex = newIndex;
@@ -583,18 +512,35 @@
         }
         dots.forEach((dot, idx) => dot.addEventListener('click', () => scrollToPage(idx)));
 
+        // Navigasi
+        function showHome() {
+            pageHome.style.display = 'block';
+            pageWebsite.style.display = 'none';
+            pageContract.style.display = 'none';
+            setTimeout(() => {
+                if (animatedTextElement && animatedTextElement.textContent === "") typeEffect();
+                updateActiveDot();
+            }, 100);
+        }
+        function showWebsite() { pageHome.style.display = 'none'; pageWebsite.style.display = 'block'; pageContract.style.display = 'none'; }
+        function showContract() { pageHome.style.display = 'none'; pageWebsite.style.display = 'none'; pageContract.style.display = 'block'; }
+        
+        if (websiteIcon) websiteIcon.addEventListener('click', showWebsite);
+        if (backFromWebsiteBtn) backFromWebsiteBtn.addEventListener('click', showHome);
+        if (backFromContractBtn) backFromContractBtn.addEventListener('click', showWebsite);
+        if (homeLink) homeLink.addEventListener('click', showHome);
+        if (contractLink) contractLink.addEventListener('click', (e) => { e.preventDefault(); showContract(); });
+
         // Proteksi
         document.addEventListener('contextmenu', (e) => e.preventDefault());
-        document.addEventListener('dragstart', (e) => {
-            if (e.target.tagName === 'IMG') e.preventDefault();
-        });
+        document.addEventListener('dragstart', (e) => { if (e.target.tagName === 'IMG') e.preventDefault(); });
         window.addEventListener('keydown', (e) => {
             if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')) e.preventDefault();
             if (e.key === 'F12') e.preventDefault();
             if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.key === 'K')) e.preventDefault();
             if (e.key === 'ContextMenu' || (e.shiftKey && e.key === 'F10')) e.preventDefault();
         });
-        document.addEventListener('selectstart', (e) => e.preventDefault());
+        document.addEventListener('selectstart', (e) => { if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') e.preventDefault(); });
         window.addEventListener('drop', (e) => e.preventDefault());
         window.addEventListener('dragover', (e) => e.preventDefault());
 
@@ -608,7 +554,8 @@
                         !node.classList.contains('bar-photo') &&
                         !node.classList.contains('foto-16-9') &&
                         !node.classList.contains('new-bar-photo') &&
-                        !node.classList.contains('fixed-photo')) {
+                        !node.classList.contains('fixed-photo') &&
+                        !node.classList.contains('website-hero-image')) {
                         node.remove();
                     }
                 });
