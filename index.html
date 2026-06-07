@@ -4,1533 +4,755 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-    <!-- Open Graph / Social Media Share Preview -->
-    <meta property="og:title" content="The Grand Maharani • Luxury Resort & Spa Bali">
-    <meta property="og:description" content="Rasakan pengalaman menginap tak tertandingi dengan panorama samudra, butler pribadi, dan kuliner kelas dunia.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop">
+    <!-- Open Graph / Social Media Share -->
+    <meta property="og:title" content="Saung Rasa Nusantara • Rumah Makan Keluarga">
+    <meta property="og:description" content="Nikmati cita rasa masakan Indonesia terbaik dengan bahan segar pilihan. Tempat nyaman untuk makan bersama keluarga.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://grandmaharani.com">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Grand Maharani">
-    <meta property="og:locale" content="id_ID">
-
-    <!-- Twitter Card -->
+    <meta property="og:site_name" content="Saung Rasa Nusantara">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Grand Maharani • Luxury Resort & Spa Bali">
-    <meta name="twitter:description" content="Rasakan pengalaman menginap tak tertandingi dengan panorama samudra, butler pribadi, dan kuliner kelas dunia.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:title" content="Saung Rasa Nusantara • Rumah Makan Keluarga">
+    <meta name="twitter:description" content="Nikmati cita rasa masakan Indonesia terbaik dengan bahan segar pilihan.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
 
-    <title>The Grand Maharani • Luxury Resort & Spa Bali</title>
+    <title>Saung Rasa Nusantara • Rumah Makan Keluarga</title>
 
-    <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
-            --gold: #c8a45c;
-            --gold-light: #d4b76e;
-            --gold-dark: #a8873a;
-            --dark: #1a1a1a;
-            --cream: #f5f0e8;
-            --cream-light: #faf7f2;
-            --white: #ffffff;
-            --text: #2a2a2a;
+            --hijau: #2d6a4f;
+            --hijau-muda: #40916c;
+            --kuning: #e9c46a;
+            --oranye: #e76f51;
+            --dark: #1e1e1e;
+            --text: #333;
             --text-light: #6b6b6b;
-            --text-lighter: #999999;
-            --border: #e5e0d8;
-            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
-            --shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.15);
-            --radius-xs: 8px;
-            --radius-sm: 12px;
-            --radius: 20px;
-            --radius-lg: 28px;
-            --radius-xl: 36px;
-            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --max-width: 1200px;
+            --bg: #f9f6f0;
+            --white: #fff;
+            --border: #e0dcd5;
+            --shadow: 0 4px 24px rgba(0,0,0,0.04);
+            --shadow-hover: 0 16px 40px rgba(0,0,0,0.08);
+            --radius: 24px;
+            --radius-sm: 14px;
+            --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Work Sans', sans-serif;
             background: var(--white);
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
             font-size: 15px;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, .serif {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            letter-spacing: -0.01em;
+        h2, h3, .handwritten {
+            font-family: 'Amatic SC', cursive;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 30px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        .container-wide {
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 0 30px;
+        /* ============ TOP BAR ============ */
+        .top-bar {
+            background: var(--hijau); color: rgba(255,255,255,0.9); padding: 8px 0;
+            font-size: 0.78rem; letter-spacing: 0.4px;
         }
+        .top-bar .container {
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+        }
+        .top-bar i { margin-right: 5px; color: var(--kuning); }
 
         /* ============ NAVBAR ============ */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 14px 0;
-            transition: var(--transition);
-            background: transparent;
+            position: sticky; top: 0; z-index: 999; background: var(--white);
+            border-bottom: 1px solid var(--border); padding: 0;
         }
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
-            padding: 8px 0;
-        }
-        .navbar .container-wide {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .navbar .container {
+            display: flex; justify-content: space-between; align-items: center; padding: 10px 0;
         }
         .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .navbar.scrolled .logo {
-            color: var(--dark);
-            font-size: 1.6rem;
-        }
-        .logo i {
-            color: var(--gold);
-            font-size: 1.4rem;
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            list-style: none;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            position: relative;
-            padding: 6px 0;
-            white-space: nowrap;
-        }
-        .navbar.scrolled .nav-links a {
-            color: var(--text);
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.35s ease;
-            border-radius: 1px;
-        }
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        .nav-links a:hover {
-            color: var(--gold) !important;
-        }
-        .btn-book-nav {
-            background: var(--gold);
-            color: var(--white) !important;
-            padding: 11px 26px !important;
-            border-radius: 50px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            box-shadow: 0 6px 22px rgba(200, 164, 92, 0.3);
-            font-size: 0.85rem !important;
-        }
-        .btn-book-nav:hover {
-            background: var(--gold-dark);
-            box-shadow: 0 10px 30px rgba(200, 164, 92, 0.45);
-            transform: translateY(-2px);
-        }
-        .btn-book-nav::after {
-            display: none !important;
-        }
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 1001;
-            padding: 8px;
-        }
-        .navbar.scrolled .mobile-toggle {
-            color: var(--dark);
-        }
-
-        /* ============ HERO ============ */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%),
-            url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-            background-attachment: fixed;
-            overflow: hidden;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.4) 100%);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: var(--white);
-            max-width: 650px;
-            padding-top: 60px;
-        }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 24px;
-            letter-spacing: 0.3px;
-        }
-        .hero-badge .stars {
-            color: #ffb800;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-        }
-        .hero-badge .stars i {
-            margin: 0 0.5px;
-        }
-        .hero h1 {
-            font-size: clamp(2.8rem, 5vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
-        }
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 32px;
-            opacity: 0.9;
-            font-weight: 400;
-            line-height: 1.8;
-            max-width: 500px;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--gold);
-            color: var(--white);
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            box-shadow: 0 12px 35px rgba(200, 164, 92, 0.35);
-            border: none;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            background: var(--gold-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 18px 45px rgba(200, 164, 92, 0.5);
-        }
-        .btn-outline-light {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--white);
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-        }
-        .btn-outline-light:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        /* ============ SECTION STYLING ============ */
-        section {
-            padding: 90px 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 56px;
-        }
-        .section-subtitle {
-            display: inline-block;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .section-title {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            color: var(--dark);
-            margin-bottom: 14px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .section-desc {
-            color: var(--text-light);
-            max-width: 550px;
-            margin: 0 auto;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* ============ GALLERY WITH HOVER OVERLAY & TITLE ============ */
-        .gallery-strip {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 40px;
-        }
-        .gallery-item {
-            position: relative;
-            border-radius: var(--radius);
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            aspect-ratio: 4/3;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease, filter 0.4s ease;
-            display: block;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.08);
-            filter: brightness(0.5);
-        }
-        .gallery-item:hover {
-            box-shadow: var(--shadow-xl);
-            transform: translateY(-4px);
-        }
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-            z-index: 2;
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        .gallery-title {
-            color: var(--white);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 16px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-            letter-spacing: 0.5px;
-            transform: translateY(8px);
-            transition: transform 0.4s ease;
-        }
-        .gallery-item:hover .gallery-title {
-            transform: translateY(0);
-        }
-        .gallery-icon {
-            position: absolute;
-            bottom: 16px;
-            right: 16px;
-            color: var(--white);
-            font-size: 1rem;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 2;
-            background: rgba(255,255,255,0.2);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(4px);
-        }
-        .gallery-item:hover .gallery-icon {
-            opacity: 1;
-        }
-
-        /* ============ LAYANAN ============ */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .service-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 36px 28px;
-            transition: var(--transition);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            transform: scaleX(0);
-            transition: transform 0.5s ease;
-            transform-origin: center;
-        }
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-        .service-card:hover {
-            border-color: var(--gold);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-6px);
-        }
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #fdf6ed, #f8f0e0);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: var(--gold);
-            margin: 0 auto 22px;
-            transition: var(--transition);
-        }
-        .service-card:hover .service-icon {
-            background: var(--gold);
-            color: var(--white);
-            transform: scale(1.1) rotateY(180deg);
-        }
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        .service-card p {
-            color: var(--text-light);
-            font-size: 0.88rem;
-            line-height: 1.6;
-        }
-
-        /* ============ ROOM SHOWCASE ============ */
-        .rooms-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .room-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-        }
-        .room-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-        .room-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            height: 280px;
-        }
-        .room-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .room-card:hover .room-img-wrapper img {
-            transform: scale(1.08);
-        }
-        .room-tag {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: var(--gold);
-            color: var(--white);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .room-body {
-            padding: 24px;
-        }
-        .room-body h3 {
-            font-size: 1.5rem;
-            color: var(--dark);
-            margin-bottom: 6px;
-        }
-        .room-body .price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 12px;
-        }
-        .room-body .price span {
-            font-size: 0.8rem;
-            color: var(--text-lighter);
-            font-weight: 400;
-        }
-        .room-features {
-            display: flex;
-            gap: 16px;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-        .room-features i {
-            color: var(--gold);
-            margin-right: 4px;
-        }
-        .btn-room {
-            display: inline-block;
-            background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        .btn-room:hover {
-            background: var(--gold);
-            color: var(--white);
-        }
-
-        /* ============ BLOG WITH EXPANDABLE CONTENT ============ */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .blog-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        .blog-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-        }
-        .blog-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            height: 240px;
-        }
-        .blog-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .blog-card:hover .blog-img-wrapper img {
-            transform: scale(1.06);
-        }
-        .blog-category {
-            position: absolute;
-            bottom: 14px;
-            left: 14px;
-            background: rgba(255,255,255,0.9);
-            color: var(--dark);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .blog-body {
-            padding: 22px;
-        }
-        .blog-body h3 {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-        .blog-excerpt {
-            color: var(--text-light);
-            font-size: 0.88rem;
-            margin-bottom: 0;
-            transition: var(--transition);
-        }
-        .blog-full {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease, opacity 0.3s ease;
-            color: var(--text-light);
-            font-size: 0.88rem;
-            line-height: 1.7;
-            opacity: 0;
-            margin-top: 0;
-        }
-        .blog-full.expanded {
-            max-height: 300px;
-            opacity: 1;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .read-more-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            transition: var(--transition);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin-top: 8px;
-        }
-        .read-more-btn:hover {
-            color: var(--gold-dark);
-            gap: 10px;
-        }
-        .read-more-btn i {
-            transition: transform 0.3s ease;
-            font-size: 0.7rem;
-        }
-        .read-more-btn.active i {
-            transform: rotate(180deg);
-        }
-
-        /* ============ BOOKING ============ */
-        .booking-wrapper {
-            background: var(--cream-light);
-            border-radius: var(--radius-xl);
-            padding: 44px 40px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border);
-        }
-        .booking-form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: flex-end;
-        }
-        .form-group {
-            flex: 1 1 180px;
-            min-width: 150px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.8rem;
-            color: var(--dark);
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1.5px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.9rem;
-            background: var(--white);
-            transition: var(--transition);
-            color: var(--text);
-            -webkit-appearance: none;
-            appearance: none;
-        }
-        .form-group select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6b6b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            padding-right: 36px;
-        }
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 4px rgba(200, 164, 92, 0.08);
-        }
-        .btn-submit {
-            background: var(--gold);
-            color: var(--white);
-            border: none;
-            padding: 15px 34px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: var(--transition);
-            white-space: nowrap;
-            letter-spacing: 0.3px;
-            height: fit-content;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-shrink: 0;
-        }
-        .btn-submit:hover {
-            background: var(--gold-dark);
-            box-shadow: 0 12px 30px rgba(200, 164, 92, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* ============ TESTIMONIAL ============ */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .testimonial-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            transition: var(--transition);
-            position: relative;
-        }
-        .testimonial-card::before {
-            content: '\201C';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 5rem;
-            color: var(--gold);
-            opacity: 0.3;
-            position: absolute;
-            top: 10px;
-            left: 20px;
+            font-family: 'Amatic SC', cursive; font-size: 2.2rem; font-weight: 700;
+            color: var(--hijau); text-decoration: none; display: flex; align-items: center; gap: 6px;
             line-height: 1;
         }
-        .testimonial-card:hover {
-            border-color: var(--gold);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
+        .logo i { color: var(--oranye); font-size: 1.6rem; }
+        .logo span {
+            font-size: 0.7rem; font-family: 'Work Sans', sans-serif; font-weight: 400;
+            color: var(--text-light); display: block; letter-spacing: 2px; text-transform: uppercase;
         }
-        .testimonial-text {
-            font-style: italic;
-            color: var(--text);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.85rem;
+            transition: var(--transition); position: relative; padding: 4px 0;
         }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .nav-links a:hover { color: var(--oranye); }
+        .nav-links a::before {
+            content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px;
+            background: var(--oranye); transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s ease;
         }
-        .testimonial-author img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
+        .nav-links a:hover::before { transform: scaleX(1); transform-origin: left; }
+        .btn-nav {
+            background: var(--oranye); color: var(--white) !important; padding: 10px 20px !important;
+            border-radius: 6px; font-weight: 600 !important; transition: var(--transition);
+            font-size: 0.8rem !important; letter-spacing: 0.5px;
         }
-        .author-name {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-        .author-stars {
-            color: #ffb800;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
+        .btn-nav:hover { background: #d45d3f; }
+        .btn-nav::before { display: none !important; }
+        .mobile-toggle {
+            display: none; background: none; border: none; font-size: 1.6rem;
+            color: var(--hijau); cursor: pointer;
         }
 
+        /* ============ HERO SPLIT ============ */
+        .hero {
+            display: flex; min-height: 85vh; background: var(--bg);
+        }
+        .hero-left {
+            flex: 1; display: flex; align-items: center; padding: 60px 40px 60px 60px;
+            background: linear-gradient(135deg, #f9f6f0 0%, #fff8ed 100%);
+        }
+        .hero-left-content { max-width: 480px; }
+        .hero-tag {
+            display: inline-block; background: var(--hijau); color: var(--white);
+            padding: 6px 16px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 1px; margin-bottom: 20px;
+        }
+        .hero-left h1 {
+            font-family: 'Amatic SC', cursive; font-size: clamp(3.2rem, 6vw, 4.5rem);
+            line-height: 1; color: var(--dark); margin-bottom: 14px; font-weight: 700;
+        }
+        .hero-left h1 em { color: var(--oranye); font-style: normal; }
+        .hero-left p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 28px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+        .btn-fill {
+            background: var(--hijau); color: var(--white); padding: 13px 28px; border-radius: 6px;
+            font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: var(--transition);
+            display: inline-flex; align-items: center; gap: 7px; border: none; cursor: pointer;
+        }
+        .btn-fill:hover { background: var(--hijau-muda); transform: translateY(-2px); }
+        .btn-ghost {
+            background: transparent; color: var(--hijau); padding: 12px 28px; border-radius: 6px;
+            font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: var(--transition);
+            display: inline-flex; align-items: center; gap: 7px; border: 2px solid var(--hijau);
+        }
+        .btn-ghost:hover { background: var(--hijau); color: var(--white); }
+
+        /* Google Review Badge - inline */
+        .review-inline {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--white); padding: 10px 18px; border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06); font-size: 0.82rem;
+            color: var(--text); white-space: nowrap;
+        }
+        .review-inline .stars { color: #f4a261; font-size: 0.8rem; letter-spacing: 1px; }
+        .review-inline strong { color: var(--dark); }
+
+        .hero-right {
+            flex: 1; background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
+            position: relative;
+        }
+        .hero-right::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, transparent 40%);
+        }
+
+        /* ============ SECTION ============ */
+        section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-tag {
+            display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 2px; color: var(--oranye); font-weight: 600;
+        }
+        .section-tag::before { content: '•'; font-size: 1.4rem; line-height: 1; color: var(--hijau); }
+        .section-tag::after { content: '•'; font-size: 1.4rem; line-height: 1; color: var(--hijau); }
+        .section-title {
+            font-family: 'Amatic SC', cursive; font-size: clamp(2.4rem, 4vw, 3.2rem);
+            color: var(--dark); margin: 8px 0; font-weight: 700;
+        }
+        .section-desc { color: var(--text-light); max-width: 460px; margin: 0 auto; font-size: 0.9rem; }
+
+        /* ============ GALERI MASONRY ============ */
+        .masonry-grid {
+            display: grid; grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto; gap: 14px;
+        }
+        .masonry-item {
+            position: relative; border-radius: var(--radius-sm); overflow: hidden;
+            cursor: pointer; transition: var(--transition); box-shadow: var(--shadow);
+        }
+        .masonry-item:nth-child(1) { grid-row: span 2; }
+        .masonry-item:nth-child(3) { grid-column: span 2; }
+        .masonry-item:nth-child(5) { grid-column: span 2; }
+        .masonry-item:nth-child(7) { grid-row: span 2; }
+        .masonry-item img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.5s ease;
+        }
+        .masonry-item:hover img { transform: scale(1.06); }
+        .masonry-item:hover { box-shadow: var(--shadow-hover); }
+        .masonry-caption {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: var(--white); padding: 20px 16px 14px; font-weight: 600;
+            font-size: 1rem; font-family: 'Amatic SC', cursive; letter-spacing: 1px;
+            opacity: 0; transform: translateY(10px); transition: all 0.4s ease;
+        }
+        .masonry-item:hover .masonry-caption { opacity: 1; transform: translateY(0); }
+
+        /* ============ MENU TAB STYLE ============ */
+        .menu-tabs {
+            display: flex; justify-content: center; gap: 0; margin-bottom: 36px;
+            border-bottom: 2px solid var(--border); flex-wrap: wrap;
+        }
+        .menu-tab {
+            padding: 12px 28px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+            transition: var(--transition); background: none; border: none;
+            color: var(--text-light); font-family: 'Work Sans', sans-serif;
+            border-bottom: 2px solid transparent; margin-bottom: -2px;
+        }
+        .menu-tab.active { color: var(--hijau); border-bottom-color: var(--hijau); }
+        .menu-tab:hover { color: var(--hijau); }
+        .menu-list { display: flex; flex-direction: column; gap: 14px; max-width: 700px; margin: 0 auto; }
+        .menu-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 20px; background: var(--white); border-radius: var(--radius-sm);
+            border: 1px solid var(--border); transition: var(--transition); gap: 14px;
+        }
+        .menu-row:hover { border-color: var(--hijau); box-shadow: var(--shadow); }
+        .menu-row-left { display: flex; align-items: center; gap: 14px; }
+        .menu-thumb {
+            width: 60px; height: 60px; border-radius: 50%; object-fit: cover;
+            border: 2px solid var(--border);
+        }
+        .menu-row h4 { font-size: 0.95rem; color: var(--dark); font-weight: 600; margin-bottom: 2px; }
+        .menu-row small { font-size: 0.78rem; color: var(--text-light); }
+        .menu-tag-sm {
+            display: inline-block; background: #fff3e0; color: var(--oranye);
+            font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;
+            margin-left: 6px;
+        }
+        .menu-row-price {
+            font-weight: 700; color: var(--hijau); font-size: 1rem; white-space: nowrap;
+        }
+
+        /* ============ OFFER BANNER ============ */
+        .offer-banner {
+            background: var(--hijau); color: var(--white); border-radius: var(--radius);
+            padding: 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;
+            justify-content: space-between; margin-top: 40px;
+        }
+        .offer-banner h3 {
+            font-family: 'Amatic SC', cursive; font-size: 2.4rem; line-height: 1;
+        }
+        .offer-banner p { opacity: 0.85; font-size: 0.9rem; }
+        .offer-banner .btn-fill { background: var(--kuning); color: var(--dark); }
+        .offer-banner .btn-fill:hover { background: #f0c152; }
+
+        /* ============ RESERVASI SIDEBAR ============ */
+        .reservasi-wrapper {
+            display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;
+        }
+        .reservasi-info {
+            flex: 1 1 300px; background: var(--hijau); color: var(--white);
+            border-radius: var(--radius); padding: 36px 30px;
+        }
+        .reservasi-info h3 { font-family: 'Amatic SC', cursive; font-size: 2.2rem; line-height: 1; margin-bottom: 14px; }
+        .reservasi-info p { opacity: 0.85; font-size: 0.88rem; margin-bottom: 20px; }
+        .info-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 0.85rem; }
+        .info-item i { color: var(--kuning); margin-top: 3px; width: 18px; text-align: center; }
+        .reservasi-form {
+            flex: 1.5 1 400px; background: var(--white); border-radius: var(--radius);
+            padding: 36px 30px; border: 1px solid var(--border); box-shadow: var(--shadow);
+        }
+        .reservasi-form h4 { font-size: 1.1rem; margin-bottom: 20px; color: var(--dark); font-weight: 600; }
+        .form-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+        .form-row .field { flex: 1 1 150px; }
+        .field label {
+            display: block; font-size: 0.78rem; font-weight: 600; color: var(--text);
+            margin-bottom: 5px;
+        }
+        .field input, .field select {
+            width: 100%; padding: 12px 14px; border: 1.5px solid var(--border);
+            border-radius: 8px; font-family: 'Work Sans', sans-serif; font-size: 0.88rem;
+            transition: var(--transition); background: var(--white);
+            -webkit-appearance: none; appearance: none;
+        }
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23666' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+        }
+        .field input:focus, .field select:focus { outline: none; border-color: var(--hijau); }
+        .btn-submit-full {
+            width: 100%; background: var(--hijau); color: var(--white); border: none;
+            padding: 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+            cursor: pointer; transition: var(--transition); margin-top: 6px;
+        }
+        .btn-submit-full:hover { background: var(--hijau-muda); }
+
+        /* ============ TESTIMONIAL ============ */
+        .testi-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;
+        }
+        .testi-card {
+            background: var(--white); border-radius: var(--radius-sm); padding: 24px;
+            border: 1px solid var(--border); transition: var(--transition);
+            position: relative; padding-top: 40px;
+        }
+        .testi-card::before {
+            content: '"'; position: absolute; top: 8px; left: 18px;
+            font-family: 'Amatic SC', cursive; font-size: 4rem; color: var(--kuning);
+            line-height: 1; opacity: 0.6;
+        }
+        .testi-card:hover { border-color: var(--hijau); box-shadow: var(--shadow-hover); }
+        .testi-card p { font-size: 0.9rem; color: var(--text); margin-bottom: 14px; font-style: italic; }
+        .testi-author { display: flex; align-items: center; gap: 10px; }
+        .testi-author img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .testi-stars { color: #f4a261; font-size: 0.7rem; }
+
         /* ============ MAPS ============ */
-        .map-container {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            border: 4px solid var(--white);
+        .map-frame {
+            border-radius: var(--radius); overflow: hidden; border: 3px solid var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
-        .map-container iframe {
-            display: block;
-            width: 100%;
-            height: 380px;
-        }
-        .address-box {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-top: 18px;
-            padding: 20px 24px;
-            background: var(--cream-light);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-        .address-box .pin-icon {
-            color: #e74c3c;
-            font-size: 1.6rem;
-            margin-top: 2px;
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
+        .map-frame iframe { display: block; width: 100%; height: 340px; }
 
         /* ============ FOOTER ============ */
         footer {
-            background: #0a0a0a;
-            color: rgba(255, 255, 255, 0.65);
-            padding: 60px 0 30px;
-            font-size: 0.88rem;
+            background: #1a1f1c; color: rgba(255,255,255,0.7); padding: 50px 0 20px;
+            font-size: 0.85rem;
         }
         .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px;
         }
         .footer-brand h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 12px;
+            font-family: 'Amatic SC', cursive; font-size: 2rem; color: var(--kuning); margin-bottom: 8px;
         }
-        .footer-brand p {
-            font-size: 0.85rem;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-        .footer-links h4 {
-            color: var(--white);
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
+        .footer-links h4 { color: var(--white); margin-bottom: 12px; font-size: 0.9rem; font-weight: 600; }
         .footer-links a {
-            display: block;
-            color: rgba(255, 255, 255, 0.55);
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: var(--transition);
-            font-size: 0.85rem;
+            display: block; color: rgba(255,255,255,0.55); text-decoration: none;
+            margin-bottom: 7px; transition: var(--transition); font-size: 0.82rem;
         }
-        .footer-links a:hover {
-            color: var(--gold);
-            padding-left: 4px;
-        }
-        .social-icons {
-            display: flex;
-            gap: 12px;
-            margin-top: 8px;
-        }
+        .footer-links a:hover { color: var(--kuning); }
+        .social-icons { display: flex; gap: 10px; margin-top: 10px; }
         .social-icons a {
-            width: 42px;
-            height: 42px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 1rem;
+            width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: var(--white);
+            text-decoration: none; transition: var(--transition); font-size: 0.9rem;
         }
-        .social-icons a:hover {
-            background: var(--gold);
-            border-color: var(--gold);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(200, 164, 92, 0.3);
-        }
+        .social-icons a:hover { background: var(--hijau); transform: translateY(-2px); }
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 24px;
-            text-align: center;
-            font-size: 0.8rem;
-            letter-spacing: 0.3px;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px;
+            text-align: center; font-size: 0.78rem;
         }
 
         /* ============ RESPONSIVE ============ */
-        @media (max-width: 1200px) {
-            .container-wide, .container { max-width: 960px; }
-            .gallery-strip { grid-template-columns: repeat(4, 1fr); gap: 12px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; min-height: auto; }
+            .hero-left { padding: 50px 24px; }
+            .hero-right { height: 350px; }
+            .masonry-grid { grid-template-columns: 1fr 1fr; }
+            .masonry-item:nth-child(3),
+            .masonry-item:nth-child(5) { grid-column: span 1; }
+            .masonry-item:nth-child(1),
+            .masonry-item:nth-child(7) { grid-row: span 1; }
         }
-        @media (max-width: 1024px) {
-            .container-wide, .container { max-width: 100%; padding: 0 24px; }
-            .services-grid, .rooms-grid, .blog-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-            .gallery-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-            .hero { min-height: 80vh; background-attachment: scroll; }
-            .hero h1 { font-size: 2.4rem; }
-            .nav-links { gap: 18px; }
-            .nav-links a { font-size: 0.8rem; }
-            .booking-wrapper { padding: 32px 28px; }
-            .booking-form { gap: 14px; }
-        }
+
         @media (max-width: 768px) {
+            /* SEMBUNYIKAN TOP BAR DI MOBILE */
+            .top-bar { display: none; }
+
+            /* NAVBAR MOBILE */
+            .navbar { position: sticky; top: 0; }
             .nav-links {
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
-                background: var(--white); flex-direction: column; padding: 80px 28px; gap: 22px;
-                box-shadow: -10px 0 40px rgba(0,0,0,0.12); transition: var(--transition); z-index: 999;
+                position: fixed; top: 0; right: -100%; width: 250px; height: 100vh;
+                background: var(--white); flex-direction: column; padding: 60px 20px; gap: 16px;
+                box-shadow: -8px 0 30px rgba(0,0,0,0.1); transition: var(--transition); z-index: 998;
             }
             .nav-links.active { right: 0; }
-            .nav-links a { color: var(--dark) !important; font-size: 0.9rem; }
             .mobile-toggle { display: block; }
-            .services-grid, .rooms-grid, .blog-grid, .testimonial-grid { grid-template-columns: 1fr; gap: 16px; }
-            .gallery-strip { grid-template-columns: 1fr 1fr; gap: 10px; }
-            .hero { min-height: 85vh; }
-            .hero h1 { font-size: 2rem; }
-            .hero-buttons { flex-direction: column; }
-            .btn-outline-light { justify-content: center; }
-            .booking-wrapper { padding: 28px 22px; border-radius: var(--radius); }
-            .booking-form { flex-direction: column; gap: 14px; }
-            .form-group { flex: 1 1 100%; min-width: 100%; }
-            .form-group label { font-size: 0.78rem; margin-bottom: 6px; }
-            .form-group input, .form-group select { padding: 15px 16px; font-size: 0.9rem; border-radius: var(--radius-xs); }
-            .form-group select { background-position: right 16px center; padding-right: 40px; }
-            .btn-submit { width: 100%; justify-content: center; padding: 16px 28px; font-size: 0.95rem; margin-top: 4px; border-radius: var(--radius-xs); }
-            .footer-grid { grid-template-columns: 1fr; gap: 28px; text-align: left; }
-            .footer-brand, .footer-brand h3, .footer-brand p, .footer-links, .footer-links h4, .footer-links a { text-align: left; }
-            .social-icons { justify-content: flex-start; }
-            .footer-bottom { text-align: left; }
-            section { padding: 60px 0; }
-            .section-title { font-size: 1.8rem; }
-            .section-header { margin-bottom: 36px; }
-            .map-container iframe { height: 280px; }
-            .gallery-title { font-size: 1.1rem; }
+
+            /* HERO MOBILE - FULL BACKGROUND IMAGE */
+            .hero {
+                flex-direction: column; min-height: 90vh; position: relative;
+                background: none;
+            }
+            .hero-left {
+                flex: 1; display: flex; align-items: flex-end; padding: 40px 20px 40px 20px;
+                background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%);
+                z-index: 2; order: 2;
+            }
+            .hero-left-content {
+                max-width: 100%; color: var(--white);
+            }
+            .hero-left h1 { color: var(--white); font-size: 2.2rem; }
+            .hero-left p { color: rgba(255,255,255,0.85); font-size: 0.88rem; }
+            .hero-tag { background: var(--oranye); }
+            .btn-ghost { color: var(--white); border-color: var(--white); }
+            .btn-ghost:hover { background: var(--white); color: var(--hijau); }
+            .review-inline { background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); color: var(--white); }
+            .review-inline strong { color: var(--white); }
+            .review-inline .stars { color: var(--kuning); }
+            .review-inline span { color: rgba(255,255,255,0.8) !important; }
+
+            /* Hero right jadi background penuh di mobile */
+            .hero-right {
+                position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                z-index: 1; order: 1;
+            }
+            .hero-right::after {
+                background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+            }
+            .hero-btns { flex-direction: column; align-items: stretch; gap: 10px; }
+            .hero-btns .btn-fill,
+            .hero-btns .btn-ghost { justify-content: center; text-align: center; }
+            .review-inline { margin-top: 8px; justify-content: center; width: 100%; }
+
+            /* Lainnya */
+            .masonry-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .menu-tabs { gap: 0; overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }
+            .menu-tab { padding: 10px 16px; font-size: 0.78rem; white-space: nowrap; }
+            .menu-row { flex-wrap: wrap; }
+            .menu-row-price { margin-left: auto; }
+            .offer-banner { text-align: center; justify-content: center; }
+            .offer-banner .btn-fill { margin-left: 0 !important; margin-top: 10px; }
+            .reservasi-wrapper { gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+            section { padding: 50px 0; }
         }
+
         @media (max-width: 480px) {
-            .container-wide, .container { padding: 0 16px; }
-            .hero h1 { font-size: 1.7rem; }
-            .hero p { font-size: 0.9rem; }
-            .hero-badge { font-size: 0.7rem; padding: 8px 16px; }
-            .btn-primary, .btn-outline-light { padding: 14px 28px; font-size: 0.85rem; }
-            .gallery-strip { grid-template-columns: 1fr; }
-            .room-img-wrapper { height: 220px; }
-            .blog-img-wrapper { height: 200px; }
-            .map-container iframe { height: 250px; }
-            .booking-wrapper { padding: 22px 16px; border-radius: var(--radius-sm); }
-            .booking-form { gap: 12px; }
-            .btn-submit { padding: 14px 24px; font-size: 0.9rem; }
-            .address-box { flex-direction: column; gap: 8px; }
+            .hero-left h1 { font-size: 2rem; }
+            .masonry-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: left; }
+            .social-icons { justify-content: flex-start; }
+            .testi-grid { grid-template-columns: 1fr; }
+            .review-inline { font-size: 0.76rem; padding: 8px 14px; }
         }
     </style>
 </head>
 <body>
 
-<!-- ==================== NAVIGATION ==================== -->
+<!-- ==================== TOP BAR (HIDDEN DI MOBILE) ==================== -->
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-phone"></i> 0812-3456-7890</span>
+        <span><i class="fas fa-clock"></i> Buka: 10:00 - 22:00 WIB</span>
+        <span><i class="fas fa-map-marker-alt"></i> Jl. Merdeka No. 45, Bandung</span>
+    </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
 <nav class="navbar" id="navbar">
-    <div class="container-wide">
+    <div class="container">
         <a href="#" class="logo">
-            <i class="fas fa-crown"></i> The Grand Maharani
+            <i class="fas fa-leaf"></i>
+            <div>Saung Rasa<span>Nusantara</span></div>
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#gallery">Galeri</a></li>
-            <li><a href="#rooms">Kamar</a></li>
-            <li><a href="#layanan">Layanan</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#booking">Pemesanan</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservasi">Reservasi</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="#location">Lokasi</a></li>
-            <li><a href="#booking" class="btn-book-nav">Pesan Sekarang</a></li>
+            <li><a href="#reservasi" class="btn-nav">Pesan Meja</a></li>
         </ul>
-        <button class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
-        </button>
+        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
     </div>
 </nav>
 
-<!-- ==================== HERO ==================== -->
+<!-- ==================== HERO SPLIT ==================== -->
 <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container-wide">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <div class="hero-badge">
-                <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                <span>4.8/5 • 1,245 Ulasan • Travelers' Choice 2025</span>
+    <div class="hero-left">
+        <div class="hero-left-content" data-aos="fade-up" data-aos-duration="500">
+            <span class="hero-tag">⭐ 4.7 • 850+ Ulasan</span>
+            <h1>Cita Rasa <em>Nusantara</em> dalam Suasana Hangat</h1>
+            <p>Nikmati hidangan khas Indonesia dengan bahan segar pilihan. Tempat nyaman untuk makan bersama keluarga dan kerabat tercinta.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-fill"><i class="fas fa-book-open"></i> Lihat Menu</a>
+                <a href="#reservasi" class="btn-ghost"><i class="fas fa-calendar-check"></i> Reservasi</a>
+                <div class="review-inline">
+                    <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                    <strong>4.7/5</strong>
+                    <span style="color:#666; font-size:0.78rem;">Google</span>
+                </div>
             </div>
-            <h1>Surga Tropis dengan Sentuhan Kemewahan</h1>
-            <p>Rasakan pengalaman menginap tak tertandingi dengan panorama samudra, butler pribadi, dan kuliner kelas dunia di resor bintang lima kami.</p>
-            <div class="hero-buttons">
-                <a href="#rooms" class="btn-primary"><i class="fas fa-bed"></i> Jelajahi Suite</a>
-                <a href="#gallery" class="btn-outline-light"><i class="fas fa-images"></i> Lihat Galeri</a>
+        </div>
+    </div>
+    <div class="hero-right"></div>
+</section>
+
+<!-- ==================== GALERI MASONRY ==================== -->
+<section id="gallery">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
+            <span class="section-tag">Galeri</span>
+            <h2 class="section-title">Suasana & Hidangan</h2>
+            <p class="section-desc">Intip kehangatan tempat dan kelezatan masakan yang kami sajikan setiap hari.</p>
+        </div>
+        <div class="masonry-grid">
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="50">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=500&auto=format&fit=crop" alt="Suasana" loading="lazy">
+                <div class="masonry-caption">Area Makan Utama</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=400&auto=format&fit=crop" alt="Makanan" loading="lazy">
+                <div class="masonry-caption">Sajian Andalan</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="150">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?q=80&w=700&auto=format&fit=crop" alt="Keluarga" loading="lazy">
+                <div class="masonry-caption">Makan Bersama Keluarga</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400&auto=format&fit=crop" alt="Hidangan" loading="lazy">
+                <div class="masonry-caption">Plating Elegan</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="250">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=700&auto=format&fit=crop" alt="Steak" loading="lazy">
+                <div class="masonry-caption">Grill Premium</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400&auto=format&fit=crop" alt="Minuman" loading="lazy">
+                <div class="masonry-caption">Minuman Segar</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="350">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=500&auto=format&fit=crop" alt="Kuliner" loading="lazy">
+                <div class="masonry-caption">Masakan Khas</div>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=400&auto=format&fit=crop" alt="Food" loading="lazy">
+                <div class="masonry-caption">Detail Hidangan</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== GALLERY WITH HOVER TITLES ==================== -->
-<section id="gallery" style="padding-bottom: 40px;">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Galeri Visual</span>
-            <h2 class="section-title">Jelajahi Keindahan Resort</h2>
-            <p class="section-desc">Setiap sudut dirancang untuk memanjakan mata dan jiwa Anda. Arahkan kursor untuk melihat detail.</p>
+<!-- ==================== MENU ==================== -->
+<section id="menu" style="background: #f9f6f0;">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
+            <span class="section-tag">Menu</span>
+            <h2 class="section-title">Hidangan Pilihan</h2>
+            <p class="section-desc">Dibuat dengan bahan segar dan resep turun-temurun keluarga.</p>
         </div>
-        <div class="gallery-strip" data-aos="fade-up">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop" alt="Resort View" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Panorama Resort</span>
+        <div class="menu-tabs" data-aos="fade-up" data-aos-delay="100">
+            <button class="menu-tab active" onclick="filterMenu('all', this)">Semua</button>
+            <button class="menu-tab" onclick="filterMenu('makanan', this)">Makanan Berat</button>
+            <button class="menu-tab" onclick="filterMenu('lauk', this)">Lauk Pauk</button>
+            <button class="menu-tab" onclick="filterMenu('minuman', this)">Minuman</button>
+            <button class="menu-tab" onclick="filterMenu('camilan', this)">Camilan</button>
+        </div>
+        <div class="menu-list" id="menuList">
+            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="150">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=100&auto=format&fit=crop" alt="Nasi Goreng" class="menu-thumb" loading="lazy">
+                    <div><h4>Nasi Goreng Spesial <span class="menu-tag-sm">Favorit</span></h4><small>Nasi goreng dengan telur, ayam suwir, dan kerupuk udang</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 28.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop" alt="Suite Mewah" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Suite Mewah</span>
+            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="200">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=100&auto=format&fit=crop" alt="Sate" class="menu-thumb" loading="lazy">
+                    <div><h4>Sate Ayam Madura</h4><small>10 tusuk sate ayam dengan bumbu kacang khas</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 32.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=600&auto=format&fit=crop" alt="Pantai" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Pantai Eksotis</span>
+            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="250">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?q=80&w=100&auto=format&fit=crop" alt="Rendang" class="menu-thumb" loading="lazy">
+                    <div><h4>Rendang Sapi <span class="menu-tag-sm">Best Seller</span></h4><small>Daging sapi empuk dimasak santan & rempah pilihan</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 38.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" alt="Lobby" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Lobby Grand</span>
+            <div class="menu-row" data-category="lauk" data-aos="fade-up" data-aos-delay="150">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=100&auto=format&fit=crop" alt="Ayam Goreng" class="menu-thumb" loading="lazy">
+                    <div><h4>Ayam Goreng Kremes</h4><small>Ayam goreng renyah dengan taburan kremesan gurih</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 25.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=600&auto=format&fit=crop" alt="Pool" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Infinity Pool</span>
+            <div class="menu-row" data-category="lauk" data-aos="fade-up" data-aos-delay="200">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1598515213692-5f252f75d785?q=80&w=100&auto=format&fit=crop" alt="Ikan Bakar" class="menu-thumb" loading="lazy">
+                    <div><h4>Ikan Bakar Jimbaran</h4><small>Ikan segar dibakar dengan sambal khas Bali</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 35.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop" alt="Spa" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Spa & Wellness</span>
+            <div class="menu-row" data-category="minuman" data-aos="fade-up" data-aos-delay="150">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=100&auto=format&fit=crop" alt="Es Teh" class="menu-thumb" loading="lazy">
+                    <div><h4>Es Teh Manis</h4><small>Teh segar dengan gula asli pilihan</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 6.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" alt="Restaurant" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Fine Dining</span>
+            <div class="menu-row" data-category="minuman" data-aos="fade-up" data-aos-delay="200">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=100&auto=format&fit=crop" alt="Es Kelapa" class="menu-thumb" loading="lazy">
+                    <div><h4>Es Kelapa Muda</h4><small>Kelapa muda segar dengan sirup & daging kelapa</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 12.000</span>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" alt="Beach" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">Tepi Pantai</span>
+            <div class="menu-row" data-category="camilan" data-aos="fade-up" data-aos-delay="150">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?q=80&w=100&auto=format&fit=crop" alt="Tahu" class="menu-thumb" loading="lazy">
+                    <div><h4>Tahu Walik Crispy</h4><small>Tahu isi sayuran digoreng renyah</small></div>
                 </div>
-                <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                <span class="menu-row-price">Rp 15.000</span>
+            </div>
+            <div class="menu-row" data-category="camilan" data-aos="fade-up" data-aos-delay="200">
+                <div class="menu-row-left">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=100&auto=format&fit=crop" alt="Pisang Goreng" class="menu-thumb" loading="lazy">
+                    <div><h4>Pisang Goreng Crispy</h4><small>Pisang raja pilihan dengan balutan tepung renyah</small></div>
+                </div>
+                <span class="menu-row-price">Rp 12.000</span>
+            </div>
+        </div>
+
+        <div class="offer-banner" data-aos="fade-up" data-aos-delay="100">
+            <div><h3>Paket Keluarga Hemat!</h3><p>Nasi Goreng 2 porsi + Sate Ayam 20 tusuk + Es Teh 4 gelas</p></div>
+            <div style="display:flex; align-items:center; flex-wrap:wrap; gap:12px;">
+                <span style="font-size:2rem; font-weight:700; font-family:'Amatic SC',cursive;">Rp 99.000</span>
+                <a href="#reservasi" class="btn-fill">Pesan Sekarang</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== ROOMS ==================== -->
-<section id="rooms" style="background: #fafaf8;">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Akomodasi</span>
-            <h2 class="section-title">Suite & Villa Eksklusif</h2>
-            <p class="section-desc">Pilih akomodasi sempurna untuk pengalaman menginap Anda.</p>
+<!-- ==================== RESERVASI ==================== -->
+<section id="reservasi">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
+            <span class="section-tag">Reservasi</span>
+            <h2 class="section-title">Pesan Meja</h2>
+            <p class="section-desc">Reservasi mudah, datang langsung duduk dan nikmati hidangan.</p>
         </div>
-        <div class="rooms-grid">
-            <div class="room-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="room-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop" alt="Deluxe Suite" loading="lazy">
-                    <span class="room-tag">Best Seller</span>
-                </div>
-                <div class="room-body">
-                    <h3>Deluxe Ocean Suite</h3>
-                    <div class="price">Rp 2.500.000 <span>/ malam</span></div>
-                    <div class="room-features">
-                        <span><i class="fas fa-ruler-combined"></i> 55 m²</span>
-                        <span><i class="fas fa-bed"></i> King Bed</span>
-                        <span><i class="fas fa-water"></i> Ocean View</span>
-                    </div>
-                    <a href="#booking" class="btn-room">Pesan Sekarang</a>
-                </div>
+        <div class="reservasi-wrapper">
+            <div class="reservasi-info" data-aos="fade-right" data-aos-duration="500">
+                <h3>Kenapa Reservasi?</h3>
+                <p>Pesan meja dulu biar gak kehabisan tempat, terutama saat jam makan siang dan akhir pekan.</p>
+                <div class="info-item"><i class="fas fa-check-circle"></i> Dapat tempat prioritas</div>
+                <div class="info-item"><i class="fas fa-check-circle"></i> Gak perlu antri lama</div>
+                <div class="info-item"><i class="fas fa-check-circle"></i> Bisa request tempat khusus</div>
+                <div class="info-item"><i class="fas fa-check-circle"></i> Konfirmasi via WhatsApp</div>
             </div>
-            <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="room-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=600&auto=format&fit=crop" alt="Premier Suite" loading="lazy">
-                    <span class="room-tag">Premium</span>
+            <div class="reservasi-form" data-aos="fade-left" data-aos-duration="500">
+                <h4>Form Reservasi</h4>
+                <div class="form-row">
+                    <div class="field"><label>Nama</label><input type="text" placeholder="Nama Anda"></div>
+                    <div class="field"><label>No. HP</label><input type="tel" placeholder="0812xxxxxx"></div>
                 </div>
-                <div class="room-body">
-                    <h3>Premier Pool Villa</h3>
-                    <div class="price">Rp 4.800.000 <span>/ malam</span></div>
-                    <div class="room-features">
-                        <span><i class="fas fa-ruler-combined"></i> 85 m²</span>
-                        <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
-                        <span><i class="fas fa-spa"></i> Jacuzzi</span>
-                    </div>
-                    <a href="#booking" class="btn-room">Pesan Sekarang</a>
+                <div class="form-row">
+                    <div class="field"><label>Tanggal</label><input type="date" value="2026-06-15"></div>
+                    <div class="field"><label>Jam</label><select><option>11:00</option><option>12:00</option><option selected>13:00</option><option>18:00</option><option>19:00</option></select></div>
                 </div>
-            </div>
-            <div class="room-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="room-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop" alt="Presidential" loading="lazy">
-                    <span class="room-tag">Exclusive</span>
+                <div class="form-row">
+                    <div class="field"><label>Jumlah Orang</label><select><option>1-2</option><option selected>3-4</option><option>5-6</option><option>7+</option></select></div>
+                    <div class="field"><label>Area Duduk</label><select><option>Indoor</option><option>Outdoor</option><option selected>Terserah</option></select></div>
                 </div>
-                <div class="room-body">
-                    <h3>Presidential Villa</h3>
-                    <div class="price">Rp 12.000.000 <span>/ malam</span></div>
-                    <div class="room-features">
-                        <span><i class="fas fa-ruler-combined"></i> 150 m²</span>
-                        <span><i class="fas fa-user-tie"></i> Butler 24/7</span>
-                        <span><i class="fas fa-wine-glass"></i> Wine Cellar</span>
-                    </div>
-                    <a href="#booking" class="btn-room">Pesan Sekarang</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== LAYANAN ==================== -->
-<section id="layanan">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Fasilitas</span>
-            <h2 class="section-title">Layanan Eksklusif</h2>
-            <p class="section-desc">Dirancang untuk kenyamanan dan kemewahan tanpa batas.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-icon"><i class="fas fa-bell-concierge"></i></div>
-                <h3>Butler 24 Jam</h3>
-                <p>Layanan pribadi siap memenuhi kebutuhan Anda kapan saja.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
-                <div class="service-icon"><i class="fas fa-water-ladder"></i></div>
-                <h3>Infinity Pool</h3>
-                <p>Kolam renang tanpa batas dengan panorama samudra.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-icon"><i class="fas fa-spa"></i></div>
-                <h3>Spa & Wellness</h3>
-                <p>Perawatan tradisional dan modern untuk relaksasi total.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="250">
-                <div class="service-icon"><i class="fas fa-utensils"></i></div>
-                <h3>Fine Dining</h3>
-                <p>Restoran berbintang dengan chef internasional ternama.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-icon"><i class="fas fa-car"></i></div>
-                <h3>Transport Mewah</h3>
-                <p>Antar-jemput bandara dengan armada premium eksklusif.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="350">
-                <div class="service-icon"><i class="fas fa-wifi"></i></div>
-                <h3>WiFi Ultra Cepat</h3>
-                <p>Koneksi internet berkecepatan tinggi di seluruh resort.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== BLOG WITH EXPANDABLE CONTENT ==================== -->
-<section id="blog" style="background: #fafaf8;">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Blog & Cerita</span>
-            <h2 class="section-title">Inspirasi Perjalanan</h2>
-            <p class="section-desc">Cerita menarik seputar destinasi, kuliner, dan gaya hidup mewah.</p>
-        </div>
-        <div class="blog-grid">
-            <!-- Blog 1 -->
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="blog-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" alt="Pantai" loading="lazy">
-                    <span class="blog-category">Destinasi</span>
-                </div>
-                <div class="blog-body">
-                    <h3>Pantai Tersembunyi di Selatan Bali</h3>
-                    <p class="blog-excerpt">Temukan surga rahasia hanya beberapa langkah dari resort kami.</p>
-                    <div class="blog-full" id="blogFull1">
-                        <p>Terletak hanya 200 meter dari resort, Pantai Nyang-Nyang menawarkan pasir putih lembut dan air jernih berwarna turquoise. Tempat ini masih sangat alami dan jarang dikunjungi wisatawan. Cocok untuk Anda yang mencari ketenangan dan ingin menikmati sunset romantis tanpa keramaian. Staf kami siap mengatur piknik privat di tepi pantai lengkap dengan champagne dan hidangan laut segar.</p>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleBlog('blogFull1', this)">
-                        Baca Selengkapnya <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Blog 2 -->
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="blog-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop" alt="Spa" loading="lazy">
-                    <span class="blog-category">Wellness</span>
-                </div>
-                <div class="blog-body">
-                    <h3>Ritual Spa Kerajaan Nusantara</h3>
-                    <p class="blog-excerpt">Perawatan eksklusif dengan rempah-rempah asli pilihan terbaik.</p>
-                    <div class="blog-full" id="blogFull2">
-                        <p>Terinspirasi dari ritual kecantikan putri-putri keraton Jawa, spa kami menggunakan bahan alami seperti kunyit, beras, cendana, dan minyak esensial langka. Setiap sesi berlangsung 90 menit dan dipimpin oleh terapis bersertifikat internasional. Paket lengkap mencakup pijat aromaterapi, lulur rempah, dan berendam di bak bunga mawar. Pengalaman yang menyegarkan jiwa dan raga.</p>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleBlog('blogFull2', this)">
-                        Baca Selengkapnya <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Blog 3 -->
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="blog-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" alt="Dining" loading="lazy">
-                    <span class="blog-category">Kuliner</span>
-                </div>
-                <div class="blog-body">
-                    <h3>Pengalaman Fine Dining Tak Terlupakan</h3>
-                    <p class="blog-excerpt">Chef bintang Michelin hadir dengan menu degustasi spesial.</p>
-                    <div class="blog-full" id="blogFull3">
-                        <p>Restoran kami, "Sahasrara", menghadirkan pengalaman bersantap 7-course yang dikurasi langsung oleh Chef Jean-Pierre Moreau, peraih dua bintang Michelin. Setiap hidangan memadukan cita rasa Indonesia dengan teknik kuliner Prancis modern. Menu berubah setiap musim mengikuti bahan-bahan segar dari petani lokal. Reservasi minimal 24 jam sebelumnya sangat disarankan.</p>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleBlog('blogFull3', this)">
-                        Baca Selengkapnya <i class="fas fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== BOOKING ==================== -->
-<section id="booking">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Reservasi</span>
-            <h2 class="section-title">Pesan Pengalaman Anda</h2>
-            <p class="section-desc">Cek ketersediaan dan dapatkan harga terbaik langsung.</p>
-        </div>
-        <div class="booking-wrapper" data-aos="fade-up">
-            <div class="booking-form">
-                <div class="form-group">
-                    <label><i class="far fa-calendar-alt" style="margin-right:4px;"></i> Check-in</label>
-                    <input type="date" value="2026-06-15">
-                </div>
-                <div class="form-group">
-                    <label><i class="far fa-calendar-check" style="margin-right:4px;"></i> Check-out</label>
-                    <input type="date" value="2026-06-19">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-user" style="margin-right:4px;"></i> Tamu</label>
-                    <select>
-                        <option>1 Dewasa</option>
-                        <option selected>2 Dewasa</option>
-                        <option>2 Dewasa, 1 Anak</option>
-                        <option>2 Dewasa, 2 Anak</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-bed" style="margin-right:4px;"></i> Tipe Suite</label>
-                    <select>
-                        <option>Deluxe Ocean Suite</option>
-                        <option>Premier Pool Villa</option>
-                        <option>Presidential Villa</option>
-                    </select>
-                </div>
-                <button class="btn-submit"><i class="fas fa-search"></i> Cek Ketersediaan</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== ABOUT ==================== -->
-<section id="about" style="background: #fafaf8;">
-    <div class="container-wide">
-        <div style="display:flex; flex-wrap:wrap; gap:50px; align-items:center;">
-            <div style="flex:1 1 400px;" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=700&auto=format&fit=crop" alt="The Grand Maharani" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-xl); height:400px; object-fit:cover;" loading="lazy">
-            </div>
-            <div style="flex:1 1 400px;" data-aos="fade-left">
-                <span class="section-subtitle">Tentang Kami</span>
-                <h2 class="section-title" style="text-align:left;">The Grand Maharani</h2>
-                <p style="margin-bottom:16px; font-size:0.95rem; color:var(--text-light);">Sejak 1998, The Grand Maharani telah menjadi ikon kemewahan di pesisir selatan Bali. Menggabungkan arsitektur klasik Jawa dengan sentuhan modern minimalis, setiap sudut resort dirancang untuk menghadirkan pengalaman menginap yang tak terlupakan.</p>
-                <p style="margin-bottom:20px; font-size:0.95rem; color:var(--text-light);">Dengan 87 suite dan villa eksklusif, 3 restoran berbintang, spa kelas dunia, dan layanan butler 24 jam, kami berkomitmen memberikan keramahan terbaik khas Indonesia.</p>
-                <div style="display:flex; align-items:center; gap:16px; background:var(--white); padding:18px 24px; border-radius:var(--radius); width:fit-content; box-shadow:var(--shadow-sm);">
-                    <span style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--dark); line-height:1;">4.8</span>
-                    <div>
-                        <div style="color:#ffb800; letter-spacing:2px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <span style="font-size:0.85rem; color:var(--text-light);">1,245+ Ulasan Tamu</span>
-                        <div style="color:var(--gold); font-weight:600; font-size:0.85rem; margin-top:4px;"><i class="fas fa-award"></i> Travelers' Choice 2025</div>
-                    </div>
-                </div>
+                <button class="btn-submit-full">Reservasi Meja Sekarang</button>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ==================== TESTIMONIAL ==================== -->
-<section id="testimonial">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Testimonial</span>
-            <h2 class="section-title">Cerita Tamu Kami</h2>
-            <p class="section-desc">Pengalaman nyata dari tamu yang telah menginap di resort kami.</p>
+<section id="testimonial" style="background: #f9f6f0;">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
+            <span class="section-tag">Testimonial</span>
+            <h2 class="section-title">Apa Kata Mereka</h2>
+            <p class="section-desc">Pengalaman nyata pelanggan yang sudah makan di tempat kami.</p>
         </div>
-        <div class="testimonial-grid">
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <p class="testimonial-text">"Pengalaman menginap yang benar-benar luar biasa! Staf sangat ramah dan perhatian. Kolam infinity dengan pemandangan sunset adalah yang terbaik yang pernah kami alami."</p>
-                <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Aditya" loading="lazy">
-                    <div>
-                        <div class="author-name">Aditya Pratama</div>
-                        <div class="author-stars">⭐ 5.0</div>
-                        <small style="color:#999;">Jakarta, Indonesia</small>
-                    </div>
-                </div>
+        <div class="testi-grid">
+            <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+                <p>"Makanannya enak banget! Tempatnya bersih dan nyaman buat makan keluarga. Nasi gorengnya juara!"</p>
+                <div class="testi-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=80&auto=format&fit=crop" alt="Budi" loading="lazy"><div><strong style="font-size:0.85rem;">Budi Santoso</strong><div class="testi-stars">⭐ 5.0</div></div></div>
             </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                <p class="testimonial-text">"Sarapan buffet sangat bervariasi dan lezat. Pemandangan dari kamar sungguh indah. Kami pasti akan kembali lagi tahun depan untuk liburan keluarga."</p>
-                <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Sarah" loading="lazy">
-                    <div>
-                        <div class="author-name">Sarah Amalia</div>
-                        <div class="author-stars">⭐ 4.9</div>
-                        <small style="color:#999;">Surabaya, Indonesia</small>
-                    </div>
-                </div>
+            <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+                <p>"Rendangnya juara! Empuk dan bumbunya meresap. Harga juga terjangkau untuk sekeluarga."</p>
+                <div class="testi-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=80&auto=format&fit=crop" alt="Ani" loading="lazy"><div><strong style="font-size:0.85rem;">Ani Wijaya</strong><div class="testi-stars">⭐ 4.9</div></div></div>
             </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                <p class="testimonial-text">"Honeymoon yang sempurna! Dekorasi romantis di kamar, pelayanan butler terbaik, dan makan malam privat di tepi pantai sangat berkesan. Sangat direkomendasikan!"</p>
-                <div class="testimonial-author">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Dian" loading="lazy">
-                    <div>
-                        <div class="author-name">Raka & Dian</div>
-                        <div class="author-stars">⭐ 5.0</div>
-                        <small style="color:#999;">Bali, Indonesia</small>
-                    </div>
-                </div>
+            <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
+                <p>"Pelayanan ramah, tempatnya adem, cocok buat arisan atau acara keluarga. Pasti balik lagi!"</p>
+                <div class="testi-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=80&auto=format&fit=crop" alt="Rina" loading="lazy"><div><strong style="font-size:0.85rem;">Rina Marlina</strong><div class="testi-stars">⭐ 5.0</div></div></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ==================== LOCATION ==================== -->
-<section id="location" style="background: #fafaf8;">
-    <div class="container-wide">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-subtitle">Lokasi</span>
-            <h2 class="section-title">Temukan Kami</h2>
-            <p class="section-desc">Terletak di kawasan eksklusif Seminyak dengan akses mudah.</p>
+<section id="location">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
+            <span class="section-tag">Lokasi</span>
+            <h2 class="section-title">Kunjungi Kami</h2>
+            <p class="section-desc">Lokasi strategis di pusat kota, mudah dijangkau.</p>
         </div>
-        <div class="map-container" data-aos="zoom-in">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.123456789!2d115.145678!3d-8.678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDAnNDQuMCJTIDExNcKwMDgnNDQuMCJF!5e0!3m2!1sid!2sid!4v1600000000000"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="map-frame" data-aos="fade-up" data-aos-delay="100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.123456789!2d106.789123!3d-6.208763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNSJTIDEwNsKwNDcnMjAuOCJF!5e0!3m2!1sid!2sid!4v1600000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="address-box" data-aos="fade-up">
-            <i class="fas fa-map-pin pin-icon"></i>
-            <div>
-                <strong style="color:var(--dark); font-size:1rem;">The Grand Maharani Resort & Spa</strong>
-                <p style="color:var(--text-light); font-size:0.9rem; margin-top:4px;">Jl. Pantai Indah No. 87, Seminyak, Bali 80361, Indonesia</p>
-                <p style="color:var(--text-light); font-size:0.85rem;"><i class="fas fa-phone" style="color:var(--gold); margin-right:6px;"></i> +62 361 876 5432 &nbsp;|&nbsp; <i class="fas fa-envelope" style="color:var(--gold); margin-right:6px;"></i> reservation@grandmaharani.com</p>
-            </div>
+        <div style="text-align:center; margin-top:16px; color:var(--text-light); font-size:0.9rem;" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-map-pin" style="color:#e74c3c;"></i> Jl. Merdeka No. 45, Kec. Sukamaju, Bandung 40123 &nbsp;|&nbsp;
+            <i class="fas fa-phone" style="color:var(--hijau);"></i> 0812-3456-7890
         </div>
     </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
 <footer>
-    <div class="container-wide">
+    <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>The Grand Maharani</h3>
-                <p>Resor bintang lima dengan keramahan khas Indonesia. Tempat di mana kemewahan berpadu dengan keindahan alam tropis.</p>
+                <h3>Saung Rasa Nusantara</h3>
+                <p>Rumah makan keluarga dengan cita rasa masakan Indonesia terbaik. Bahan segar, harga bersahabat, tempat nyaman untuk semua kalangan.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Navigasi</h4>
-                <a href="#home">Home</a>
-                <a href="#gallery">Galeri</a>
-                <a href="#rooms">Kamar</a>
-                <a href="#layanan">Layanan</a>
-                <a href="#blog">Blog</a>
-            </div>
-            <div class="footer-links">
-                <h4>Informasi</h4>
-                <a href="#about">Tentang Kami</a>
-                <a href="#testimonial">Testimonial</a>
-                <a href="#location">Lokasi</a>
-                <a href="#">Karir</a>
-                <a href="#">Kebijakan Privasi</a>
-            </div>
-            <div class="footer-links">
-                <h4>Kontak</h4>
-                <a href="tel:+623618765432">+62 361 876 5432</a>
-                <a href="mailto:reservation@grandmaharani.com">Email Reservasi</a>
-                <a href="#">WhatsApp Concierge</a>
-                <a href="#">Syarat & Ketentuan</a>
-            </div>
+            <div class="footer-links"><h4>Navigasi</h4><a href="#home">Home</a><a href="#gallery">Galeri</a><a href="#menu">Menu</a><a href="#reservasi">Reservasi</a></div>
+            <div class="footer-links"><h4>Informasi</h4><a href="#testimonial">Testimonial</a><a href="#location">Lokasi</a><a href="#">Tentang Kami</a><a href="#">Karir</a></div>
+            <div class="footer-links"><h4>Kontak</h4><a href="tel:+6281234567890">0812-3456-7890</a><a href="mailto:saungrasa@gmail.com">saungrasa@gmail.com</a><a href="#">WhatsApp Order</a></div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 The Grand Maharani Resort & Spa. All Rights Reserved. Designed with 💵 in Bali.</p>
-        </div>
+        <div class="footer-bottom"><p>© 2026 Saung Rasa Nusantara. All Rights Reserved. Made with ❤️ in Bandung.</p></div>
     </div>
 </footer>
 
 <!-- ==================== SCRIPTS ==================== -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({
-        duration: 700,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 50
-    });
+    AOS.init({ duration: 500, easing: 'ease-out', once: true, offset: 40 });
 
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Mobile menu
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
     });
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            document.getElementById('navLinks').classList.remove('active');
         });
     });
 
-    // Blog expand/collapse function
-    function toggleBlog(blogId, btn) {
-        const blogFull = document.getElementById(blogId);
-        const isExpanded = blogFull.classList.contains('expanded');
-
-        // Tutup semua blog yang terbuka
-        document.querySelectorAll('.blog-full').forEach(el => el.classList.remove('expanded'));
-        document.querySelectorAll('.read-more-btn').forEach(el => {
-            el.classList.remove('active');
-            el.innerHTML = 'Baca Selengkapnya <i class="fas fa-chevron-down"></i>';
+    function filterMenu(category, btn) {
+        document.querySelectorAll('.menu-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.menu-row').forEach(row => {
+            row.style.display = (category === 'all' || row.dataset.category === category) ? 'flex' : 'none';
         });
-
-        // Buka yang diklik jika sebelumnya tertutup
-        if (!isExpanded) {
-            blogFull.classList.add('expanded');
-            btn.classList.add('active');
-            btn.innerHTML = 'Tutup <i class="fas fa-chevron-down"></i>';
-        }
     }
 </script>
 
