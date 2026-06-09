@@ -1,760 +1,1330 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no">
+  
+  <!-- META TAGS UNTUK SEO & DESKRIPSI TAB -->
+  <title>Rocket Chicken Kandanghaur | Ayam Crispy Terbaik</title>
+  <meta name="description" content="Rocket Chicken Kandanghaur - Nikmati ayam crispy terenak dengan bumbu rahasia khas Kandanghaur. Pesan sekarang untuk sensasi gurih dan renyah tiada tanding!">
+  <meta name="keywords" content="rocket chicken, ayam crispy, kandanghaur, ayam goreng, makanan enak, indramayu, pesan ayam online">
+  <meta name="author" content="Rocket Chicken Kandanghaur">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#e63946">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Rocket Chicken Kandanghaur | Ayam Crispy Terbaik">
+  <meta property="og:description" content="Nikmati ayam crispy terenak dengan bumbu rahasia khas Kandanghaur. Pesan sekarang!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rocketchicken-kandanghaur.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=1200&h=630&fit=crop">
+  <meta property="og:site_name" content="Rocket Chicken Kandanghaur">
+  <meta property="og:locale" content="id_ID">
+  
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rocket Chicken Kandanghaur | Ayam Crispy Terbaik">
+  <meta name="twitter:description" content="Nikmati ayam crispy terenak dengan bumbu rahasia khas Kandanghaur.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=1200&h=630&fit=crop">
+  
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://rocketchicken-kandanghaur.com">
+  
+  <!-- FAVICON GENERATE FROM EMOJI/ICON (1:1) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e63946'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🚀</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e63946'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🚀</text></svg>">
 
-    <!-- Open Graph / Social Media Share -->
-    <meta property="og:title" content="Saung Rasa Nusantara • Rumah Makan Keluarga">
-    <meta property="og:description" content="Nikmati cita rasa masakan Indonesia terbaik dengan bahan segar pilihan. Tempat nyaman untuk makan bersama keluarga.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Saung Rasa Nusantara">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Saung Rasa Nusantara • Rumah Makan Keluarga">
-    <meta name="twitter:description" content="Nikmati cita rasa masakan Indonesia terbaik dengan bahan segar pilihan.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+  <!-- Font: Space Grotesk + Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    :root {
+      --red: #e63946;
+      --red-deep: #9b1d20;
+      --black: #0a0a0a;
+      --dark: #111111;
+      --card: #1a1a1a;
+      --yellow: #ffb703;
+      --yellow-bright: #ffd60a;
+      --white: #ffffff;
+      --gray-light: #c0c0c0;
+      --border: #2a2a2a;
+      --radius: 18px;
+    }
 
-    <title>Saung Rasa Nusantara • Rumah Makan Keluarga</title>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      /* Izinkan select teks & klik kanan */
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
 
-    <style>
-        :root {
-            --hijau: #2d6a4f;
-            --hijau-muda: #40916c;
-            --kuning: #e9c46a;
-            --oranye: #e76f51;
-            --dark: #1e1e1e;
-            --text: #333;
-            --text-light: #6b6b6b;
-            --bg: #f9f6f0;
-            --white: #fff;
-            --border: #e0dcd5;
-            --shadow: 0 4px 24px rgba(0,0,0,0.04);
-            --shadow-hover: 0 16px 40px rgba(0,0,0,0.08);
-            --radius: 24px;
-            --radius-sm: 14px;
-            --transition: all 0.3s ease;
-        }
+    h1, h2, h3, h4, .headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+    .container {
+      width: 92%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background: var(--white);
-            color: var(--text);
-            line-height: 1.6;
-            font-size: 15px;
-            overflow-x: hidden;
-        }
+    /* ===== CUSTOM AOS ANIMATIONS ===== */
+    [data-aos="flip-horizontal"] {
+      transform: perspective(1000px) rotateY(100deg) scale(0.8);
+      opacity: 0;
+      transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.9s ease;
+    }
+    [data-aos="flip-horizontal"].aos-animate {
+      transform: perspective(1000px) rotateY(0deg) scale(1);
+      opacity: 1;
+    }
 
-        h2, h3, .handwritten {
-            font-family: 'Amatic SC', cursive;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+    [data-aos="scale-corner"] {
+      transform: scale(0) rotate(-15deg) translateY(60px);
+      opacity: 0;
+      transform-origin: bottom left;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s ease;
+    }
+    [data-aos="scale-corner"].aos-animate {
+      transform: scale(1) rotate(0deg) translateY(0);
+      opacity: 1;
+    }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    [data-aos="blur-in"] {
+      filter: blur(30px);
+      opacity: 0;
+      transform: scale(1.05);
+      transition: filter 1s ease-out, opacity 1s ease-out, transform 1s ease-out;
+    }
+    [data-aos="blur-in"].aos-animate {
+      filter: blur(0px);
+      opacity: 1;
+      transform: scale(1);
+    }
 
-        /* ============ TOP BAR ============ */
-        .top-bar {
-            background: var(--hijau); color: rgba(255,255,255,0.9); padding: 8px 0;
-            font-size: 0.78rem; letter-spacing: 0.4px;
-        }
-        .top-bar .container {
-            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
-        }
-        .top-bar i { margin-right: 5px; color: var(--kuning); }
+    [data-aos="bounce-up"] {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    }
+    [data-aos="bounce-up"].aos-animate {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
-        /* ============ NAVBAR ============ */
-        .navbar {
-            position: sticky; top: 0; z-index: 999; background: var(--white);
-            border-bottom: 1px solid var(--border); padding: 0;
-        }
-        .navbar .container {
-            display: flex; justify-content: space-between; align-items: center; padding: 10px 0;
-        }
-        .logo {
-            font-family: 'Amatic SC', cursive; font-size: 2.2rem; font-weight: 700;
-            color: var(--hijau); text-decoration: none; display: flex; align-items: center; gap: 6px;
-            line-height: 1;
-        }
-        .logo i { color: var(--oranye); font-size: 1.6rem; }
-        .logo span {
-            font-size: 0.7rem; font-family: 'Work Sans', sans-serif; font-weight: 400;
-            color: var(--text-light); display: block; letter-spacing: 2px; text-transform: uppercase;
-        }
-        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-        .nav-links a {
-            text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.85rem;
-            transition: var(--transition); position: relative; padding: 4px 0;
-        }
-        .nav-links a:hover { color: var(--oranye); }
-        .nav-links a::before {
-            content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px;
-            background: var(--oranye); transform: scaleX(0); transform-origin: right;
-            transition: transform 0.35s ease;
-        }
-        .nav-links a:hover::before { transform: scaleX(1); transform-origin: left; }
-        .btn-nav {
-            background: var(--oranye); color: var(--white) !important; padding: 10px 20px !important;
-            border-radius: 6px; font-weight: 600 !important; transition: var(--transition);
-            font-size: 0.8rem !important; letter-spacing: 0.5px;
-        }
-        .btn-nav:hover { background: #d45d3f; }
-        .btn-nav::before { display: none !important; }
-        .mobile-toggle {
-            display: none; background: none; border: none; font-size: 1.6rem;
-            color: var(--hijau); cursor: pointer;
-        }
+    [data-aos="clip-reveal"] {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transition: clip-path 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+    }
+    [data-aos="clip-reveal"].aos-animate {
+      clip-path: inset(0 0% 0 0);
+      opacity: 1;
+    }
 
-        /* ============ HERO SPLIT ============ */
-        .hero {
-            display: flex; min-height: 85vh; background: var(--bg);
-        }
-        .hero-left {
-            flex: 1; display: flex; align-items: center; padding: 60px 40px 60px 60px;
-            background: linear-gradient(135deg, #f9f6f0 0%, #fff8ed 100%);
-        }
-        .hero-left-content { max-width: 480px; }
-        .hero-tag {
-            display: inline-block; background: var(--hijau); color: var(--white);
-            padding: 6px 16px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
-            letter-spacing: 1px; margin-bottom: 20px;
-        }
-        .hero-left h1 {
-            font-family: 'Amatic SC', cursive; font-size: clamp(3.2rem, 6vw, 4.5rem);
-            line-height: 1; color: var(--dark); margin-bottom: 14px; font-weight: 700;
-        }
-        .hero-left h1 em { color: var(--oranye); font-style: normal; }
-        .hero-left p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 28px; line-height: 1.7; }
-        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-        .btn-fill {
-            background: var(--hijau); color: var(--white); padding: 13px 28px; border-radius: 6px;
-            font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: var(--transition);
-            display: inline-flex; align-items: center; gap: 7px; border: none; cursor: pointer;
-        }
-        .btn-fill:hover { background: var(--hijau-muda); transform: translateY(-2px); }
-        .btn-ghost {
-            background: transparent; color: var(--hijau); padding: 12px 28px; border-radius: 6px;
-            font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: var(--transition);
-            display: inline-flex; align-items: center; gap: 7px; border: 2px solid var(--hijau);
-        }
-        .btn-ghost:hover { background: var(--hijau); color: var(--white); }
+    [data-aos="rotate-scale"] {
+      transform: rotate(-30deg) scale(0.3);
+      opacity: 0;
+      transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.8s ease;
+    }
+    [data-aos="rotate-scale"].aos-animate {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
 
-        /* Google Review Badge - inline */
-        .review-inline {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--white); padding: 10px 18px; border-radius: 50px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06); font-size: 0.82rem;
-            color: var(--text); white-space: nowrap;
-        }
-        .review-inline .stars { color: #f4a261; font-size: 0.8rem; letter-spacing: 1px; }
-        .review-inline strong { color: var(--dark); }
+    [data-aos="slide-left"] {
+      transform: translateX(-150px);
+      opacity: 0;
+      transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.9s ease;
+    }
+    [data-aos="slide-left"].aos-animate {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
-        .hero-right {
-            flex: 1; background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
-            position: relative;
-        }
-        .hero-right::after {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, transparent 40%);
-        }
+    [data-aos="slide-right"] {
+      transform: translateX(150px);
+      opacity: 0;
+      transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.9s ease;
+    }
+    [data-aos="slide-right"].aos-animate {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
-        /* ============ SECTION ============ */
-        section { padding: 80px 0; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-tag {
-            display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem;
-            text-transform: uppercase; letter-spacing: 2px; color: var(--oranye); font-weight: 600;
-        }
-        .section-tag::before { content: '•'; font-size: 1.4rem; line-height: 1; color: var(--hijau); }
-        .section-tag::after { content: '•'; font-size: 1.4rem; line-height: 1; color: var(--hijau); }
-        .section-title {
-            font-family: 'Amatic SC', cursive; font-size: clamp(2.4rem, 4vw, 3.2rem);
-            color: var(--dark); margin: 8px 0; font-weight: 700;
-        }
-        .section-desc { color: var(--text-light); max-width: 460px; margin: 0 auto; font-size: 0.9rem; }
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+    }
+    .brand i {
+      font-size: 2rem;
+      color: var(--red);
+      animation: rocketFloat 2s infinite ease-in-out;
+    }
+    @keyframes rocketFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-8px) rotate(-5deg); }
+      75% { transform: translateY(-4px) rotate(5deg); }
+    }
+    .brand-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      line-height: 1.1;
+    }
+    .brand-text small {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--yellow);
+      letter-spacing: 2px;
+    }
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-group a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-group a:hover {
+      color: var(--yellow);
+    }
+    .pill-btn {
+      background: var(--red);
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.3s !important;
+    }
+    .pill-btn:hover {
+      background: var(--yellow) !important;
+      color: black !important;
+      transform: scale(1.05);
+    }
+    .burger {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
 
-        /* ============ GALERI MASONRY ============ */
-        .masonry-grid {
-            display: grid; grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto; gap: 14px;
-        }
-        .masonry-item {
-            position: relative; border-radius: var(--radius-sm); overflow: hidden;
-            cursor: pointer; transition: var(--transition); box-shadow: var(--shadow);
-        }
-        .masonry-item:nth-child(1) { grid-row: span 2; }
-        .masonry-item:nth-child(3) { grid-column: span 2; }
-        .masonry-item:nth-child(5) { grid-column: span 2; }
-        .masonry-item:nth-child(7) { grid-row: span 2; }
-        .masonry-item img {
-            width: 100%; height: 100%; object-fit: cover; display: block;
-            transition: transform 0.5s ease;
-        }
-        .masonry-item:hover img { transform: scale(1.06); }
-        .masonry-item:hover { box-shadow: var(--shadow-hover); }
-        .masonry-caption {
-            position: absolute; bottom: 0; left: 0; right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: var(--white); padding: 20px 16px 14px; font-weight: 600;
-            font-size: 1rem; font-family: 'Amatic SC', cursive; letter-spacing: 1px;
-            opacity: 0; transform: translateY(10px); transition: all 0.4s ease;
-        }
-        .masonry-item:hover .masonry-caption { opacity: 1; transform: translateY(0); }
+    /* ===== HERO ===== */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 85vh;
+      align-items: center;
+      gap: 40px;
+      padding: 30px 0 60px;
+    }
+    .hero-left h1 {
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      line-height: 0.9;
+      color: white;
+    }
+    .hero-left h1 .accent {
+      color: var(--yellow-bright);
+      display: block;
+    }
+    .hero-left p {
+      font-size: 1.15rem;
+      color: #ccc;
+      margin: 20px 0 30px;
+      max-width: 450px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .btn-red {
+      background: var(--red);
+      color: white;
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s;
+    }
+    .btn-red:hover {
+      background: var(--yellow);
+      color: black;
+      transform: translateX(5px);
+    }
+    .btn-outline {
+      border: 2px solid #333;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-outline:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+    .hero-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+    .hero-right img:first-child {
+      grid-column: span 2;
+      height: 280px;
+    }
 
-        /* ============ MENU TAB STYLE ============ */
-        .menu-tabs {
-            display: flex; justify-content: center; gap: 0; margin-bottom: 36px;
-            border-bottom: 2px solid var(--border); flex-wrap: wrap;
-        }
-        .menu-tab {
-            padding: 12px 28px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
-            transition: var(--transition); background: none; border: none;
-            color: var(--text-light); font-family: 'Work Sans', sans-serif;
-            border-bottom: 2px solid transparent; margin-bottom: -2px;
-        }
-        .menu-tab.active { color: var(--hijau); border-bottom-color: var(--hijau); }
-        .menu-tab:hover { color: var(--hijau); }
-        .menu-list { display: flex; flex-direction: column; gap: 14px; max-width: 700px; margin: 0 auto; }
-        .menu-row {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 16px 20px; background: var(--white); border-radius: var(--radius-sm);
-            border: 1px solid var(--border); transition: var(--transition); gap: 14px;
-        }
-        .menu-row:hover { border-color: var(--hijau); box-shadow: var(--shadow); }
-        .menu-row-left { display: flex; align-items: center; gap: 14px; }
-        .menu-thumb {
-            width: 60px; height: 60px; border-radius: 50%; object-fit: cover;
-            border: 2px solid var(--border);
-        }
-        .menu-row h4 { font-size: 0.95rem; color: var(--dark); font-weight: 600; margin-bottom: 2px; }
-        .menu-row small { font-size: 0.78rem; color: var(--text-light); }
-        .menu-tag-sm {
-            display: inline-block; background: #fff3e0; color: var(--oranye);
-            font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 4px;
-            margin-left: 6px;
-        }
-        .menu-row-price {
-            font-weight: 700; color: var(--hijau); font-size: 1rem; white-space: nowrap;
-        }
+    /* ===== SECTION HEADER ===== */
+    .section-head {
+      margin-bottom: 50px;
+    }
+    .label {
+      display: inline-block;
+      background: rgba(230,57,70,0.15);
+      color: var(--red);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .section-head h2 {
+      font-size: 3rem;
+      color: var(--yellow);
+      margin-top: 12px;
+    }
 
-        /* ============ OFFER BANNER ============ */
-        .offer-banner {
-            background: var(--hijau); color: var(--white); border-radius: var(--radius);
-            padding: 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;
-            justify-content: space-between; margin-top: 40px;
-        }
-        .offer-banner h3 {
-            font-family: 'Amatic SC', cursive; font-size: 2.4rem; line-height: 1;
-        }
-        .offer-banner p { opacity: 0.85; font-size: 0.9rem; }
-        .offer-banner .btn-fill { background: var(--kuning); color: var(--dark); }
-        .offer-banner .btn-fill:hover { background: #f0c152; }
+    /* ===== BLOG ===== */
+    .blog-scroll {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    .blog-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(230,57,70,0.15);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .blog-card .pad {
+      padding: 22px;
+    }
 
-        /* ============ RESERVASI SIDEBAR ============ */
-        .reservasi-wrapper {
-            display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;
-        }
-        .reservasi-info {
-            flex: 1 1 300px; background: var(--hijau); color: var(--white);
-            border-radius: var(--radius); padding: 36px 30px;
-        }
-        .reservasi-info h3 { font-family: 'Amatic SC', cursive; font-size: 2.2rem; line-height: 1; margin-bottom: 14px; }
-        .reservasi-info p { opacity: 0.85; font-size: 0.88rem; margin-bottom: 20px; }
-        .info-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 0.85rem; }
-        .info-item i { color: var(--kuning); margin-top: 3px; width: 18px; text-align: center; }
-        .reservasi-form {
-            flex: 1.5 1 400px; background: var(--white); border-radius: var(--radius);
-            padding: 36px 30px; border: 1px solid var(--border); box-shadow: var(--shadow);
-        }
-        .reservasi-form h4 { font-size: 1.1rem; margin-bottom: 20px; color: var(--dark); font-weight: 600; }
-        .form-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
-        .form-row .field { flex: 1 1 150px; }
-        .field label {
-            display: block; font-size: 0.78rem; font-weight: 600; color: var(--text);
-            margin-bottom: 5px;
-        }
-        .field input, .field select {
-            width: 100%; padding: 12px 14px; border: 1.5px solid var(--border);
-            border-radius: 8px; font-family: 'Work Sans', sans-serif; font-size: 0.88rem;
-            transition: var(--transition); background: var(--white);
-            -webkit-appearance: none; appearance: none;
-        }
-        .field select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23666' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
-        }
-        .field input:focus, .field select:focus { outline: none; border-color: var(--hijau); }
-        .btn-submit-full {
-            width: 100%; background: var(--hijau); color: var(--white); border: none;
-            padding: 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
-            cursor: pointer; transition: var(--transition); margin-top: 6px;
-        }
-        .btn-submit-full:hover { background: var(--hijau-muda); }
+    /* ===== ABOUT ===== */
+    .about-block {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-img-collage {
+      position: relative;
+    }
+    .about-img-collage img {
+      width: 100%;
+      border-radius: var(--radius);
+    }
+    .about-img-collage .floating-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--red);
+      padding: 18px 25px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
 
-        /* ============ TESTIMONIAL ============ */
-        .testi-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;
-        }
-        .testi-card {
-            background: var(--white); border-radius: var(--radius-sm); padding: 24px;
-            border: 1px solid var(--border); transition: var(--transition);
-            position: relative; padding-top: 40px;
-        }
-        .testi-card::before {
-            content: '"'; position: absolute; top: 8px; left: 18px;
-            font-family: 'Amatic SC', cursive; font-size: 4rem; color: var(--kuning);
-            line-height: 1; opacity: 0.6;
-        }
-        .testi-card:hover { border-color: var(--hijau); box-shadow: var(--shadow-hover); }
-        .testi-card p { font-size: 0.9rem; color: var(--text); margin-bottom: 14px; font-style: italic; }
-        .testi-author { display: flex; align-items: center; gap: 10px; }
-        .testi-author img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-        .testi-stars { color: #f4a261; font-size: 0.7rem; }
+    /* ===== MENU UNGGULAN LAYOUT ===== */
+    .menu-unggulan-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+    .menu-kiri-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 1fr;
+      gap: 20px;
+      aspect-ratio: 1 / 1;
+    }
+    .menu-kecil-item {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-kecil-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--red);
+    }
+    .menu-kecil-item img {
+      width: 100%;
+      height: 65%;
+      object-fit: cover;
+    }
+    .menu-kecil-item .info {
+      padding: 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .menu-kecil-item .info h3 {
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+    .menu-kecil-item .info .harga {
+      color: var(--red);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .menu-besar-item {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 3px solid var(--red);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+      aspect-ratio: 1 / 1;
+    }
+    .menu-besar-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-besar-item img {
+      width: 100%;
+      height: 55%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .menu-besar-item .info-besar {
+      padding: 24px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.95));
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .menu-besar-item .info-besar h3 {
+      font-size: 1.6rem;
+      color: var(--yellow);
+    }
+    .menu-besar-item .info-besar .deskripsi {
+      color: #ccc;
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }
+    .menu-besar-item .info-besar .harga-besar {
+      color: var(--yellow-bright);
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+    .best-seller-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--yellow);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      z-index: 2;
+      animation: badgePulse 2s infinite;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 25px rgba(255,183,3,0.6);
+    }
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(255,183,3,0.6); transform: scale(1); }
+      50% { box-shadow: 0 15px 40px rgba(255,183,3,1); transform: scale(1.08); }
+    }
 
-        /* ============ MAPS ============ */
-        .map-frame {
-            border-radius: var(--radius); overflow: hidden; border: 3px solid var(--white);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-        .map-frame iframe { display: block; width: 100%; height: 340px; }
+    /* ===== MENU TABLE ===== */
+    .menu-table-wrap {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .menu-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+    .menu-row.header-row {
+      background: var(--red-deep);
+      font-weight: 700;
+    }
 
-        /* ============ FOOTER ============ */
-        footer {
-            background: #1a1f1c; color: rgba(255,255,255,0.7); padding: 50px 0 20px;
-            font-size: 0.85rem;
-        }
-        .footer-grid {
-            display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px;
-        }
-        .footer-brand h3 {
-            font-family: 'Amatic SC', cursive; font-size: 2rem; color: var(--kuning); margin-bottom: 8px;
-        }
-        .footer-links h4 { color: var(--white); margin-bottom: 12px; font-size: 0.9rem; font-weight: 600; }
-        .footer-links a {
-            display: block; color: rgba(255,255,255,0.55); text-decoration: none;
-            margin-bottom: 7px; transition: var(--transition); font-size: 0.82rem;
-        }
-        .footer-links a:hover { color: var(--kuning); }
-        .social-icons { display: flex; gap: 10px; margin-top: 10px; }
-        .social-icons a {
-            width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; color: var(--white);
-            text-decoration: none; transition: var(--transition); font-size: 0.9rem;
-        }
-        .social-icons a:hover { background: var(--hijau); transform: translateY(-2px); }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px;
-            text-align: center; font-size: 0.78rem;
-        }
+    /* ===== FAQ ===== */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .faq-box {
+      background: var(--card);
+      padding: 28px;
+      border-radius: var(--radius);
+      border-top: 4px solid var(--red);
+    }
 
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 900px) {
-            .hero { flex-direction: column; min-height: auto; }
-            .hero-left { padding: 50px 24px; }
-            .hero-right { height: 350px; }
-            .masonry-grid { grid-template-columns: 1fr 1fr; }
-            .masonry-item:nth-child(3),
-            .masonry-item:nth-child(5) { grid-column: span 1; }
-            .masonry-item:nth-child(1),
-            .masonry-item:nth-child(7) { grid-row: span 1; }
-        }
+    /* ===== ORDER ===== */
+    .order-panel {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .order-panel input, .order-panel select, .order-panel textarea {
+      width: 100%;
+      background: #222;
+      border: 1px solid #333;
+      padding: 14px;
+      border-radius: 12px;
+      color: white;
+      margin-bottom: 14px;
+      font-family: inherit;
+    }
+    .order-panel button {
+      background: var(--red);
+      border: none;
+      padding: 16px;
+      font-weight: 700;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+    .order-panel button:hover {
+      background: var(--yellow);
+      color: black;
+    }
 
-        @media (max-width: 768px) {
-            /* SEMBUNYIKAN TOP BAR DI MOBILE */
-            .top-bar { display: none; }
+    .responsive-heading {
+      font-size: 2.5rem;
+      color: var(--yellow);
+    }
 
-            /* NAVBAR MOBILE */
-            .navbar { position: sticky; top: 0; }
-            .nav-links {
-                position: fixed; top: 0; right: -100%; width: 250px; height: 100vh;
-                background: var(--white); flex-direction: column; padding: 60px 20px; gap: 16px;
-                box-shadow: -8px 0 30px rgba(0,0,0,0.1); transition: var(--transition); z-index: 998;
-            }
-            .nav-links.active { right: 0; }
-            .mobile-toggle { display: block; }
+    /* ===== TESTI ===== */
+    .testi-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    .testi-card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: var(--radius);
+      transition: transform 0.3s;
+    }
+    .testi-card:hover {
+      transform: translateY(-5px);
+    }
+    .testi-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .testi-profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--red);
+    }
+    .testi-profile .name {
+      font-weight: 700;
+      color: var(--yellow);
+    }
+    .testi-profile .handle {
+      font-size: 0.8rem;
+      color: #888;
+    }
 
-            /* HERO MOBILE - FULL BACKGROUND IMAGE */
-            .hero {
-                flex-direction: column; min-height: 90vh; position: relative;
-                background: none;
-            }
-            .hero-left {
-                flex: 1; display: flex; align-items: flex-end; padding: 40px 20px 40px 20px;
-                background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%);
-                z-index: 2; order: 2;
-            }
-            .hero-left-content {
-                max-width: 100%; color: var(--white);
-            }
-            .hero-left h1 { color: var(--white); font-size: 2.2rem; }
-            .hero-left p { color: rgba(255,255,255,0.85); font-size: 0.88rem; }
-            .hero-tag { background: var(--oranye); }
-            .btn-ghost { color: var(--white); border-color: var(--white); }
-            .btn-ghost:hover { background: var(--white); color: var(--hijau); }
-            .review-inline { background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); color: var(--white); }
-            .review-inline strong { color: var(--white); }
-            .review-inline .stars { color: var(--kuning); }
-            .review-inline span { color: rgba(255,255,255,0.8) !important; }
+    /* ===== CONTACT ===== */
+    .contact-duo {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+    }
+    .contact-info-box {
+      background: var(--card);
+      padding: 35px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 16px;
+      background: #222;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .contact-item:hover {
+      background: #2a2a2a;
+      transform: translateX(5px);
+    }
+    .contact-icon {
+      font-size: 1.4rem;
+      color: var(--red);
+      width: 35px;
+      text-align: center;
+    }
+    .contact-text h4 {
+      color: var(--yellow);
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+    .contact-text p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 2px solid var(--red);
+      min-height: 400px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-            /* Hero right jadi background penuh di mobile */
-            .hero-right {
-                position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                z-index: 1; order: 1;
-            }
-            .hero-right::after {
-                background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
-            }
-            .hero-btns { flex-direction: column; align-items: stretch; gap: 10px; }
-            .hero-btns .btn-fill,
-            .hero-btns .btn-ghost { justify-content: center; text-align: center; }
-            .review-inline { margin-top: 8px; justify-content: center; width: 100%; }
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 50px 0 30px;
+      border-top: 2px solid #1f1f1f;
+      margin-top: 60px;
+    }
+    .sosmed {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 1.7rem;
+      margin: 25px 0;
+    }
+    .sosmed a {
+      color: #666;
+      transition: 0.3s;
+    }
+    .sosmed a:hover {
+      color: var(--yellow);
+      transform: translateY(-3px);
+    }
 
-            /* Lainnya */
-            .masonry-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-            .menu-tabs { gap: 0; overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }
-            .menu-tab { padding: 10px 16px; font-size: 0.78rem; white-space: nowrap; }
-            .menu-row { flex-wrap: wrap; }
-            .menu-row-price { margin-left: auto; }
-            .offer-banner { text-align: center; justify-content: center; }
-            .offer-banner .btn-fill { margin-left: 0 !important; margin-top: 10px; }
-            .reservasi-wrapper { gap: 24px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-            section { padding: 50px 0; }
-        }
+    /* ===== RESPONSIVE MOBILE ONLY ===== */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 94%;
+        padding: 0 10px;
+      }
 
-        @media (max-width: 480px) {
-            .hero-left h1 { font-size: 2rem; }
-            .masonry-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; text-align: left; }
-            .social-icons { justify-content: flex-start; }
-            .testi-grid { grid-template-columns: 1fr; }
-            .review-inline { font-size: 0.76rem; padding: 8px 14px; }
-        }
-    </style>
+      .navbar {
+        padding: 14px 0;
+        position: relative;
+      }
+      .brand i {
+        font-size: 1.6rem;
+      }
+      .brand-text {
+        font-size: 1.1rem;
+      }
+      .brand-text small {
+        font-size: 0.55rem;
+      }
+      .nav-group {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(20,20,20,0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 12px;
+        border-radius: 0 0 20px 20px;
+        border: 1px solid rgba(255,255,255,0.08);
+        z-index: 999;
+      }
+      .nav-group.active {
+        display: flex;
+      }
+      .nav-group a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+      }
+      .nav-group a:hover {
+        background: rgba(255,255,255,0.05);
+      }
+      .pill-btn {
+        display: inline-block;
+        width: auto;
+        margin: 5px auto;
+      }
+      .burger {
+        display: block;
+        font-size: 1.5rem;
+      }
+
+      .hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 25px;
+        padding: 20px 0 40px;
+        text-align: center;
+      }
+      .hero-left h1 {
+        font-size: 2.8rem;
+        line-height: 1;
+      }
+      .hero-left p {
+        font-size: 0.95rem;
+        margin: 15px auto 20px;
+        max-width: 100%;
+        padding: 0 5px;
+      }
+      .btn-group {
+        justify-content: center;
+        gap: 10px;
+      }
+      .btn-red, .btn-outline {
+        padding: 12px 22px;
+        font-size: 0.85rem;
+      }
+      .hero-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .hero-right img {
+        height: 160px;
+      }
+      .hero-right img:first-child {
+        grid-column: span 2;
+        height: 200px;
+      }
+
+      .section-head {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .section-head h2 {
+        font-size: 2.2rem;
+      }
+      .label {
+        font-size: 0.7rem;
+        padding: 5px 14px;
+      }
+
+      .responsive-heading {
+        font-size: 1.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+        line-height: 1.1;
+      }
+
+      .section-head h2.testi-heading-mobile {
+        font-size: 1.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+        line-height: 1.1;
+      }
+
+      .blog-scroll {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .blog-card img {
+        height: 180px;
+      }
+      .blog-card .pad {
+        padding: 18px;
+      }
+      .blog-card .pad h3 {
+        font-size: 1rem;
+      }
+      .blog-card .pad p {
+        font-size: 0.85rem;
+      }
+
+      .about-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .about-img-collage .floating-badge {
+        bottom: -15px;
+        right: -10px;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+      }
+
+      .menu-unggulan-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .menu-kiri-grid {
+        aspect-ratio: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 12px;
+      }
+      .menu-kecil-item img {
+        height: 55%;
+      }
+      .menu-kecil-item .info {
+        padding: 8px 6px;
+      }
+      .menu-kecil-item .info h3 {
+        font-size: 0.75rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+      .menu-kecil-item .info .harga {
+        font-size: 0.8rem;
+      }
+      .menu-besar-item {
+        aspect-ratio: auto;
+        min-height: 400px;
+      }
+      .menu-besar-item img {
+        height: 50%;
+      }
+      .menu-besar-item .info-besar {
+        padding: 18px;
+      }
+      .menu-besar-item .info-besar h3 {
+        font-size: 1.3rem;
+      }
+      .menu-besar-item .info-besar .deskripsi {
+        font-size: 0.8rem;
+      }
+      .menu-besar-item .info-besar .harga-besar {
+        font-size: 1.5rem;
+      }
+      .best-seller-badge {
+        top: 12px;
+        right: 12px;
+        padding: 6px 14px;
+        font-size: 0.7rem;
+        gap: 5px;
+      }
+
+      .menu-row {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 12px 14px;
+        font-size: 0.8rem;
+        gap: 8px;
+      }
+      .menu-row span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .faq-box {
+        padding: 20px;
+      }
+      .faq-box h3 {
+        font-size: 0.95rem;
+      }
+      .faq-box p {
+        font-size: 0.85rem;
+      }
+
+      .order-panel {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px 20px;
+      }
+      .order-panel input, .order-panel select, .order-panel textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+      .order-panel button {
+        padding: 14px;
+        font-size: 0.95rem;
+      }
+
+      .testi-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .testi-card {
+        padding: 22px;
+      }
+      .testi-profile img {
+        width: 42px;
+        height: 42px;
+      }
+      .testi-profile .name {
+        font-size: 0.9rem;
+      }
+      .testi-profile .handle {
+        font-size: 0.7rem;
+      }
+      .testi-card p {
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .contact-duo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      .contact-info-box {
+        padding: 22px;
+        gap: 12px;
+      }
+      .contact-item {
+        padding: 12px;
+        gap: 10px;
+      }
+      .contact-icon {
+        font-size: 1.2rem;
+        width: 28px;
+      }
+      .contact-text h4 {
+        font-size: 0.75rem;
+      }
+      .contact-text p {
+        font-size: 0.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      .map-container {
+        min-height: 300px;
+      }
+
+      .footer {
+        padding: 35px 0 20px;
+        margin-top: 40px;
+      }
+      .footer h2 {
+        font-size: 1.5rem;
+      }
+      .sosmed {
+        gap: 20px;
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+      .footer p {
+        font-size: 0.75rem;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .responsive-heading {
+        font-size: 1.5rem;
+      }
+      .section-head h2.testi-heading-mobile {
+        font-size: 1.5rem;
+      }
+      .hero-left h1 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .hero-split {
+        gap: 25px;
+      }
+      .hero-left h1 {
+        font-size: 3rem;
+      }
+      .menu-kecil-item .info h3 {
+        font-size: 0.75rem;
+      }
+      .contact-duo {
+        gap: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ==================== TOP BAR (HIDDEN DI MOBILE) ==================== -->
-<div class="top-bar">
+  <!-- NAVIGASI -->
+  <nav class="navbar container" data-aos="blur-in" data-aos-duration="800">
+    <a href="#" class="brand">
+      <i class="fas fa-rocket"></i>
+      <div class="brand-text">ROCKET CHICKEN<small>KANDANGHAUR</small></div>
+    </a>
+    <ul class="nav-group" id="navMenu">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#order">Pemesanan</a></li>
+      <li><a href="#testi">Testimonial</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#order" class="pill-btn">Pesan</a></li>
+    </ul>
+    <div class="burger" id="burgerBtn"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- HERO BERANDA -->
+  <section class="hero-split container">
+    <div class="hero-left" data-aos="clip-reveal" data-aos-duration="1000">
+      <h1>ROCKET <span class="accent">CHICKEN</span></h1>
+      <p>Nikmati sensasi ayam crispy paling dicari di Kandanghaur. Dibuat dari bahan pilihan, bumbu spesial, dan cinta.</p>
+      <div class="btn-group">
+        <a href="#order" class="btn-red"><i class="fas fa-fire"></i> Pesan Sekarang</a>
+        <a href="#menu" class="btn-outline">Lihat Menu</a>
+      </div>
+    </div>
+    <div class="hero-right" data-aos="rotate-scale" data-aos-duration="1000" data-aos-delay="300">
+      <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop" alt="Ayam Crispy Rocket Chicken">
+      <img src="https://images.unsplash.com/photo-1569058242567-93de6f36f8e6?q=80&w=1470&auto=format&fit=crop" alt="Fire Wings Rocket Chicken">
+      <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=1470&auto=format&fit=crop" alt="Dada Crispy Rocket Chicken">
+    </div>
+  </section>
+
+  <!-- BLOG SPOT -->
+  <section style="padding:70px 0;">
     <div class="container">
-        <span><i class="fas fa-phone"></i> 0812-3456-7890</span>
-        <span><i class="fas fa-clock"></i> Buka: 10:00 - 22:00 WIB</span>
-        <span><i class="fas fa-map-marker-alt"></i> Jl. Merdeka No. 45, Bandung</span>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <span class="label">Blog & Cerita</span>
+        <h2>BLOG</h2>
+      </div>
+      <div class="blog-scroll">
+        <div class="blog-card" data-aos="slide-left" data-aos-duration="700" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1470&auto=format&fit=crop" alt="Resep Ayam">
+          <div class="pad"><h3>Resep Ayam Terbaru</h3><p>Rahasia bumbu 12 jam.</p></div>
+        </div>
+        <div class="blog-card" data-aos="bounce-up" data-aos-duration="700" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1561758033-7e924f619b47?q=80&w=1470&auto=format&fit=crop" alt="Promo">
+          <div class="pad"><h3>Promo 10.10</h3><p>Diskon besar-besaran.</p></div>
+        </div>
+        <div class="blog-card" data-aos="slide-right" data-aos-duration="700" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop" alt="Cabang Baru">
+          <div class="pad"><h3>Cabang Baru</h3><p>Rocket makin dekat.</p></div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- ==================== NAVBAR ==================== -->
-<nav class="navbar" id="navbar">
+  <!-- ABOUT -->
+  <section id="about" style="background:#0f0f0f; padding:80px 0;">
+    <div class="container about-block">
+      <div class="about-img-collage" data-aos="flip-horizontal" data-aos-duration="1000">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1470&auto=format&fit=crop" alt="Interior Rocket Chicken">
+        <div class="floating-badge"><i class="fas fa-star"></i> Sejak 2018</div>
+      </div>
+      <div data-aos="bounce-up" data-aos-duration="800">
+        <span class="label">Tentang Kami</span>
+        <h2 style="font-size:2.8rem; color:var(--yellow); margin:15px 0;">ABOUT</h2>
+        <p>Rocket Chicken hadir membawa revolusi ayam crispy di Kandanghaur. Kami menggabungkan bahan segar, racikan bumbu warisan, dan proses memasak higienis untuk menghadirkan pengalaman makan terbaik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU UNGGULAN -->
+  <section id="menu" style="padding:80px 0;">
     <div class="container">
-        <a href="#" class="logo">
-            <i class="fas fa-leaf"></i>
-            <div>Saung Rasa<span>Nusantara</span></div>
-        </a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Galeri</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#reservasi">Reservasi</a></li>
-            <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="#location">Lokasi</a></li>
-            <li><a href="#reservasi" class="btn-nav">Pesan Meja</a></li>
-        </ul>
-        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
-    </div>
-</nav>
-
-<!-- ==================== HERO SPLIT ==================== -->
-<section class="hero" id="home">
-    <div class="hero-left">
-        <div class="hero-left-content" data-aos="fade-up" data-aos-duration="500">
-            <span class="hero-tag">⭐ 4.7 • 850+ Ulasan</span>
-            <h1>Cita Rasa <em>Nusantara</em> dalam Suasana Hangat</h1>
-            <p>Nikmati hidangan khas Indonesia dengan bahan segar pilihan. Tempat nyaman untuk makan bersama keluarga dan kerabat tercinta.</p>
-            <div class="hero-btns">
-                <a href="#menu" class="btn-fill"><i class="fas fa-book-open"></i> Lihat Menu</a>
-                <a href="#reservasi" class="btn-ghost"><i class="fas fa-calendar-check"></i> Reservasi</a>
-                <div class="review-inline">
-                    <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                    <strong>4.7/5</strong>
-                    <span style="color:#666; font-size:0.78rem;">Google</span>
-                </div>
-            </div>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <span class="label">Best Seller</span>
+        <h2>MENU UNGGULAN</h2>
+      </div>
+      <div class="menu-unggulan-layout">
+        <div class="menu-kiri-grid">
+          <div class="menu-kecil-item" data-aos="scale-corner" data-aos-duration="600" data-aos-delay="0">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=1470&auto=format&fit=crop" alt="Rocket Original">
+            <div class="info"><h3>Rocket Original</h3><span class="harga">Rp 15.000</span></div>
+          </div>
+          <div class="menu-kecil-item" data-aos="scale-corner" data-aos-duration="600" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1569058242567-93de6f36f8e6?q=80&w=1470&auto=format&fit=crop" alt="Fire Wings">
+            <div class="info"><h3>Fire Wings</h3><span class="harga">Rp 18.000</span></div>
+          </div>
+          <div class="menu-kecil-item" data-aos="scale-corner" data-aos-duration="600" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1470&auto=format&fit=crop" alt="Burger Rocket">
+            <div class="info"><h3>Burger Rocket</h3><span class="harga">Rp 20.000</span></div>
+          </div>
+          <div class="menu-kecil-item" data-aos="scale-corner" data-aos-duration="600" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=1470&auto=format&fit=crop" alt="Rocket Tenders">
+            <div class="info"><h3>Rocket Tenders</h3><span class="harga">Rp 16.000</span></div>
+          </div>
         </div>
+        <div class="menu-besar-item" data-aos="rotate-scale" data-aos-duration="900" data-aos-delay="400">
+          <div class="best-seller-badge"><i class="fas fa-crown"></i> BEST SELLER</div>
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop" alt="Paket Rocket Hemat">
+          <div class="info-besar">
+            <h3>Paket Rocket Hemat</h3>
+            <p class="deskripsi">Nasi + Ayam Crispy + Minuman + French Fries</p>
+            <span class="harga-besar">Rp 22.000</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hero-right"></div>
-</section>
+  </section>
 
-<!-- ==================== GALERI MASONRY ==================== -->
-<section id="gallery">
+  <!-- DAFTAR MENU TEKS -->
+  <section style="background:#0f0f0f; padding:80px 0;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
-            <span class="section-tag">Galeri</span>
-            <h2 class="section-title">Suasana & Hidangan</h2>
-            <p class="section-desc">Intip kehangatan tempat dan kelezatan masakan yang kami sajikan setiap hari.</p>
-        </div>
-        <div class="masonry-grid">
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="50">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=500&auto=format&fit=crop" alt="Suasana" loading="lazy">
-                <div class="masonry-caption">Area Makan Utama</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=400&auto=format&fit=crop" alt="Makanan" loading="lazy">
-                <div class="masonry-caption">Sajian Andalan</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="150">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=500&auto=format&fit=crop" alt="Keluarga" loading="lazy">
-                <div class="masonry-caption">Makan Bersama Keluarga</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400&auto=format&fit=crop" alt="Hidangan" loading="lazy">
-                <div class="masonry-caption">Plating Elegan</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="250">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=700&auto=format&fit=crop" alt="Steak" loading="lazy">
-                <div class="masonry-caption">Grill Premium</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400&auto=format&fit=crop" alt="Minuman" loading="lazy">
-                <div class="masonry-caption">Minuman Segar</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="350">
-                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=500&auto=format&fit=crop" alt="Kuliner" loading="lazy">
-                <div class="masonry-caption">Masakan Khas</div>
-            </div>
-            <div class="masonry-item" data-aos="fade-up" data-aos-delay="400">
-                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=400&auto=format&fit=crop" alt="Food" loading="lazy">
-                <div class="masonry-caption">Detail Hidangan</div>
-            </div>
-        </div>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <h2>DAFTAR MENU</h2>
+      </div>
+      <div class="menu-table-wrap" data-aos="clip-reveal" data-aos-duration="900">
+        <div class="menu-row header-row"><span>Menu</span><span>Deskripsi</span><span>Harga</span></div>
+        <div class="menu-row"><span>Rocket Dada Crispy</span><span>Dada premium</span><span>Rp 17.000</span></div>
+        <div class="menu-row"><span>Rocket Paha Bawah</span><span>Paha juicy</span><span>Rp 14.000</span></div>
+        <div class="menu-row"><span>Fire Rocket Wings</span><span>Sayap pedas</span><span>Rp 18.000</span></div>
+        <div class="menu-row"><span>French Fries</span><span>Kentang renyah</span><span>Rp 10.000</span></div>
+        <div class="menu-row"><span>Rocket Tenders</span><span>Strip ayam crispy</span><span>Rp 16.000</span></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ==================== MENU ==================== -->
-<section id="menu" style="background: #f9f6f0;">
+  <!-- FAQ -->
+  <section id="faq" style="padding:80px 0;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
-            <span class="section-tag">Menu</span>
-            <h2 class="section-title">Hidangan Pilihan</h2>
-            <p class="section-desc">Dibuat dengan bahan segar dan resep turun-temurun keluarga.</p>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <span class="label">Bantuan</span>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-box" data-aos="slide-left" data-aos-duration="700" data-aos-delay="0">
+          <h3><i class="fas fa-truck"></i> Apakah bisa delivery?</h3>
+          <p>Ya, kami melayani pesan antar area Kandanghaur.</p>
         </div>
-        <div class="menu-tabs" data-aos="fade-up" data-aos-delay="100">
-            <button class="menu-tab active" onclick="filterMenu('all', this)">Semua</button>
-            <button class="menu-tab" onclick="filterMenu('makanan', this)">Makanan Berat</button>
-            <button class="menu-tab" onclick="filterMenu('lauk', this)">Lauk Pauk</button>
-            <button class="menu-tab" onclick="filterMenu('minuman', this)">Minuman</button>
-            <button class="menu-tab" onclick="filterMenu('camilan', this)">Camilan</button>
+        <div class="faq-box" data-aos="slide-right" data-aos-duration="700" data-aos-delay="100">
+          <h3><i class="fas fa-clock"></i> Jam operasional?</h3>
+          <p>Buka setiap hari 10.00 - 22.00 WIB.</p>
         </div>
-        <div class="menu-list" id="menuList">
-            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="150">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=100&auto=format&fit=crop" alt="Nasi Goreng" class="menu-thumb" loading="lazy">
-                    <div><h4>Nasi Goreng Spesial <span class="menu-tag-sm">Favorit</span></h4><small>Nasi goreng dengan telur, ayam suwir, dan kerupuk udang</small></div>
-                </div>
-                <span class="menu-row-price">Rp 28.000</span>
-            </div>
-            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="200">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=100&auto=format&fit=crop" alt="Sate" class="menu-thumb" loading="lazy">
-                    <div><h4>Sate Ayam Madura</h4><small>10 tusuk sate ayam dengan bumbu kacang khas</small></div>
-                </div>
-                <span class="menu-row-price">Rp 32.000</span>
-            </div>
-            <div class="menu-row" data-category="makanan" data-aos="fade-up" data-aos-delay="250">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?q=80&w=100&auto=format&fit=crop" alt="Rendang" class="menu-thumb" loading="lazy">
-                    <div><h4>Rendang Sapi <span class="menu-tag-sm">Best Seller</span></h4><small>Daging sapi empuk dimasak santan & rempah pilihan</small></div>
-                </div>
-                <span class="menu-row-price">Rp 38.000</span>
-            </div>
-            <div class="menu-row" data-category="lauk" data-aos="fade-up" data-aos-delay="150">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=100&auto=format&fit=crop" alt="Ayam Goreng" class="menu-thumb" loading="lazy">
-                    <div><h4>Ayam Goreng Kremes</h4><small>Ayam goreng renyah dengan taburan kremesan gurih</small></div>
-                </div>
-                <span class="menu-row-price">Rp 25.000</span>
-            </div>
-            <div class="menu-row" data-category="lauk" data-aos="fade-up" data-aos-delay="200">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1598515213692-5f252f75d785?q=80&w=100&auto=format&fit=crop" alt="Ikan Bakar" class="menu-thumb" loading="lazy">
-                    <div><h4>Ikan Bakar Jimbaran</h4><small>Ikan segar dibakar dengan sambal khas Bali</small></div>
-                </div>
-                <span class="menu-row-price">Rp 35.000</span>
-            </div>
-            <div class="menu-row" data-category="minuman" data-aos="fade-up" data-aos-delay="150">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=100&auto=format&fit=crop" alt="Es Teh" class="menu-thumb" loading="lazy">
-                    <div><h4>Es Teh Manis</h4><small>Teh segar dengan gula asli pilihan</small></div>
-                </div>
-                <span class="menu-row-price">Rp 6.000</span>
-            </div>
-            <div class="menu-row" data-category="minuman" data-aos="fade-up" data-aos-delay="200">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=100&auto=format&fit=crop" alt="Es Kelapa" class="menu-thumb" loading="lazy">
-                    <div><h4>Es Kelapa Muda</h4><small>Kelapa muda segar dengan sirup & daging kelapa</small></div>
-                </div>
-                <span class="menu-row-price">Rp 12.000</span>
-            </div>
-            <div class="menu-row" data-category="camilan" data-aos="fade-up" data-aos-delay="150">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1604909052743-94e838986d24?q=80&w=100&auto=format&fit=crop" alt="Tahu" class="menu-thumb" loading="lazy">
-                    <div><h4>Tahu Walik Crispy</h4><small>Tahu isi sayuran digoreng renyah</small></div>
-                </div>
-                <span class="menu-row-price">Rp 15.000</span>
-            </div>
-            <div class="menu-row" data-category="camilan" data-aos="fade-up" data-aos-delay="200">
-                <div class="menu-row-left">
-                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=100&auto=format&fit=crop" alt="Pisang Goreng" class="menu-thumb" loading="lazy">
-                    <div><h4>Pisang Goreng Crispy</h4><small>Pisang raja pilihan dengan balutan tepung renyah</small></div>
-                </div>
-                <span class="menu-row-price">Rp 12.000</span>
-            </div>
+        <div class="faq-box" data-aos="slide-left" data-aos-duration="700" data-aos-delay="200">
+          <h3><i class="fas fa-credit-card"></i> Metode pembayaran?</h3>
+          <p>Tunai, QRIS, dan transfer bank.</p>
         </div>
-
-        <div class="offer-banner" data-aos="fade-up" data-aos-delay="100">
-            <div><h3>Paket Keluarga Hemat!</h3><p>Nasi Goreng 2 porsi + Sate Ayam 20 tusuk + Es Teh 4 gelas</p></div>
-            <div style="display:flex; align-items:center; flex-wrap:wrap; gap:12px;">
-                <span style="font-size:2rem; font-weight:700; font-family:'Amatic SC',cursive;">Rp 99.000</span>
-                <a href="#reservasi" class="btn-fill">Pesan Sekarang</a>
-            </div>
+        <div class="faq-box" data-aos="slide-right" data-aos-duration="700" data-aos-delay="300">
+          <h3><i class="fas fa-utensils"></i> Menu rekomendasi?</h3>
+          <p>Fire Wings dan Paket Hemat favorit pelanggan.</p>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ==================== RESERVASI ==================== -->
-<section id="reservasi">
+  <!-- PEMESANAN -->
+  <section id="order" style="background:#0f0f0f; padding:80px 0;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
-            <span class="section-tag">Reservasi</span>
-            <h2 class="section-title">Pesan Meja</h2>
-            <p class="section-desc">Reservasi mudah, datang langsung duduk dan nikmati hidangan.</p>
+      <div class="order-panel" data-aos="blur-in" data-aos-duration="800">
+        <div>
+          <span class="label">Order</span>
+          <h2 class="responsive-heading">PEMESANAN</h2>
+          <p>Lengkapi data, kami proses secepat roket!</p>
         </div>
-        <div class="reservasi-wrapper">
-            <div class="reservasi-info" data-aos="fade-right" data-aos-duration="500">
-                <h3>Kenapa Reservasi?</h3>
-                <p>Pesan meja dulu biar gak kehabisan tempat, terutama saat jam makan siang dan akhir pekan.</p>
-                <div class="info-item"><i class="fas fa-check-circle"></i> Dapat tempat prioritas</div>
-                <div class="info-item"><i class="fas fa-check-circle"></i> Gak perlu antri lama</div>
-                <div class="info-item"><i class="fas fa-check-circle"></i> Bisa request tempat khusus</div>
-                <div class="info-item"><i class="fas fa-check-circle"></i> Konfirmasi via WhatsApp</div>
-            </div>
-            <div class="reservasi-form" data-aos="fade-left" data-aos-duration="500">
-                <h4>Form Reservasi</h4>
-                <div class="form-row">
-                    <div class="field"><label>Nama</label><input type="text" placeholder="Nama Anda"></div>
-                    <div class="field"><label>No. HP</label><input type="tel" placeholder="0812xxxxxx"></div>
-                </div>
-                <div class="form-row">
-                    <div class="field"><label>Tanggal</label><input type="date" value="2026-06-15"></div>
-                    <div class="field"><label>Jam</label><select><option>11:00</option><option>12:00</option><option selected>13:00</option><option>18:00</option><option>19:00</option></select></div>
-                </div>
-                <div class="form-row">
-                    <div class="field"><label>Jumlah Orang</label><select><option>1-2</option><option selected>3-4</option><option>5-6</option><option>7+</option></select></div>
-                    <div class="field"><label>Area Duduk</label><select><option>Indoor</option><option>Outdoor</option><option selected>Terserah</option></select></div>
-                </div>
-                <button class="btn-submit-full">Reservasi Meja Sekarang</button>
-            </div>
-        </div>
+        <form>
+          <input type="text" placeholder="Nama" required>
+          <select required><option value="">Pilih Menu</option><option>Rocket Original</option><option>Fire Wings</option><option>Paket Hemat</option></select>
+          <input type="number" placeholder="Jumlah" min="1" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Kirim</button>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ==================== TESTIMONIAL ==================== -->
-<section id="testimonial" style="background: #f9f6f0;">
+  <!-- TESTIMONIAL -->
+  <section id="testi" style="padding:80px 0;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
-            <span class="section-tag">Testimonial</span>
-            <h2 class="section-title">Apa Kata Mereka</h2>
-            <p class="section-desc">Pengalaman nyata pelanggan yang sudah makan di tempat kami.</p>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <h2 class="testi-heading-mobile">TESTIMONIAL</h2>
+      </div>
+      <div class="testi-row">
+        <div class="testi-card" data-aos="rotate-scale" data-aos-duration="700" data-aos-delay="0">
+          <div class="testi-profile">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Andi Nugroho">
+            <div><div class="name">Andi Nugroho</div><div class="handle">@andinugroho</div></div>
+          </div>
+          <p>"Rocket Chicken juara crispy! Ayamnya gurih, renyah, bikin nagih."</p>
         </div>
-        <div class="testi-grid">
-            <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
-                <p>"Makanannya enak banget! Tempatnya bersih dan nyaman buat makan keluarga. Nasi gorengnya juara!"</p>
-                <div class="testi-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=80&auto=format&fit=crop" alt="Budi" loading="lazy"><div><strong style="font-size:0.85rem;">Budi Santoso</strong><div class="testi-stars">⭐ 5.0</div></div></div>
-            </div>
-            <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
-                <p>"Rendangnya juara! Empuk dan bumbunya meresap. Harga juga terjangkau untuk sekeluarga."</p>
-                <div class="testi-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=80&auto=format&fit=crop" alt="Ani" loading="lazy"><div><strong style="font-size:0.85rem;">Ani Wijaya</strong><div class="testi-stars">⭐ 4.9</div></div></div>
-            </div>
-            <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
-                <p>"Pelayanan ramah, tempatnya adem, cocok buat arisan atau acara keluarga. Pasti balik lagi!"</p>
-                <div class="testi-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=80&auto=format&fit=crop" alt="Rina" loading="lazy"><div><strong style="font-size:0.85rem;">Rina Marlina</strong><div class="testi-stars">⭐ 5.0</div></div></div>
-            </div>
+        <div class="testi-card" data-aos="rotate-scale" data-aos-duration="700" data-aos-delay="150">
+          <div class="testi-profile">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face" alt="Sari Indah">
+            <div><div class="name">Sari Indah</div><div class="handle">@sariindah</div></div>
+          </div>
+          <p>"Tempatnya aesthetic banget, cocok buat nongkrong sambil nikmatin ayam crispy terenak."</p>
         </div>
+        <div class="testi-card" data-aos="rotate-scale" data-aos-duration="700" data-aos-delay="300">
+          <div class="testi-profile">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Rian Maulana">
+            <div><div class="name">Rian Maulana</div><div class="handle">@rianm</div></div>
+          </div>
+          <p>"Fire wings level 5 bikin nagih. Pedasnya nendang, dagingnya juicy."</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ==================== LOCATION ==================== -->
-<section id="location">
+  <!-- CONTACT & MAPS -->
+  <section id="contact" style="background:#0f0f0f; padding:80px 0;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-duration="500">
-            <span class="section-tag">Lokasi</span>
-            <h2 class="section-title">Kunjungi Kami</h2>
-            <p class="section-desc">Lokasi strategis di pusat kota, mudah dijangkau.</p>
+      <div class="section-head" data-aos="bounce-up" data-aos-duration="700">
+        <h2>CONTACT</h2>
+      </div>
+      <div class="contact-duo">
+        <div class="contact-info-box" data-aos="slide-left" data-aos-duration="800">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-text"><h4>Alamat</h4><p>Jl. Raya Kandanghaur No. 88, Indramayu</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-text"><h4>Telepon</h4><p>0812-3456-7890</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-text"><h4>WhatsApp</h4><p>0812-1111-2222</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="far fa-envelope"></i></div>
+            <div class="contact-text"><h4>Email</h4><p>rocket.kandanghaur@email.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="far fa-clock"></i></div>
+            <div class="contact-text"><h4>Jam Operasional</h4><p>Setiap Hari: 10.00 - 22.00 WIB</p></div>
+          </div>
         </div>
-        <div class="map-frame" data-aos="fade-up" data-aos-delay="100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.123456789!2d106.789123!3d-6.208763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNSJTIDEwNsKwNDcnMjAuOCJF!5e0!3m2!1sid!2sid!4v1600000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-container" data-aos="rotate-scale" data-aos-duration="1000">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9!2d108.1068853!3d-6.3556818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb5770783e837%3A0x78cca6d817c62bbf!2sROCKET%20CHICKEN%20KANDANG%20HAUR!5e0!3m2!1sid!2sid!4v1690000000000" allowfullscreen="" loading="lazy" title="Lokasi Rocket Chicken Kandanghaur"></iframe>
         </div>
-        <div style="text-align:center; margin-top:16px; color:var(--text-light); font-size:0.9rem;" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-map-pin" style="color:#e74c3c;"></i> Jl. Merdeka No. 45, Kec. Sukamaju, Bandung 40123 &nbsp;|&nbsp;
-            <i class="fas fa-phone" style="color:var(--hijau);"></i> 0812-3456-7890
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ==================== FOOTER ==================== -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>Saung Rasa Nusantara</h3>
-                <p>Rumah makan keluarga dengan cita rasa masakan Indonesia terbaik. Bahan segar, harga bersahabat, tempat nyaman untuk semua kalangan.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-links"><h4>Navigasi</h4><a href="#home">Home</a><a href="#gallery">Galeri</a><a href="#menu">Menu</a><a href="#reservasi">Reservasi</a></div>
-            <div class="footer-links"><h4>Informasi</h4><a href="#testimonial">Testimonial</a><a href="#location">Lokasi</a><a href="#">Tentang Kami</a><a href="#">Karir</a></div>
-            <div class="footer-links"><h4>Kontak</h4><a href="tel:+6281234567890">0812-3456-7890</a><a href="mailto:saungrasa@gmail.com">saungrasa@gmail.com</a><a href="#">WhatsApp Order</a></div>
-        </div>
-        <div class="footer-bottom"><p>© 2026 Saung Rasa Nusantara. All Rights Reserved. Made with ❤️ in Bandung.</p></div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" data-aos="blur-in" data-aos-duration="800">
+      <h2 style="color:var(--yellow);">ROCKET CHICKEN KANDANGHAUR</h2>
+      <div class="sosmed">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="color:#555;">&copy; 2025 Rocket Chicken Kandanghaur. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
-<!-- ==================== SCRIPTS ==================== -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 500, easing: 'ease-out', once: true, offset: 40 });
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Inisialisasi AOS
+    AOS.init({ duration: 700, once: false, mirror: true, offset: 120 });
 
-    document.getElementById('mobileToggle').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('active');
+    // Burger menu toggle
+    document.getElementById('burgerBtn').addEventListener('click', function(){
+      document.getElementById('navMenu').classList.toggle('active');
     });
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.remove('active');
-        });
+    document.querySelectorAll('#navMenu a').forEach(link => {
+      link.addEventListener('click', ()=> document.getElementById('navMenu').classList.remove('active'));
     });
 
-    function filterMenu(category, btn) {
-        document.querySelectorAll('.menu-tab').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.menu-row').forEach(row => {
-            row.style.display = (category === 'all' || row.dataset.category === category) ? 'flex' : 'none';
-        });
-    }
-</script>
-
+    // ===== SECURITY: Izinkan klik kanan, save gambar, select teks =====
+    // Tidak ada kode yang memblokir event contextmenu, keydown, atau drag
+    // User bebas klik kanan, save image, select text, inspect element
+    console.log('Rocket Chicken Kandanghaur - Website siap online!');
+    console.log('Semua fitur user diizinkan: klik kanan, save gambar, select teks.');
+  </script>
 </body>
 </html>
