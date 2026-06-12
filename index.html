@@ -22,7 +22,7 @@
   <meta property="og:locale" content="id_ID">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="gambar">
+  <meta name="twitter:card" content="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop">
   <meta name="twitter:title" content="Ayam Geprek Femeli | Spesial Nyambel Bawang Khas Jogja">
   <meta name="twitter:description" content="Nikmati ayam geprek dengan sambel bawang pedas gurih khas Jogja.">
   
@@ -1289,6 +1289,73 @@ Yang jual sangat datar, tapi gak usah dipeduliin ges yang penting ayamnya enak h
   <!-- ========================================== -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // ===== KODE SECURITY - ANTI CTRL+U, CTRL+S, F12, RIGHT CLICK, DLL =====
+    (function() {
+      // Disable Right Click (tidak bisa save image, dll)
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+      });
+
+      // Disable keyboard shortcuts
+      document.addEventListener('keydown', function(e) {
+        // CTRL+U (View Source)
+        if (e.ctrlKey && e.keyCode === 85) {
+          e.preventDefault();
+          return false;
+        }
+        // CTRL+S (Save Page)
+        if (e.ctrlKey && e.keyCode === 83) {
+          e.preventDefault();
+          return false;
+        }
+        // CTRL+P (Print)
+        if (e.ctrlKey && e.keyCode === 80) {
+          e.preventDefault();
+          return false;
+        }
+        // F12 (Developer Tools)
+        if (e.keyCode === 123) {
+          e.preventDefault();
+          return false;
+        }
+        // CTRL+SHIFT+I (Inspect Element)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+          e.preventDefault();
+          return false;
+        }
+        // CTRL+SHIFT+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+          e.preventDefault();
+          return false;
+        }
+        // CTRL+SHIFT+C (Inspect Element Selector)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Disable drag images
+      document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Advanced: Detect DevTools (console dibuka)
+      var element = new Image();
+      Object.defineProperty(element, 'id', {
+        get: function() {
+          // DevTools terdeteksi, redirect atau tutup tab
+          document.body.innerHTML = '<h1 style="color:red;text-align:center;margin-top:20%;">Akses Tidak Diizinkan!</h1>';
+        }
+      });
+      console.log('%c', element);
+    })();
+    // ===== END KODE SECURITY =====
+
     // Inisialisasi AOS Animation
     AOS.init({ duration: 700, once: false, mirror: true, offset: 120 });
 
